@@ -1,0 +1,18 @@
+/*
+Lo primero que ponemos en una propiedad css es con un selector
+Selector: el elemento html al que se aplica al estilo
+Propiedad: valor
+Selectores: formas de seleccionar los elementos de html
+Selector Elemento: busca el nombre de la etiquetahtml
+Clases: separar los elemento por clases o tema, permite modificar varios elementos al mismo tiempo con las mismas características. Se pueden aplicar a varios elementos. No son elementos únicos
+id: se le puede dar sólo a un elemento en toda la página, no puede haber dos elementos con el mismo id. Son elementos únicos
+*/
+li {
+  color: grey;
+}
+.ingrediente-faltante {
+  color: red;
+}
+#ingrediente-secreto {
+  color: blue;
+}
