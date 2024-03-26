@@ -1,0 +1,24 @@
+/*
+  Box Model: describe coo se diseña y como se deben poner los elementos en HTML, define como las cajas interactuan entre sí y cuales son sus propiedades
+  Contenido: lo que pongo en la caja
+  Padding: espacio o relleno entre el contenido y el border
+  Border: envuelve el contenido y el padding
+  Margin: espacio fuera de la caja que separa al elemento de las otras cajas
+  Box-sizing: determina como interactual las tres anteriores
+  Width y height: define el ancho y alto del elemento
+  Si el valor de la caja interna esta en porcenaje, este va a ser en función de la caja que lo contiene
+*/
+
+div {
+  background-color: red;
+  width: 300px;
+  height: 100px;
+}
+
+input {
+  width: 90%;
+}
+
+form {
+  width: 300px;
+}
