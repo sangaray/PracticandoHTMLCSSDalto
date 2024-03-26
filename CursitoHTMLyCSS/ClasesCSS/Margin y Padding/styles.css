@@ -1,0 +1,35 @@
+/*
+  shorhand: es cuando resumimos en una propiedad varias juntas. por ejemplo: padding reune a padding-top, padding-bottom, padding-left padding-right
+  propiedad: top right bottom left Ejemplo padding: 10px 0 20px 40px
+  propiedad: (top bottom) (right left) Ejemplo padding: 10px 20px
+  padding cambia el tamaño de la caja pero no el tamaño del contenido
+  margin colapse: la caja con el margen más grande es el que se queda cuando dos cajas tienen su propio margin
+*/
+
+.formulario {
+  background: red;
+  padding: 30px;
+}
+
+.formulario-input {
+  width: 90%;
+  background: black;
+  color: wheat;
+  margin: 10px;
+}
+
+.formulario-submit {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  background: white;
+  width: 50%;
+}
+
+.box {
+  background: red;
+  padding: 50px;
+  height: 150px;
+  width: 150px;
+  margin: 30px;
+}
