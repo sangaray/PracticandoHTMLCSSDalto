@@ -1,0 +1,49 @@
+/*
+  FONDOS
+  Background; es un shorthand que reune varias propiedades
+  background: imagen posición / size reapeat attachement color
+
+  background-color: define el color del fondo
+  background-image: url("dirección de la imagen), permite usar una imagen como fondo
+  background-size: 100%, ajusta la imagen al ancho del contenedor,
+  con 100px la imagen se repite, 
+  con contain se ajusta lo más posible para que la imagen entre, es decir obliga a la imagen a adaptarse. Fuerza al navegador a mostrar la imagen entera auque sea una vez
+  con cover hace que no importa la resolución o tamaño la imagen entre entera en la pantalla
+  background-position: con center, left, right, top o bottom, acomoda la imagen en el contenedor. También se pueden dar valores específicos en pixeles
+  background-repeat: no-repeat, no repite la imagen aunque sobre espacio
+  con repeat-x se repite a la derech
+  con repeat-y se repite hacia abajo
+  background-attachment: fixed permite dejar una imagen u objeto como fondo detras de otro objeto al hacer scroll se ve como a través de una ventana
+  background-attachment: scroll
+
+*/
+
+body {
+  background-color: #0f0;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+.box {
+  width: 100%;
+  height: 100px;
+  margin: 20px;
+  margin: 0;
+  background-color: #6fa;
+  background-image: url("https://cdn.wallpapersafari.com/85/86/xXNwrZ.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.opaco {
+  height: 100%;
+  width: 100%;
+  background-color: #000a;
+}
+
+h2 {
+  padding: 20px;
+  text-align: center;
+}
