@@ -1,0 +1,53 @@
+/* 
+BORDES
+border-width: permite definir el grosor del borde
+border-style: permite definir el estilo del borde liso, punteado, doble, línea, etc
+border-color: permite definir el color del borde
+border-radius: permite redondear las esquinas o vertices del borde
+Si usamos pixeles se redondea sólo las esquinas, tomando solo el centro vertical, si usamos porcentaje se redondea desde el medio horizonal y vertica
+border: reemplaza a las tres primeras propiedades
+Ejemplo
+border: tamaño estilo color
+border: 3px solid black
+border-top:
+border-bottom:
+border-left:
+border-right
+Se pueden usar con width, style y color como border o simplificarlo para cada lado igual que con border
+puedo hacer lo mismo con border radius
+*/
+
+body {
+  background: black;
+}
+
+div {
+  background: red;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+div {
+  border-width: 4px;
+  border-color: aquamarine;
+  border-style: solid;
+  border-radius: 2px;
+  background-color: greenyellow;
+  margin-top: 10px;
+}
+
+.form {
+  background-color: black;
+  border: none;
+}
+
+input {
+  background-color: black;
+  border: none;
+  border-left: 1px solid greenyellow;
+  border-bottom: 1px solid greenyellow;
+  margin: 5px;
+  color: greenyellow;
+  border-radius: 0 0 0 5px;
+}
