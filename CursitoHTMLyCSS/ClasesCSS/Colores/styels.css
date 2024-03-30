@@ -1,0 +1,35 @@
+/*
+  COLORES
+  RGBA: red, green, blue. alfa Los tres colores primarios de la luz. Tiene 256 combinaciones posibles para cada uno de los tres colores, es decir 16777216 colores posibles. Alfa habla de la transparencia, detremina la opacidad del color.
+  Para definir el valor de cadda color podemos elegir entre 0 y 255 
+
+  hsl: tiene menos colores que los otros dos. También tiene.
+  hue es la color
+  saturación 
+  iluminación: los colores al 50% son los más fuertes
+  Los colores pastel se caracterizan por tener poca saturación y mucha iluminación
+
+  hexadecimal: tiene la misma cantidad de colores que el rgb, tiene 16 posibilidad, sistema de base 16. Para definirlo uso #rrggbb
+  0, 1, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, g
+  hay 16 posibilidades para cada primer valor y otras 16 posibilidades por cada primer valor con el segundo valor
+  Hay una forma abreviada
+  #rgb
+  El segundo valor especifíca más el tono. 4294967296
+  También tiene un canal alfa
+*/
+
+.box {
+  padding: 20px 50px;
+  background: hsl(
+    319,
+    24%,
+    86%
+  ); /* es lo mismo que escribir red, la capa del rojo esta al máximo */
+  margin: 20px;
+  margin-left: 100px;
+  text-align: center;
+  border-top: 2px solid hsl(271, 98%, 35%);
+  font-family: sans-serif;
+  font-weight: bold;
+  color: hsl(271, 98%, 35%);
+}
