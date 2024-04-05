@@ -2,6 +2,12 @@
   Textarea: es una especie de input que te permite excribir texto más largo, texto en varias líneas
 
   div: es sólo un bloque, no tiene ninguna función especial o semántica, se pueden usar todos los que se quiera, pero no se pueden reemplazar las etiquetas específicas aunque funcionen igual
+
+  readonly en el textarea evita que se pueda modificar el contenido de la misma. El contenido se envia con el formulario y puedo hacer focus en el objeto
+
+  disabled desactiva el campo, no se puede modificar y el contenido no es enviado con el formulario y no puedo hacer foco en él
+
+  max-length determina la cantidad de caracteres máximos que se pueden escribir en el cuadro
 -->
 
 <!DOCTYPE html>
@@ -15,11 +21,14 @@
   <body>
     <form>
       <h2>Formulario de Contacto</h2>
-      <div class="form-input">
+      <div class="form_input">
         <input type="text" placeholder="Nombre completo" />
       </div>
-      <div class="form-input">
+      <div class="form_input">
         <input type="text" placeholder="email" />
+      </div>
+      <div class="form_input">
+        <textarea placeholder="Deja tu mensaje"></textarea>
       </div>
     </form>
   </body>

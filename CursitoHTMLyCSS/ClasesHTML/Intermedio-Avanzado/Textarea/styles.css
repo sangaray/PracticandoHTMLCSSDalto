@@ -1,3 +1,16 @@
+/* 
+  TEXTAREA
+  min-width evita que se amplie hacia los costados
+  resize define si puede cambiarse el tamañno del textarea
+  - both puede cambiarse el tamaño en el eje x y en el eje y
+  - vertical se agranda solo en el eje vertical
+  - horizontal se agranda solo en el eje horizontal
+  - none no se expande en ninguna dirección, sólo agrega una scroll bar
+  La tipografía es propia, si la queremos cambiar debemos hacerlo en el propio textarea, no va a tomar lo que pongamos en body
+
+  form-sizing permite que el textarea crezca con nuestro texto, esta propiedad todavía no está disponible
+*/
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -20,22 +33,30 @@ form {
   padding: 20px 0;
   max-width: 500px;
   margin: auto; /* centrar */
-  box-shadow: 0 0 55px #0009;
+  box-shadow: 0 0 55px #fff2;
   margin-top: 50px;
 }
 
-.form-input {
+.form_input {
   padding: 6px 20px;
 }
 
-input {
+input,
+textarea {
   width: 100%;
   box-sizing: border-box;
-  padding: 6px 12px;
+  padding: 6px 8px;
   border: none; /* especificar propiedades a 0 */
   border: 1px solid #666;
   box-shadow: 0 0 15px #0003;
   background-color: transparent;
   border-radius: 4px;
   color: #eee;
+}
+
+textarea {
+  min-width: 100%;
+  resize: none;
+  min-height: 102px;
+  font-family: sans-serif;
 }
