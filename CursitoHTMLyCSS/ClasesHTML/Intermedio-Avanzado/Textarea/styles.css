@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #444;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: #ededed;
+  padding: 20px 0;
+  max-width: 500px;
+  margin: auto; /* centrar */
+  box-shadow: 0 0 35px #0006;
+  margin-top: 50px;
+}
+
+.form-input {
+  padding: 6px 20px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border: none; /* especificar propiedades a 0 */
+  border-left: 3px solid #999;
+  box-shadow: 0 0 15px #0001;
+}
