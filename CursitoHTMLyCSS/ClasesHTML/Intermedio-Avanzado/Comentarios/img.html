@@ -4,14 +4,54 @@
   FAVICONS  
   iconito o logo que aparece en la pestaña o parte superior de navegador junto al title del head  
   Imagen de 32 x 32 o 64 x 64 pixeles porque se ve muy chiquita
-  se recomienda el atributo type="image/png" para que el navegador la cargue más rápido
+  se recomienda el atributo type="image/png" para que el navegador la cargue más rápido que sirve, suma y ayuda
+  METATAG
+  Es un tag que da información de la página. Van en el head, importante para el SEO, como se muestra en las redes sociales
+  
+  Atributo charset de la etiqueta META permite especificar los caracteres que se utilizarán en la página, UTF-8
+  
+  Atributo lang de la etiqueta HTML: le indica al navegador en que idioma va a estar la página y le ahora el tiempo de tener que determinarlo por sí mismo permite todos los caracteres disponible.
+  
+  meta viewport: con qué estamos trabajando
+  Valor width=device-width: ajusta nuestra página a la pantalla de cualquier dispositivo
+  initial-scale=1.0: se carga la página siempre en zoom 1
+  Clave al trabajar con responsive design
+  
+  meta description: una descripción de por lo menos 100 caracteres que descibe de qué trata la página
+
+  meta keyword: indica todas las palabras clave de la página. Si en la búsqueda de alguien figura una de tus palabras clave tu página va a tener más posibilidades de aparecer porque se trata de ese tema
+  
+  meta author: indica quien es el autor o creador de la página
+
+  meta robots: si content dice nofollow le dice a google no indixes me página en la busqueda, nosnippet no permite que los buscadores extraigan una sección de la página y la muestra, noarchive no permite a google que archive nuestra página en el caché, noimageindex es para que no se indexen las imágenes, no permite que las guarde o aparezcan en google fotos
+  
+  meta title: guarda el título de la página
+
+  meta og: indica que mostrar en la búsqueda, title, image, description, url esta última muestra la dirección a donde se debe redirigir a la persons
+
+  metatags.io
 -->
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Imagenes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Esta página web se trata de bla bla bla y también se trata de bla bla bla"
+    />
+    <meta
+      name="keywords"
+      content="frutas, fruta, banana, manzana, 1kg de papa"
+    />
+    <meta name="author" content="Sandra Garaycochea" />
+    <meta name="og:title" content="" />
+    <meta name="og:image" content="" />
+    <meta name="og:description" content="" />
+
+    <title>Página de venta de fruta</title>
     <link
-      rel="stylesheet"
+      rel="icon"
       href="./iconos/icons8-estudiante-masculino-32.png"
       type="image/pngº"
     />
@@ -19,5 +59,11 @@
   <body>
     <!--Este es un títulos-->
     <h1>adasdfadf</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus beatae
+      vero iusto velit accusamus delectus rem, perspiciatis, dolorem ullam
+      veritatis adipisci quas voluptate quis quaerat iure? Odio distinctio saepe
+      libero.
+    </p>
   </body>
 </html>
