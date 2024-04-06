@@ -1,0 +1,49 @@
+<!-- 
+  LABEL
+  El label acompaña a los imputs, permitiendo hacer foco en ellos cuando se hace click en su label
+
+  Para enlazarla a los inputs podemos
+  usar for en el label y id en el input con el mismo valor
+  envolver el input con el laber
+  
+  Sirve también con los checkbox para no tener que darle click al cuadradito que a veces se hace dificil, clickeamos en el label y ya está
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form>
+      <h2>Formulario de Contacto</h2>
+      <div class="form_input">
+        <label
+          >Nombre completo
+          <input type="text" placeholder="John Doe" />
+        </label>
+      </div>
+      <div class="form_input">
+        <label
+          >Email
+          <input type="text" placeholder="ejemplo@gmail.com" />
+        </label>
+      </div>
+      <div class="form_input">
+        <label
+          >Mensaje
+          <textarea placeholder="Deja tu mensaje"></textarea>
+        </label>
+      </div>
+      <div>
+        <label>
+          Acepto los términos y condiciones
+          <input type="checkbox" class="checkbox"></input>
+        </label>
+      </div>
+    </form>
+  </body>
+</html>
