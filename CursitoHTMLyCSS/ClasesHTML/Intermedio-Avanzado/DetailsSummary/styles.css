@@ -1,0 +1,28 @@
+/*
+  Para dar estilo a un detail sólo cuando está abierto usamos
+  details[open] {}
+*/
+
+body {
+  background-color: #333;
+  color: #ddd;
+  font-family: sans-serif;
+}
+
+details {
+  padding: 9px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  font-size: 0.7em;
+  color: #aaa;
+}
+
+summary {
+  background-color: transparent;
+  font-size: 1em;
+  color: #eee;
+}
+
+ul {
+  font-weight: 100;
+}
