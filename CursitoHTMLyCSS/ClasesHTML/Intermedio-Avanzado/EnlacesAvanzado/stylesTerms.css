@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #333, #000);
+  color: #ddd;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.container {
+  background-color: transparent;
+  padding: 20px 0;
+  max-width: 500px;
+  margin: auto; /* centrar */
+  box-shadow: 0 0 55px #fff2;
+  margin-top: 50px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+a {
+  color: #69f;
+  text-decoration: none;
+}
