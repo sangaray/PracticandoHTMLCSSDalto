@@ -1,0 +1,58 @@
+<!-- 
+  TABLAS
+  Son una forma de organizar la información en filas y columnas
+  Haces años las tablas se usaban para todo, estructurar páginas, diseño, etc. Hoy en dia la única razón para usar tablas es cuando queremos estructurar datos en forma tabular
+  <table></table>: define la tabla
+  <tr></tr>: determina una fila
+  <td></td>: determina una celda para la fila en la que se encuentre
+  <th></th>: determina los encabezados de columna. Posiciona la página mejor, porque asocia el encabezado a su contenido
+  colspan: permite permite unir celdas de forma horizontal
+  rowspan: permite unir celdad de foma vertical
+  <thead></thead>: indica una sección con encabezados y sin datos
+  <tbody></tbody>: es donde van a estar todos los datos
+  <tfoot></tfoot>:
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table cellspacing>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Costo</th>
+          <th>Unidades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Banana</td>
+          <td>$3</td>
+          <td>1kg</td>
+        </tr>
+        <tr>
+          <td>Manzan</td>
+          <td>$2</td>
+          <td>1kg</td>
+        </tr>
+        <tr>
+          <td>Melón</td>
+          <td>$4</td>
+          <td>1 unidad</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="header_total">Total</th>
+          <td class="dato_total" colspan="2">$9</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
