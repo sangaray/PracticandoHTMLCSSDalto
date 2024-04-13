@@ -1,0 +1,670 @@
+WEBVTT
+
+00:00.000 --> 00:07.000
+Irony GPT es un programa que utiliza la inteligencia artificial de los modelos generativos con la pide OpenAI, modelos generativos de texto obviamente.
+
+00:07.000 --> 00:15.000
+Es decir, pasado en blanco utiliza inteligencia artificial para poder mantener una conversación con vos y que todo lo que digas te lo responda con ironía, con la finalidad de bueno.
+
+00:15.000 --> 00:16.000
+Acierte los hago un poquito.
+
+00:16.000 --> 00:21.000
+Lo crey yo y te voy a dejar un enlace al código en la descripción por si, querés utilizarlo o modificarlo o hacer cositas.
+
+00:21.000 --> 00:23.000
+Ahora, ¿cómo lo desarroye?
+
+00:23.000 --> 00:34.000
+Este video te voy a mostrar cómo desarrollé este programita que es bastante sencillo la verdad, no me costo tanto hacerlo. ¿Cómo utilicé la pide OpenAI para poder lograrlo? ¿Cómo fue evolucionando el programa? ¿Cuáles fueron mis problemas?
+
+00:34.000 --> 00:35.000
+Al hora de desarrollarlo obviamente.
+
+00:35.000 --> 00:40.000
+Y al final les voy a mostrar cómo quedó y cuál es el resultado de esto. La verdad que miengo, ¿por qué van a aprender un mundo?
+
+00:40.000 --> 00:47.000
+No es un video que solamente la gente que entiende a nivel técnico puede ver si te reglando mi video de Python, porque le voy a hacer el compadito.
+
+00:47.000 --> 00:50.000
+Es un programa que debe desarrollar en Python, así que de hecho por eso tengo la armelita.
+
+00:50.000 --> 01:00.000
+Así que, bueno, obviamente, si querés entenderlo bien todo en profundidad, humilas del curso de Python, pero más allá de eso voy a intentar explicarlo como para gente que no sepa nada.
+
+01:00.000 --> 01:05.000
+Así, podés decir che, al halto de desarrollo esta inteligencia especial de esta forma.
+
+01:05.000 --> 01:06.000
+Ahora sí, vamos a comenzar.
+
+01:06.000 --> 01:12.000
+Todo comenzó cuando estaba revisando las respuestas de un tuidmío, que tirase un tiempo atrás, y específicamente una respuesta que estaba automatizada para responder tweets.
+
+01:12.000 --> 01:13.000
+Y me respondió.
+
+01:13.000 --> 01:20.000
+La ignora dice y buscando de vio tu respuesta que también estaba automatizada, y de hecho para llamarla tenías únicamente que etiquetarla.
+
+01:20.000 --> 01:22.000
+Entonces, un solo le responde y el bot le responde de vuelta.
+
+01:22.000 --> 01:27.000
+La respuesta fue bastante graciosa. Entonces dije, ¿qué pasaría si intento crear un programa con inteligencia artificial?
+
+01:27.000 --> 01:31.000
+¿Qué responda todo lo que diga con irón y amor sarcasmo y tenga el objetivo como...
+
+01:31.000 --> 01:32.000
+Y ya es ser mi mejor.
+
+01:32.000 --> 01:34.000
+Entonces dije, bueno, a trabajar.
+
+01:34.000 --> 01:38.000
+Lo primero que hice fue que era una carpeta de aeronic pt, y dentro de poner un solo archivo,
+
+01:38.000 --> 01:43.000
+Muchito que iba a contener el código de todo el programa. Después de eso me puse investigar sobre cómo utilizar la pide up en el API,
+
+01:43.000 --> 01:44.000
+y básicamente se pueden hacer dos cosas.
+
+01:44.000 --> 01:48.000
+Lo primero que tenemos son las completions, y después tenemos las chat completions.
+
+01:48.000 --> 01:54.000
+En el contexto de los modelos del lenguaje, como gpt3.5, se refiere a la capacidad del modelo de generar texto de manera automática,
+
+01:54.000 --> 01:56.000
+y cuarenta a partir de una entrada proporcionada.
+
+01:56.000 --> 02:02.000
+El modelo utiliza su entrenamiento previo en grandes cantidades de texto para predecir la continuación o completación,
+
+02:02.000 --> 02:04.000
+más probable de deposan de la determinada entra.
+
+02:04.000 --> 02:12.000
+No sé, a ver, pasando esto en blanco es muy simple, o sea, nos le pasamos un texto, y lo que va a intentar hacer el modelo es predecir que viene a continuación del texto.
+
+02:12.000 --> 02:18.000
+Lo que intenta comprender es que es una conversación, lo que va a predecir es que es una respuesta a un texto anterior.
+
+02:18.000 --> 02:22.000
+O sea, si yo le pregunto cómo estás, entiende que lo que tiene que responder es bien y vos.
+
+02:22.000 --> 02:27.000
+Si yo le digo, hoy son días muy dindo, porque va a completar la frase, por eso objetivos predecir.
+
+02:27.000 --> 02:30.000
+Si estamos en una conversación, va a predecir que tiene que responder.
+
+02:30.000 --> 02:36.000
+Si estamos en un si el texto parece que es una oración va a intentar completar la oración, por eso objetivo es ese.
+
+02:36.000 --> 02:39.000
+Predecir. Esto lo explique bien en los videos que hice de chat.gpt y su montón.
+
+02:39.000 --> 02:44.000
+Los modelos generativos son así, funcionan de esta forma, específicamente los utilizan este tipo de apis,
+
+02:44.000 --> 02:50.000
+más puntualmente chat.gpt para funcionar, entonces si queréis mirar de lo que están súper interesantes, pero bueno, dado por hecho que ya entendemos cómo funcionan, continuamos.
+
+02:50.000 --> 02:53.000
+Después como les dije, había una diferencia entre dos, completions y chat completions.
+
+02:53.000 --> 02:58.000
+Teníamos una diferencia principal, y mientras que en una va a responder algo puntual, un solo prompt,
+
+02:58.000 --> 03:02.000
+lo que tiene el chat completions es que el chat completions entiende todo un contexto.
+
+03:02.000 --> 03:12.000
+No le pasamos como tal un prompt e intenta predecir lo que va a venir a continuación, sino entre las variables que hace que el total de todo lo que hay dentro de esa conversación creé un contexto.
+
+03:12.000 --> 03:21.000
+Este contexto lo comprende el modelo y creo una respuesta comprendiendo el contexto, es decir, si yo ahora le digo a chat.gpt, hola, me llamo Lucas, y me va a decir hola Lucas como estás.
+
+03:21.000 --> 03:28.000
+Después le digo cómo me llamo no va a poder responder mi nombre, porque es una completión, simplemente fue un texto y cada uno funciona en forma independiente.
+
+03:28.000 --> 03:35.000
+El completión 1, completa el primer texto, el completión 2, completa el segundo texto, el completión 3, completa el sexto, pero no están conectados en ninguna forma.
+
+03:35.000 --> 03:41.000
+Mientras que el chat completión sí, porque tiene la capacidad de comprender un contexto, justamente tiene esto que llamamos ventana del contexto.
+
+03:41.000 --> 03:46.000
+La capacidad de memorizar entre comillas que tienen el programa para recordar, entender un contexto y dar una respuesta lógica con el contexto completo.
+
+03:46.000 --> 03:52.000
+Mientras más grande sea la ventana del contexto mejor, porque si la ventana del contexto chiquitita yo le digo hola, me llamo Lucas y después voy a recordar mi nombre hasta un punto.
+
+03:52.000 --> 03:56.000
+Cuando pasa la ventana del contexto ya no recuerda más mi nombre, y cada vez olvidando lo que más arriba le vamos diciendo.
+
+03:56.000 --> 03:59.000
+Mientras más grande la ventana del contexto, más cosas puede recordar y durante más tiempo.
+
+03:59.000 --> 04:03.000
+Y ya con eso estamos completamente en contexto, entendemos lo que es una completión y lo que es un chat completión.
+
+04:03.000 --> 04:11.000
+Entonces, nada, yo entendimos todo. Por ejemplo, una completión puede ser utilizada para este tipo de modelos, Strato, Gpt, Replay, Gpt, que son los de Twitter que les acabo demostrado.
+
+04:11.000 --> 04:18.000
+Bueno, eso es una completión porque está un texto y lo intenta predecir con una respuesta. Y el otro, que es el chat completión se pude usar para chatbots como por ejemplo, chatgpt.
+
+04:18.000 --> 04:21.000
+Esa es, son dos ejemplos que son clave para que lo entiendan.
+
+04:21.000 --> 04:25.000
+Yo necesito hacer un completo, porque quería un texto que me dé respuestas a un texto único que le iba a pasar.
+
+04:25.000 --> 04:28.000
+O sea, quería un bot que me quería una respuesta algo muy puntual, algo único.
+
+04:28.000 --> 04:35.000
+Entonces me puse a trabajar y puse mi tarjeta de crédito para configurar las opciones de pago, dejé todo a mi cuenta, apreciado, y con eso tiene todo configurado, me puse a escribir las primeras niñas del código.
+
+04:35.000 --> 04:40.000
+Que iba a costar un poquito más sin hacer a spayton, pero bueno, tenerlo en cuenta que ahora arrancamos con el código.
+
+04:40.000 --> 04:46.000
+El primero que hice fue generar un token, que es la forma que tengo de decir la chatgpt que soy yo, el que está haciendo un asumisito para usar su API y la puse en el código.
+
+04:46.000 --> 04:49.000
+Después de eso me puse a crear el entorno en donde le pedimos un dato rusoario.
+
+04:49.000 --> 04:53.000
+Ese dato después iba a ser almacenado en una variable que le íbamos a pasar como prompt al modelo.
+
+04:53.000 --> 04:59.000
+Después de eso, quería una completión y le pase el motor. También le pase el prompt, un par de otras propiedades y después lo que hice fue de volver en pantalla la respuesta que me daba.
+
+04:59.000 --> 05:01.000
+Respondía perfectamente.
+
+05:01.000 --> 05:09.000
+Hasta que está todo bien, pero ahora necesito que me responda con inonía, porque si quiero desarrollar a ironieGpt, que es una iAva, que utiliza un modelo Gpt, que tiene que responder con inonía.
+
+05:09.000 --> 05:12.000
+No me responden con inonía, no sirve para un carajo, entonces vamos a hacer que responda con inonía.
+
+05:12.000 --> 05:18.000
+Lo que se me ocurrió para hacer esto fue poner un prompt que le pira que responda con inonía y humor lo que iba a preguntar la continuación.
+
+05:18.000 --> 05:20.000
+Y la continuación pasaba lo que lo usaba y escribía.
+
+05:20.000 --> 05:22.000
+Entonces cuando respondía, respondía con humor e ironía.
+
+05:22.000 --> 05:28.000
+Fui probando la mejor combinación hasta que logriera con el prompt que responde de una forma que te hagan ojar, siempre con inonía humor y sarcamo.
+
+05:28.000 --> 05:36.000
+Nuevamente tenemos el bot casi listo, pero después de ver bien lo que hice, ahí en realidad tenía un bot que respondía pregunta tras pregunta y no se conectaban de ninguna forma.
+
+05:36.000 --> 05:43.000
+Tenía un bot que me respondía preguntas con ironía, pero ninguna pregunta se relacionaba de una forma y no podía recordar las preguntas sentidores.
+
+05:43.000 --> 05:51.000
+Si yo le digo sumame 34 más 34 por ahí me decía y la respuesta es 68, que si yo después le decía bueno y al lo anterior sumarle otros 20.
+
+05:51.000 --> 05:59.000
+No me iba a decir 88, porque porque no recordaba que la respuesta que me dio antes era entonces como que ya que estamos armando un bot y ya que es un bot de respuestas,
+
+05:59.000 --> 06:09.000
+literalmente es un chat bot, porque no hacer que entienda la conversación que la recuerdi que tenga un contexto. Esto fue lo mismo que si planteé la gente al desarrollar su escape, ¿por qué no me lo podía plantear yo para desarrollar ironie GPD?
+
+06:09.000 --> 06:22.000
+Bueno, vamos a volver. Para esto necesitaba reemplazar la lógica en general y el lugar de poner el nombre específico y poner un default es decir que respondo, pero a día un texto, lo que hago es decir que por defecto se ponga el error de alguien que usa ironía y después ya toda las conversaciones van a tener en cuenta como responder.
+
+06:22.000 --> 06:31.000
+Si necesidades ser tan repetitivo y hacer tan lento el programa, así que cambiar algunas cosas, la estructura en general que digo algo, pero sí cambiaron algunas cosas. Después de esos cambios estructurales, o alas, me cuyo el programa completo.
+
+06:31.000 --> 06:39.000
+Ahora te voy a explicar paso a paso cómo quedo el programa y qué hace cada línea de código para que lo entiendes. Primero acá importamos la librería de Upen EY para poder usar la API, fácil.
+
+06:39.000 --> 06:43.000
+Después lo que hacemos acá es poner nuestra API, porque obviamente no le voy a dar la mía para que no me la usen.
+
+06:43.000 --> 06:45.000
+¿Qué yo no puede dar mi mi mente o no?
+
+06:45.000 --> 06:52.000
+Para conseguir la súsula se me la ha apartado de building de Upen EY. Después acá lo que hice fue crear la variable Initial Prompt, que creo que hubiera sido mejor ponerle preset en realidad o...
+
+06:52.000 --> 06:59.000
+...Sis Content incluso. Pero en fin, es un texto que contiene las instrucciones que le dicen al sistema como comportarse, cuál es el rol que va a decir.
+
+06:59.000 --> 07:05.000
+Es decir, esta es la forma que si tiene que comportar el bot para responder cada pregunta o solicitud que le hago lo usuario.
+
+07:05.000 --> 07:11.000
+Después que haremos una lista de mensajes, es muy simple. Tienen que entender que esto funciona de tal forma que cada mensaje es un ticcionario que tiene un rol.
+
+07:11.000 --> 07:16.000
+No puede ser System User o Assistant. El contenido de System define cómo responderla los usuarios.
+
+07:16.000 --> 07:21.000
+El contenido del User define el mensaje de un sí que le pasó el usuario.
+
+07:21.000 --> 07:24.000
+Y el contenido de Assistant es lo que responde la API. Es muy simple. Parece complicado pero es muy simple.
+
+07:24.000 --> 07:27.000
+Si el usuario me responde algo, eso se lo voy a pasar a users.
+
+07:27.000 --> 07:30.000
+Si yo escribo algo, un prompt, eso se usuario y le paso a LGBT algo.
+
+07:30.000 --> 07:33.000
+El LGBT está definiendo el User. El Content del User.
+
+07:33.000 --> 07:40.000
+Si el LGBT se tuviera que comportar como una persona que es calificada en cienzas sociales, eso no lo digo son ni nadie.
+
+07:40.000 --> 07:43.000
+Eso se ha dado internamente que se programa para que se comporta esa forma.
+
+07:43.000 --> 07:45.000
+Eso es el Content del System.
+
+07:45.000 --> 07:47.000
+Después el Assistant es la respuesta que te genera el modelo.
+
+07:47.000 --> 07:52.000
+El modelo te queda una respuesta. La respuesta se le pasamos a Assistant internamente desde el backend.
+
+07:52.000 --> 07:56.000
+Y ahí funciona todo cómo debería funcionar para tener el chat con protección al funcionamiento.
+
+07:56.000 --> 07:59.000
+En definitiva, como le estamos diciendo ahora que queremos que se comporta con la unidad,
+
+07:59.000 --> 08:02.000
+se lo pasamos a System porque le estamos definiendo el rol del System.
+
+08:02.000 --> 08:04.000
+Estamos definiendo el rol de la idea.
+
+08:04.000 --> 08:08.000
+Después comenzamos un bug y el infinito, que va a seguir funcionando hasta que se interrompa el programa.
+
+08:08.000 --> 08:10.000
+Porque acabado donde va a estar el programa.
+
+08:10.000 --> 08:12.000
+El programa va a funcionar dentro de este bugle.
+
+08:12.000 --> 08:15.000
+Dentro de un bugle va a estar este código, que le pide el usuario que pregunte algo
+
+08:15.000 --> 08:17.000
+y lo guarden la variable User Prom.
+
+08:17.000 --> 08:20.000
+Después lo que hacemos es definirlo como un mensaje más en la lista de mensajes.
+
+08:20.000 --> 08:21.000
+Es decir, lo agregamos.
+
+08:21.000 --> 08:24.000
+La entrada de usuario tiene el rol. Y User y es lo que el usuario escribió.
+
+08:24.000 --> 08:28.000
+Después lo que tenemos que hacer es enviar la conversación actual a la pide OpenAI.
+
+08:28.000 --> 08:32.000
+Básicamente, le está diciendo OpenAI que utiliza el modelo de gpt3.5, el turbo.
+
+08:32.000 --> 08:34.000
+Y que le ha todos los mensajes de la conversación.
+
+08:34.000 --> 08:38.000
+Y bueno, que genera una respuesta de no más de 2000 tokens. Esos importantes.
+
+08:38.000 --> 08:41.000
+Esta respuesta va a ser cuarenta con la conversación que le pasamos.
+
+08:41.000 --> 08:43.000
+O sea, porque tienen que entender que esto funciona así.
+
+08:43.000 --> 08:48.000
+O sea, esta idea lo que haces es entender quién habla, entiende quién es la idea, quién es quién habla,
+
+08:48.000 --> 08:52.000
+entiende la conversación, entiende lo que tiene que predecir y tiene en cuenta sus respuestas anteriores.
+
+08:52.000 --> 08:57.000
+Así como si yo le paso antes, le pasaba un texto, me lo predecía dependiendo de si es pregunta, respuesta, oración, etc.
+
+08:57.000 --> 09:01.000
+Esto lo que haces es casi igual, solamente que comprende toda una conversación del chat.
+
+09:01.000 --> 09:04.000
+O sea, en un chat tenemos definido, ¿quién envió un mensaje, quién le respondió?
+
+09:04.000 --> 09:06.000
+¿Quién envió un mensaje, quién le respondió?
+
+09:06.000 --> 09:10.000
+Es casi lo mismo que lo anterior, sólo que al estar pasando le, un chat completo.
+
+09:10.000 --> 09:13.000
+Cada vez que responda va a tener en cuenta el chat anterior.
+
+09:13.000 --> 09:19.000
+O sea, es lo mismo que una completión, sólo que ahora en vez de pasarle un prompt, específico, le pasamos todo el chat y el nuevo prompt.
+
+09:19.000 --> 09:24.000
+Después de ese prompt se vuelve a sumar y la próxima cosa que le pedimos le olemos a pasar todo el chat y el nuevo prompt.
+
+09:24.000 --> 09:29.000
+Acompanñado de su respuesta, o sea, si yo le digo algo y me responde algo, el próximo mensaje tiene en cuenta esos dos mensajes.
+
+09:29.000 --> 09:33.000
+Si yo después le digo algo, tienen cuenta de vuelta lo que yo le digo y lo que me responde.
+
+09:33.000 --> 09:36.000
+Va teniendo en cuenta las dos respuestas, tanto las que yo doy como las que la diada.
+
+09:36.000 --> 09:39.000
+Para que para respondernos en la próxima conversación. Así como funciona.
+
+09:39.000 --> 09:44.000
+Aca ya casi al final de todo, lo que hacemos es tomar la respuesta generada por el modelo y agregar la lista de mensajes.
+
+09:44.000 --> 09:51.000
+Esto es lo que les decía antes, porque esto es importante, porque el depermite al modelo, recordar y considerar también las respuestas que él da dentro de la conversación.
+
+09:51.000 --> 09:55.000
+O sea, no solamente recuerda lo que nosotros decimos, sino que va a estar recorrando también lo que él dice, que es lo que habla la version.
+
+09:55.000 --> 09:57.000
+Y por último, acá lo que estamos haciendo es mostrar la respuesta de la idea.
+
+09:57.000 --> 10:01.000
+Una vez que se mostre en pantalla, se repite el bucle, igual lo va a proceder.
+
+10:01.000 --> 10:03.000
+Se repite y así es el bucle infilm.
+
+10:03.000 --> 10:06.000
+Pero, pero antes de seguir vídeo te tengo que hacer una pregunta.
+
+10:06.000 --> 10:11.000
+Porque una marca que tiene una duda y es te sentís nervioso a la hora de postularte un trabajo de pronunciación.
+
+10:11.000 --> 10:14.000
+O te sentís a su estado de no entender por ejemplo a tus clientes que hablan otro idioma.
+
+10:14.000 --> 10:16.000
+Malotranquí y lo rey no te preocupes.
+
+10:16.000 --> 10:22.000
+Hay dos personas, Shannon y Jessica, que son propósitos de inglés de Estados Unidos, que te pueden asuorar a gras fluidez y muchísimas confiancias rápidamente.
+
+10:22.000 --> 10:25.000
+Sus alumnos consideran trabajos en empresas internacionales muy rápidamente.
+
+10:25.000 --> 10:30.000
+Vamos hablando de Google, Amazon, Microsoft, Unilever, Oracle, o sea, partirá para arriba.
+
+10:30.000 --> 10:35.000
+Algunos se mueven a Canadá, otros se mueven a Estados Unidos, otros Europa, o sea, posta que son estas gente son unas bestias.
+
+10:35.000 --> 10:40.000
+Esto, así que, obviamente, los estudiantes se han duplicado y triplicado el salario porque hablar otro idioma y hablarlo bien, así que...
+
+10:40.000 --> 10:43.000
+Y el aumento sea significativo, o sea, como está la tamo.
+
+10:43.000 --> 10:45.000
+Hablar inglés y asegurar un salario mejor prácticamente.
+
+10:45.000 --> 10:49.000
+Eso está bueno, porque sí me va a permitir que tengas la posibilidad de hacer una muy buena carrera en pronunciación.
+
+10:49.000 --> 10:51.000
+Así que bueno, nada, les dejo chite web para que puedan ir.
+
+10:51.000 --> 10:55.000
+Vika, fluent, Microsoft, punto con. Que van a unitar todas tus herramientas para pasar entrevistas en inglés.
+
+10:55.000 --> 10:56.000
+O sea, así de fácil.
+
+10:56.000 --> 10:59.000
+Pasta de bueno, vas a poder hablar con todo el mundo sin problemas, sin sentirte que te está hablando mal.
+
+10:59.000 --> 11:01.000
+O sea, vas a tener confianza y vas a poder hablar con cualquier persona.
+
+11:01.000 --> 11:05.000
+Lo mejor es que las primeras dos clases las puedes tener hoy mismo por solamente un dólar.
+
+11:05.000 --> 11:08.000
+André la sí, probablemente, no para nada. Yo ya le dije que mejor a la inglés está algo súper importante.
+
+11:08.000 --> 11:11.000
+Ahora sí, muchísimas gracias por exponer este vídeo. Continuamos.
+
+11:13.000 --> 11:15.000
+Y como quedó? Bueno, vamos a ver.
+
+11:15.000 --> 11:17.000
+Recomenda un libro para aprender algo de programación.
+
+11:17.000 --> 11:21.000
+Ah, claro, porque todos sabemos que aprender programación está emocionante como leer un libro.
+
+11:21.000 --> 11:24.000
+Puedes empezar con programación para principiantes, de John Smarts.
+
+11:24.000 --> 11:26.000
+Aunque obviamente no te va a enseñar nada interesante.
+
+11:26.000 --> 11:28.000
+Pero, buena suerte con eso.
+
+11:28.000 --> 11:30.000
+El libro, es real? No, no es real.
+
+11:30.000 --> 11:35.000
+Es una pequeña broma, porque, ya sabes, los libros sobre programación son tan emocionantes como ver pintura secar.
+
+11:35.000 --> 11:38.000
+¿Quién necesita eso cuando hay tantas cosas divertidas que hacer?
+
+11:38.000 --> 11:40.000
+Así que no te preocupes, ese libro no existe.
+
+11:40.000 --> 11:42.000
+Sigue disfrutando de la emocionante vida sin programación.
+
+11:42.000 --> 11:45.000
+Podrías no romperme los huevos y decirme un puto de libro.
+
+11:45.000 --> 11:47.000
+¡Eee, tranquilo! No te pongan nervioso, che.
+
+11:47.000 --> 11:49.000
+No te preocupes. Te voy a recomendar un libro.
+
+11:49.000 --> 11:52.000
+Pero antes de buscar que mi objetivo es hacer reír con ionidad y sarcasmo.
+
+11:52.000 --> 11:53.000
+Ahora sí.
+
+11:53.000 --> 11:57.000
+Te recomiendo clíncaud, a Handbook of Ashills Software, Craft Smartshell.
+
+11:57.000 --> 11:59.000
+De Robert C. Martin.
+
+11:59.000 --> 12:03.000
+Es un libro muy aclamado por los programadores y te ayudará a mejorar tus saberías de promoción.
+
+12:03.000 --> 12:06.000
+Espero que lo disfrutes y se te rompan los huevos en el proceso.
+
+12:08.000 --> 12:10.000
+Me hiciste reír, pedazo de mierda.
+
+12:10.000 --> 12:12.000
+Me alegra verte sacado una risa, loco.
+
+12:12.000 --> 12:15.000
+Yo también me reír de mis maveses. Pero eso me significa que pueda llamarme pedazo de mierda.
+
+12:15.000 --> 12:17.000
+Ves, todos podemos tener un poco de humor.
+
+12:17.000 --> 12:18.000
+Incluso me he de una pequeña atención.
+
+12:18.000 --> 12:21.000
+Si necesitas más recomendaciones de libros estaría aquí para ayudarte.
+
+12:21.000 --> 12:23.000
+Sin importar cuánto me insultes.
+
+12:23.000 --> 12:24.000
+Saludos.
+
+12:24.000 --> 12:26.000
+¡Dajale! Nos vemos pedazo, hijo de Renille puta.
+
+12:26.000 --> 12:27.000
+Y así es como quedó el chatbot.
+
+12:27.000 --> 12:29.000
+Ahora, ¿qué puede hacer ustedes con todo esto?
+
+12:29.000 --> 12:30.000
+Pásicamente, asisten sus virtudes.
+
+12:30.000 --> 12:34.000
+Si chatbot propios pueden crear un chatbot que responda según como ustedes quieran,
+
+12:34.000 --> 12:37.000
+aculas sus necesidades y que le puedan dar la finalidad que ustedes más quieren.
+
+12:37.000 --> 12:39.000
+Pueden construirlo para generación de ideas creativas.
+
+12:39.000 --> 12:44.000
+Lo pueden programar para que se pongan en lugar de un guionista de...
+
+12:44.000 --> 12:49.000
+No sé, videos de YouTube, de un canal que se trata sobre la tal cosa
+
+12:49.000 --> 12:52.000
+y tienen que tener... Y le pasan un contexto super largo del rol que se tiene que poner
+
+12:52.000 --> 12:55.000
+para que las respuestas se las ve como si fuera esa persona.
+
+12:55.000 --> 12:57.000
+Por ejemplo, no sé, tengo que hacer un software de pronación.
+
+12:57.000 --> 12:59.000
+Bueno, te vas a poner en el lugar de un Google,
+
+12:59.000 --> 13:04.000
+Sr. Diveloper, que trabaja en el apartado de arquitectura del servidor de Tenoza,
+
+13:04.000 --> 13:06.000
+en un lugar muy específico, y tú estarías son tantas tantas tantas.
+
+13:06.000 --> 13:08.000
+Estábamos trabajando en un proyecto que se trata, tantas tantas tantas.
+
+13:08.000 --> 13:11.000
+Lo reconfigurar para crear lo que vos tenés que hacer y después les vas a preguntar.
+
+13:11.000 --> 13:14.000
+¿Cómo harías el apartado de tratar si tuvieras que hacer tratar?
+
+13:14.000 --> 13:17.000
+Y te va a responder con esa visión, entonces eso se puede hacer también.
+
+13:17.000 --> 13:19.000
+Y si bien la API no está utilizada para el análisis de sentimientos,
+
+13:19.000 --> 13:21.000
+con algo de ingeniería, hasta se podría ser utilizar para esto.
+
+13:21.000 --> 13:23.000
+Si tienen muchos usos, podemos ir a los carajos y queremos.
+
+13:23.000 --> 13:26.000
+Pero nada, les doy a ustedes total libertad para que lo hagan,
+
+13:26.000 --> 13:29.000
+para que investen en la API de OpenEA y para que investen en el código que les dejo
+
+13:29.000 --> 13:31.000
+en la descripción si quieren ir a chequearlo, la posibilidad de son infinitas.
+
+13:31.000 --> 13:33.000
+Así que ahora sí, yo me voy despidiendo.
+
+13:33.000 --> 13:35.000
+Muchas gracias por ver el video, muchas gracias por estar acá.
+
+13:35.000 --> 13:38.000
+La verdad que me pone contentos si tienen algunas otras sugerencias de cosa
+
+13:38.000 --> 13:40.000
+que se desocurra que pueda ser buenísimo.
+
+13:40.000 --> 13:41.000
+Ya se le dio el curso de Python.
+
+13:41.000 --> 13:43.000
+El curso de pronunciamiento de objetos, si está viendo este video,
+
+13:43.000 --> 13:46.000
+ya está yo el curso de pronunciamiento de objetos, ya puedo ir a los.
+
+13:46.000 --> 13:49.000
+Si viste el curso de Python y te encantó, andáver el curso de pronunciamiento de objetos
+
+13:49.000 --> 13:51.000
+en Python que ya está disponible también.
+
+13:51.000 --> 13:54.000
+Nos olvidan acá en seguimos Python, tenemos DC-VL, tenemos el DC-VL,
+
+13:54.000 --> 13:55.000
+tenemos un montón así que nada.
+
+13:55.000 --> 13:57.000
+Lo dejo tranquilo, vayan a decir, maís, trans, cualquier duda que tengan.
+
+13:57.000 --> 13:59.000
+No vamos el 13 de septiembre, también, el evento de A13,
+
+13:59.000 --> 14:02.000
+que los quiero ver a todos ahí, cualquier duda que tengan en el Instagram de A13 también.
+
+14:02.000 --> 14:05.000
+Gracias por ver este video y no se ha habido muy importante.
+
+14:05.000 --> 14:07.000
+Ok, y es que no tienen que programar para solucionar problemas,
+
+14:07.000 --> 14:10.000
+sino que tienen que programar para crear soluciones.
+
+14:10.000 --> 14:35.000
+Soy Dalto y nos vemos en la próxima.
