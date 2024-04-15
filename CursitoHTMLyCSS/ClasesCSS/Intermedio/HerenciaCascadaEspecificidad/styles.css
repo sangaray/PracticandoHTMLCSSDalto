@@ -1,50 +1,34 @@
 /*
-SELECTORES AVANZADOS
-CSS básicamente funciona tomando un elemento o seleccionando algo y cambiando o sobreescribiendo sus propiedades
-Dos cosas muy importantes para hacer cualquier cosa con CSS
-1. Saber cómo darle estilo a un elemento, conocer sus propiedades. Las propiedades nos permiten modificar las características de un elemento, las características que sobre todo son visibles
-2. Saber cómo seleccionar eso que queremos modificar. Porque tenemos muchas formas en las que podemos tener problemas si no sabemos seleccionar correctamente
+HERENCIA
+Dice que algunas propiedades se pueden heredar y otras no
 
-Selector por atributo: elemento[atributo="valor"]{}. Si un elemento tienen un atributo definido o ese atributo tienen un valor específico. Si uso el signo $ después del atributo le digo que puede arrancar con algo pero tiene que terminar con lo que figura como valor. Significa termina con...
-El símbolo ^ significa arranaca o comienza con...
-Los tres puntos que aparecen cuando me posiciono sobre el selector significa hay algo más
-Sin los símbolos anteriores ($ o ^) tiene que ser el valor exacto
+Si le pongo un color al body, todo el texto dentro de él toma ese color
 
-Selectores descendientes: elemento1 elemento_dentro_elemento1{}. Selecciona de forma descendente
+color: inherit es el color por defecto que el elemento hereda de su padre o del elemento siguiente hacia arriba
 
-Selector de hijo directo
-elemento_padre > elemento_hijo{}: indica que elemento interno tiene que ser hijo directo de elemento externo
+La propiedad width no es heredable por defecto
+Los elementos en bloque por defecto tienen un width del 100%
 
-Selector Hermano Adyascente: hermano1 + hermano2 {} Permite seleccionar al siguiente elemento, que sigue inmediatamente después del indicado
+initial: indica que la propiedad que tiene ese valor no hereda los valores de su padre, toma el valor que tiene el navegador por defecto.
 
-Selector de Hermanos Generales: da estilo a todos los elementos que vengan después del indicado en su mismo nivel
+unset: restablece al valor inicial y actúa como inherit, revierte al valor del navegador
 
-Los selectores de hijos y hermanos se pueden usar con más de un elemento siguiendo a otro
+revert: intenta primero encontrar el estilo del usuario, si el usuario definió un estilo lo revierte a eso y si no lo revierte a inherit, al valor del navegador
 
-Selector de múltiples elementos: elemento1, elemento2{} Dan estilo a varios tipos de elementos al mismo tiempo, con las mismas propiedades
+Se define el font-family una vez y se hereda en los inputs de los formularios
+El a también podemos hacer que herede los colores
 */
 
-/*SELECTOR POR VALOR DE UN ATRIBUTO*/
-img[src="Severus.jpg"] {
-  width: 100%;
-}
-
-/*SELECTOR DESCENDIENTE DIRECTO Y NO DIRECTO*/
-ul li {
-  color: red;
-}
-
-/*SELECTOR POR HIJO DIRECTO*/
-ul > em {
-  color: green;
-}
-
-/*SELECTOR HERMANO ADYASCENTE*/
-h1 + p {
-  color: blue;
-}
-
-/*SELECTOR DE HERMANOS GENERALES*/
-h1 ~ p {
+/*En este caso todos los elementos toman estos estilos hasta que los cambie independientemente*/
+body {
   color: brown;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: inherit;
+}
+
+p {
+  color: blue;
 }
