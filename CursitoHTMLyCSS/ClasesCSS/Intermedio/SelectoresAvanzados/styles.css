@@ -1,0 +1,17 @@
+/*
+SELECTORES AVANZADOS
+CSS básicamente funciona tomando un elemento o seleccionando algo y cambiando o sobreescribiendo sus propiedades
+Dos cosas muy importantes para hacer cualquier cosa con CSS
+1. Saber cómo darle estilo a un elemento, conocer sus propiedades. Las propiedades nos permiten modificar las características de un elemento, las características que sobre todo son visibles
+2. Saber cómo seleccionar eso que queremos modificar. Porque tenemos muchas formas en las que podemos tener problemas si no sabemos seleccionar correctamente
+
+Selector por atributo: si un elemento tienen un atributo definido o ese atributo tienen un valor específico. Si uso el signo $ después del atributo le digo que puede arrancar con algo pero tiene que terminar con lo que figura como valor. Significa termina con...
+El símbolo ^ significa arranaca o comienza con...
+Los tres puntos que aparecen cuando me posiciono sobre el selector significa hay algo más
+Sin los símbolos anteriores ($ o ^) tiene que ser el valor exacto
+*/
+
+/*SELECTOR POR VALOR DE UN ATRIBUTO*/
+img[src="Severus.jpg"] {
+  width: 100%;
+}
