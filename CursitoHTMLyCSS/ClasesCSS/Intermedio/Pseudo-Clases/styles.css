@@ -1,0 +1,118 @@
+/*
+  PSEUDO-CLASES
+  Son palabras clave que nos permiten seleccionar un estado específico de un elemento. Cuando la agrego voy a poder modificar el elemento cuando esté eneste estado
+  :hover selecciona el elemento cuando paso el mouse por encima. Este evento es mouse over, cuando el mouse está por encima del elemento se activa la regla 
+
+  :active define el color de un elemento cuando está activo. Se aplica con los dos clicks izquierdo y derecho
+
+  :first-child aplica la regla sólo al primer elemento que encuentra del tipo indicado
+
+  :last-child aplica la regla sóloal último elemente que encuentre dde ese tipo
+
+  :nth-child(número elemento) selecciona al elemento indicado entre los paréntesis. Si entre paréntesis ponemos un número acompañado por n, va a comenzar en el elemento indicado y va a saltar de número en numero. Por ejemplo
+  :nth-child(3n) a partir del tercer elemento va a saltar de tres en tres. Esta pseudo-clase se usa para dar estilo a tablas. Tiene en cuenta a todos los hijos
+
+  :nth-of-type() hace lo mismo pero sólo con elementos del mismo tipo. Tiene sólo en cuenta a los elementos del mismo tipo
+
+  :not() no aplica la regla al elemento, clase o id indicado entre paréntesis
+
+  :empty selecciona sólo aquellos elementos del tipo indicado que estén vacíos. Se usa, por ejemplo. para en caso de tener un contenido mostrar un estilo y en caso de estar vacío que no se muestre nada
+
+  :root selecciona al elemento raíz. Va siempre arriba de todo en el css y no acompaña a ningún elemento, va solo. Es el elemento base, y todos los demas lo heredan
+
+  :checked selecciona un checkbox sólo si está chequeado o tildado
+
+  :link y :visited se usan con el elemento a, el primero lo selecciona si el link no fue visitado aún, y el segundo se selecciona si el link ya fue visitado
+
+  :invalid se usa con input y se selecciona si lo que se ingresó al input no es válido
+
+  :valid se selecciona si lo que se introdujo al input es válido
+
+  Material de referencia
+  mdn pseudo-clases, muestra toda la lista de pseudo-clases de css.
+
+*/
+
+:root {
+  color: #c300ff;
+}
+
+h1 {
+  color: #48e;
+  font-family: sans-serif;
+  margin: 30px;
+}
+
+/* Cuando pasamos el mouse por encima de h1 */
+h1:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+/* Mientras se esté clickeando h1 */
+h1:active {
+  background-color: #999;
+  color: #fff;
+}
+
+/* Seleccionando el primero li */
+li:first-child {
+  color: #f00;
+}
+
+/* Seleccionando el segundo li */
+li:nth-child(2) {
+  color: #0f0;
+}
+
+/* Seleccionando el segundo li */
+li:nth-child(3n) {
+  color: #c300ff;
+}
+
+li:nth-of-type(2) {
+  color: #fff;
+}
+
+/* Seleccionando el último li */
+li:last-child {
+  color: #00f;
+}
+
+/* Seleccionando los LI dentro de la clase lista pero que no tengan la clase excluir */
+.lista li:not(.excluir) {
+  color: red;
+}
+
+/* Seleccionar el div en cado de estar vacío */
+div:empty {
+  background-color: #0f0;
+  padding: 30px;
+}
+
+input[type="checkbox"] {
+  margin: 50px;
+}
+
+/* Seleccionar los checkbox chequeados */
+input[type="checkbox"]:checked {
+  margin: 0px;
+}
+
+/* Seleccionar los enlaces no visitados */
+a:link {
+  color: red;
+}
+
+/* Seleccionar los enlaces visitados */
+a:visited {
+  color: green;
+}
+
+input:invalid {
+  color: red;
+}
+
+input:valid {
+  color: green;
+}
