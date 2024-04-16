@@ -15,3 +15,7 @@ section :is(.elemento1, .elemento2, .elemento3) {
 section :where(.elemento1, .elemento2, .elemento3) {
   color: blue;
 }
+
+section:has(.elemento5) {
+  background-color: #000;
+}
