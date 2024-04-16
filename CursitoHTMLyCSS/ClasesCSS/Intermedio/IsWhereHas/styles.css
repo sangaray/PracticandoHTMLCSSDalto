@@ -1,0 +1,9 @@
+/*
+IS, WHERE Y HAS
+:is agrupa los elementos indicados entre paréntesis
+
+*/
+
+section :is(.elemento1, .elemento2, .elemento3) {
+  color: red;
+}
