@@ -1,9 +1,17 @@
 /*
 IS, WHERE Y HAS
-:is agrupa los elementos indicados entre paréntesis
+:is agrupa los elementos indicados entre paréntesis. Cambia la especificidad de selcción
+
+:where no cambia la especificidad de selección. Tiene la misma función que is
+
+:has modifica el elemento indicado solo en el caso de que ese elemento tenga lo que se encuntra entre paréntesis, si eso no existe el cambio no se realiza
 
 */
 
 section :is(.elemento1, .elemento2, .elemento3) {
   color: red;
+}
+
+section :where(.elemento1, .elemento2, .elemento3) {
+  color: blue;
 }
