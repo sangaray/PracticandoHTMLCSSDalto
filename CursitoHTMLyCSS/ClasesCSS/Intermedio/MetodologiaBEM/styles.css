@@ -1,0 +1,68 @@
+/*
+METODOLOGÍA BEM
+BEM: Block Element Modifier. Se compone de Bloques, elementos y modificadores
+Metodología: es una forma específica de trabajar. 
+En CSS se utiliza una metodología porque:
+1. Nos permite reutilizar código que es el propósito principal de esta metodología, que es optimizar código
+Por ejemplo: si tenemos dos botones diferentes lo que hacemos es darle un estilo a un botón y otro estilo a otro botón, entonces tenemos dos botones diferentes pero hay partes del código que se repiten. 
+Esta metodología es una clase de estilo predefinido nos permite crear una base que luego con los modificadores podemos ir modificando para no tener que estar escribiendo el código una y otra y otra vez
+2. Se resuelven problemas de especificidad. Si van a generadores de especificidad o páginas que revisan la especificidad de su código normalmente es complicada la forma con que manejan la especificidad los proyectos que no trabajan con una metodología. BEM nos permite crear clases para con sólo verlas saber a que se refieren
+3. Tienen código más legible. Si voy a un elemento sé que hace, donde está y qué quiero modificar
+
+Bloque: componente independiente que no depende de nadie para existir. Ejemplo: una barra de navegación
+
+Elemento: hace refeencia a una parte de un bloque, un pedazo del bloque que por sí solo no tiene sentido pero dentro del bloque sí
+
+Modificadores; son una forma de modificar un bloque o un elemento
+
+ESTILO SIN METODOLOGÍA BEM
+.lista {
+  border: 2px solid #000;
+}
+
+.ingrediente {
+  color: grey;
+  margin: 10px 0;
+  list-style: square;
+}
+
+.ingrediente-importante {
+  color: blue;
+  margin: 10px 0;
+  list-style: square;
+}
+
+.ingrediente-danino {
+  color: red;
+  margin: 10px 0;
+  list-style: square;
+}
+
+La propiedad opacity cambia la opacidad o transparencia de un elemento
+*/
+
+/* ESTILO CON METODOLOGÍA BEM */
+.lista {
+  border: 2px solid #000;
+}
+
+.lista__item {
+  color: grey;
+  margin: 10px 0;
+  list-style: square;
+}
+
+/* MODIFICACIÓN DE UN BLOQUE */
+.lista--vieja {
+  opacity: 0.3;
+  background-color: #ccc;
+}
+
+/* MODIFICACIÓN DE ELEMENTOS */
+.item--danino {
+  color: red;
+}
+
+.item--importante {
+  color: blue;
+}

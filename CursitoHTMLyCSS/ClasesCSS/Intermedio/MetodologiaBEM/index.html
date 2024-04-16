@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>INGREDIENTES</h1>
+    <!-- ESTA LISTA NO USA METODOLOGÍA BEM 
+    <ul class="lista">
+      <li class="ingrediente-danino">SAL</li>
+      <li class="ingrediente">PAPA</li>
+      <li class="ingrediente-importante">HARINA</li>
+      <li class="ingrediente">AGUA</li>
+    </ul>
+  -->
+    <!-- 
+      ESTA LISTA TRABAJA LA METODOLOGÍA BEM 
+      Los bloques se tienen que llamar como la funcionalidad del mismo, en este caso lista
+      Los elementos se nombran con el nombre del componente dos guiones bajos y el tipo de elemento (nombre del elemento). Ejemplo: lista__item
+      
+      Clase modificadores: es el nombre de la clase de los elementos a modificar, se escribe el nombre o tipo de elemento, dos guiones medios y la modificación que se va hacer. Ejemplo: item--danino. Se agrega como una segunda clase
+    -->
+    <!-- LA LISTA COMPLETA ES UN BLOQUE -->
+    <ul class="lista">
+      <li class="lista__item item--danino">SAL</li>
+      <li class="lista__item">PAPA</li>
+      <li class="lista__item item--importante">HARINA</li>
+      <li class="lista__item">AGUA</li>
+    </ul>
+    <ul class="lista lista--vieja">
+      <li class="lista__item item--danino">SAL</li>
+      <li class="lista__item">PAPA</li>
+      <li class="lista__item item--importante">HARINA</li>
+      <li class="lista__item">AGUA</li>
+    </ul>
+    <ul class="lista">
+      <li class="lista__item item--danino">SAL</li>
+      <li class="lista__item">PAPA</li>
+      <li class="lista__item item--importante">HARINA</li>
+      <li class="lista__item">AGUA</li>
+    </ul>
+  </body>
+</html>
