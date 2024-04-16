@@ -1,16 +1,21 @@
 /*
 IS, WHERE Y HAS
+Estas son tres nuevas pseudo-clases, has es la más nueva, y chrome recomienda su uso
+
 :is agrupa los elementos indicados entre paréntesis. Cambia la especificidad de selcción
 
 :where no cambia la especificidad de selección. Tiene la misma función que is
 
-:has modifica el elemento indicado solo en el caso de que ese elemento tenga lo que se encuntra entre paréntesis, si eso no existe el cambio no se realiza
+:has modifica el elemento indicado solo en el caso de que ese elemento tenga lo que se encuntra entre paréntesis, si eso no existe el cambio no se realiza. También sirve como un medio de validación más estético
 
 */
 
+/* Modificando los elementos 1, 2 y 3 que están dentro de algún section */
 section :is(.elemento1, .elemento2, .elemento3) {
   color: red;
 }
+
+/* Si no queremos que cambie la especificidad usamos :where */
 
 section :where(.elemento1, .elemento2, .elemento3) {
   color: blue;
@@ -18,4 +23,34 @@ section :where(.elemento1, .elemento2, .elemento3) {
 
 section:has(.elemento5) {
   background-color: #000;
+  color: #fff;
+}
+
+ul + div {
+  color: blue;
+}
+
+/* En caso de que a un ul le siga un div, modificamos el ul */
+ul:has(+ div) {
+  background-color: #000;
+  color: #fff;
+}
+
+div {
+  padding: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+/* colorea tanto el label como el input */
+label:has(input:valid),
+input:valid {
+  color: green;
+}
+
+label:has(input:invalid),
+input:invalid {
+  color: red;
 }
