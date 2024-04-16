@@ -109,10 +109,12 @@ a:visited {
   color: green;
 }
 
+/* Seleccionando los inputs inválidos */
 input:invalid {
   color: red;
 }
 
+/* Seleccionando los inputs válidos */
 input:valid {
   color: green;
 }
