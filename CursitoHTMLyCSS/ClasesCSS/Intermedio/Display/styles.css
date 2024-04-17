@@ -4,7 +4,9 @@
   block: convierte el elemento en un bloque, lo primero que hacemos es decirle que ocupe todo el ancho disponible, lo segundo es que comienza una nueva línea. Permiten un margin, permiten un padding, pero si le saco el block, acepta margin y/padding
   inline: hace que un bloque se convierta en en línea algunos elemento son inline,están en la misma línea. No aceptan margin ni padding un poco se rompe. Sólo acepta margina y padding de forma horizontal, de forma vertical no afectan el flujo del diseño, no aceptan cambios con width o height, el tamaño se ajusta al contenido 
 
-  inline-block: no ocupan todo el ancho, no empeizan una nueva línea y se pueden apilar
+  inline-block: no ocupan todo el ancho, no empeizan una nueva línea y se pueden apilar. Acepta width y height
+
+  none: el elemento sigue estanod pero no se muestra y no ocupa espacio en la página y los elementos adyascentes actúan como si no existiera, no forma el flujo de la página
 */
 
 body {
@@ -39,6 +41,7 @@ p {
 
 .nav__list {
   margin: 0;
+  text-align: center;
 }
 
 .nav__item {
@@ -47,9 +50,27 @@ p {
   background-color: #48e;
 }
 
+.nav__item:hover {
+  background-color: #59e;
+}
+
 .nav__link {
   background-color: #48e;
   text-decoration: none;
   font-size: 1.5em;
+  color: #fff;
+}
+
+.link--button {
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 4px 15px;
+  color: #48e;
+  border-radius: 3px;
+  margin-left: 60px;
+}
+
+.link--button:hover {
+  background-color: transparent;
   color: #fff;
 }
