@@ -1,0 +1,25 @@
+/*
+  POSICIÓN ABSOLUTA
+  
+*/
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  color: #fff;
+}
+
+.box--blue {
+  background-color: blue;
+}
+
+/* Debería ser .box:first-child, pero no me funcionó, sólo me funciona dentro de otro contenedor o con su propia clase y con first-of-type. A Dalto le funciona como indico arriba */
+.box:first-of-type {
+  background-color: red;
+}
