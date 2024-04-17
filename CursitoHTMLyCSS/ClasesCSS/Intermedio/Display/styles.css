@@ -3,10 +3,13 @@
   display 
   block: convierte el elemento en un bloque, lo primero que hacemos es decirle que ocupe todo el ancho disponible, lo segundo es que comienza una nueva línea. Permiten un margin, permiten un padding, pero si le saco el block, acepta margin y/padding
   inline: hace que un bloque se convierta en en línea algunos elemento son inline,están en la misma línea. No aceptan margin ni padding un poco se rompe. Sólo acepta margina y padding de forma horizontal, de forma vertical no afectan el flujo del diseño, no aceptan cambios con width o height, el tamaño se ajusta al contenido 
+
+  inline-block: no ocupan todo el ancho, no empeizan una nueva línea y se pueden apilar
 */
 
 body {
   margin: 0;
+  font-family: sans-serif;
 }
 
 div {
@@ -19,15 +22,34 @@ a {
   color: #fff;
   display: block;
   border: 1px solid #000;
-  margin: 20px;
-  padding: 20px;
   opacity: 0.6;
 }
 
 p {
   background-color: #000;
   color: #fff;
-  display: inline;
+  display: inline-block;
   margin: 5px;
   padding: 20px;
+}
+
+.nav {
+  background-color: #48e;
+}
+
+.nav__list {
+  margin: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  padding: 10px;
+  background-color: #48e;
+}
+
+.nav__link {
+  background-color: #48e;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #fff;
 }
