@@ -1,0 +1,47 @@
+/*
+  POSICIÓN RELATIVA Y ABSOLUTA
+  Es una forma de posicionar elementos
+
+  Contexto de Apilamiento: permite apilar u ordenar los elementos en capas en el eje z, es como tridimensionalizar el html. Podemos hacer que una capa aparezca detrás de la otra o adelante de otra
+
+  relative: le dice al navegador, elemento mantené tu posición original pero yo si quiero ahora puedo moverte arriba o abajo o hacia los costados y además vas a ser un putno de referencia para los elementos que estén adentro tuyo. Mantengo el lugar original de la caja pero puedo moverme visualmente. El siguiente elemento parte al final de la posición original del elemento anterior aunque a este lo hayamos movido 
+  
+  Tenemos cuatro propiedades que se aplican a la posición
+  top, bottom, left y right: estas indican cuanto se va a seplazar desde arriba, desde abajo, desde la iquierda o desde la derecha, y el desplazamiento es en sentido contrario a su nombre. Ejemplo si uso top, desde arriba se mueva una x distancia hacia abajo, y así con todas
+  top y left tienen prioridad sobre bottom y right y se van a aplicar no importa si uso las últimas
+  position funciona como capas y cada una nueva se ubica por encima de la anterior
+
+  z-index: permite mover un elemento en el eje <, adelante y atrás,usa sólo un número, no lleva ninguna unidad. El elemento que quiere ubicarse por encima o delante de otro debe tener un valor de z-index mayor que el que va a quedar por detrás. Una buena técnica es darle valores de 10 en adelante y luego de diez en diez. Sólo funciona si las cajas están posicionadas, si no, no
+
+  static: no se puede considerar que un elemento está posicionado cuando está static
+*/
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.box--blue {
+  background-color: blue;
+  color: #fff;
+  top: 70px;
+  left: 20px;
+  z-index: 20;
+}
+
+/* Debería ser .box:first-child, pero no me funcionó, sólo me funciona dentro de otro contenedor o con su propia clase y con first-of-type. A Dalto le funciona como indico arriba */
+.box:first-of-type {
+  top: 150px;
+  left: 40px;
+  background-color: red;
+  z-index: 30;
+}
