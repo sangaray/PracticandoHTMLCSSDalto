@@ -1,25 +1,40 @@
 /*
   POSICIÓN ABSOLUTA
-  
+  El elemento ya no ocupa espacio en la página, y se coloca encima del elemetno que le sigue. Le dice al objeto que no ocupe lugar en el flujo de la página pero su posición sigue siendo absoluta
+  El desplazamiento va aser en función del html, del margen superior iquierdo y no relativo a su posición original como en el caso de relative
+  Pero si el contenedor está posicionado con relative, el punto de referencia o de partida del elemento con posición absoluta va a ser el contenedor
+  Para top, bottom, left y right el elemento con position absolute va a tomar como referencia los bordes del contenedor que tenga posicion relativ. Si ponemos estas cuatro propiedades en cero y damos margin auto al elemento, este se centra. 
+  Pierde el espacio en la página.
+  Con relative los objetos toman como punto de referencia su propia posición original, pero con absolute toman como pumto de referencia al elemento contenedor
 */
 
 body {
   margin: 0;
   background-color: #000;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.contenedor {
+  border: 2px solid #fff;
+  margin: 50px;
+  position: relative;
 }
 
 .box {
   width: 100px;
   height: 100px;
-  background-color: orange;
+  background-color: #ca6;
   color: #fff;
 }
 
 .box--blue {
-  background-color: blue;
+  background-color: #37e;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-/* Debería ser .box:first-child, pero no me funcionó, sólo me funciona dentro de otro contenedor o con su propia clase y con first-of-type. A Dalto le funciona como indico arriba */
-.box:first-of-type {
-  background-color: red;
+.box--red {
+  background-color: #e53;
 }
