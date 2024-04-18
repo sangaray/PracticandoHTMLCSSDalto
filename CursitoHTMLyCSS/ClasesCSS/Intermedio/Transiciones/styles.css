@@ -1,0 +1,42 @@
+/*
+  TRANSICIONES
+  Son el cambio de una propiedad entre un valor y otro
+  Para que la tansición se aplique ya tiene que estar en el elemento original
+  
+  transition-property: cuál es la propiedad que se quiere transicionar.
+  Usar el valor all para eta propiedade es una mala práctica porque hace que el navegador trabaje mucho, se recomienda indicar cada propiedad en la que se quiere aplicar la transición separadas por comas
+
+  transition-duration: cuánto queremos que dure la transición
+
+  transition-delay: cuánto tiempo va a tardar en comenzar la transición
+
+  Hay que tener cuidado cuando se transiciona entre valores que no son compatibles, como auto a 20px por ejemplo
+
+  Curvas de Bezier: 
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-delay: 2s;
+  color: red;
+}
+
+.box:hover {
+  background-color: blue;
+  font-size: 80px;
+  color: #fff;
+}
