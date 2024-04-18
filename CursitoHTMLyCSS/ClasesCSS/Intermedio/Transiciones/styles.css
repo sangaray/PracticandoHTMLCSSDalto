@@ -12,31 +12,36 @@
 
   Hay que tener cuidado cuando se transiciona entre valores que no son compatibles, como auto a 20px por ejemplo
 
-  Curvas de Bezier: 
+  Curvas de Bezier: es una ecuación matemática que permite definir una curva paramétrica, tiene cuatrao parámetros que controlan la dirección y la intensidad de la animación
+
+  Material de referencia:
+  cubic-bezier.com
+
+  transition-timing-function: cambiar la aceleración
+  ease: rápido a lento
+  ease-in:
+  ease-in-out:
+  ease-out:
+
 */
 
 body {
   margin: 0;
   font-family: sans-serif;
+  height: 100vh;
 }
 
 .box {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   background-color: red;
-  margin: auto;
   margin-top: 50px;
-  font-size: 60px;
-  text-align: center;
-  font-weight: bold;
-  transition-property: background-color, color;
-  transition-duration: 1s;
-  transition-delay: 2s;
+  transition: left 1s cubic-bezier(0.63, 0.11, 0.25, 0.89) 2s; /* shorthand de transition */
   color: red;
+  position: relative;
+  left: 0;
 }
 
-.box:hover {
-  background-color: blue;
-  font-size: 80px;
-  color: #fff;
+body:hover .box {
+  left: 400px;
 }
