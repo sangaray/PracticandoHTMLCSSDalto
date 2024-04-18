@@ -1,0 +1,71 @@
+/*
+  POSITION FIXEN Y STICKY
+  Fixed: al principio parece que está absolute. Para arrancar, se va del flujo natural de la página, el espacio reservado se eliminia. Siempre se vva a posicionar respecto a la ventana, La característica principal es que si hacemos scroll se va a quedar siempre en el lugar
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.overlay {
+  background: linear-gradient(to top, #fff, transparent);
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+}
+
+.contenedor {
+  padding: 150px;
+  background-color: #00f;
+  position: relative;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.box {
+  height: 60px;
+  width: 200px;
+  background-color: red;
+  position: fixed;
+  right: 0;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-right: 0;
+  box-shadow: 0 0 40px #0009;
+  z-index: 30;
+}
+
+.box-fixed {
+  height: 60px;
+  width: 200px;
+  background-color: #f00;
+  position: sticky;
+  top: 100px;
+  z-index: 40;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.first {
+  top: 30px;
+}
+
+.last {
+  top: 170px;
+}
+
+.last2 {
+  top: 240px;
+}
