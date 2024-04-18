@@ -1,6 +1,8 @@
 /*
   POSITION FIXEN Y STICKY
   Fixed: al principio parece que está absolute. Para arrancar, se va del flujo natural de la página, el espacio reservado se eliminia. Siempre se vva a posicionar respecto a la ventana, La característica principal es que si hacemos scroll se va a quedar siempre en el lugar
+  
+  STICKY: actúa como relative hasta que llega al lugar en que se le indicó que se quede fija. Al principio se desplaza con la página y cuando llega al valor que se le indicón en top, bottom y desde ahí se queda fijo
 */
 
 body {
