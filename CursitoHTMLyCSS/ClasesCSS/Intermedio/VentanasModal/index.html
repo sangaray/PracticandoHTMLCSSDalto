@@ -1,0 +1,69 @@
+<!-- 
+  ETIQUETA DIÁLOG
+  Se usa para crear ventanas modal, se coloca todo el contenido entre la etiqueta de apertura y la de cierre.
+  Cualquier botón dentro de un form con el method dialog y que esté entre las etiquetas dialog cierran la ventana
+  Ejemplo:
+  <dialog open>
+    <div class="modal__content">
+        <h2 class="modal__title">VENTANA MODAL</h2>
+        <p class="modal__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab ea, perferendis modi voluptatem doloremque odit pariatur  emporibus consequatur, dolores minima commodi aspernatur beatae. Similique laborum, vitae aspernatur numquam rem distinctio?
+        </p>
+        <form method="dialog">
+          <button class="modal__close-button"></button>
+        </form>
+      </div>
+  </dialog>
+  open hace que la ventana se muestro si no está no se muestra
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ventana Modal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal__content">
+        <h2 class="modal__title">VENTANA MODAL</h2>
+        <p class="modal__text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab ea,
+          perferendis modi voluptatem doloremque odit pariatur temporibus
+          consequatur, dolores minima commodi aspernatur beatae. Similique
+          laborum, vitae aspernatur numquam rem distinctio?
+        </p>
+        <span class="modal__close-button">X</span>
+      </div>
+    </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+    perferendis ad dolorum laudantium illum temporibus praesentium deserunt
+    optio. Dicta dolorem saepe vero fugit repellendus sint veritatis ullam rerum
+    ipsa ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+    commodi aspernatur quibusdam nostrum soluta aperiam pariatur vel rem
+    accusamus, minima quod blanditiis voluptate, dicta molestias perferendis
+    iure assumenda tempore nisi? Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Consequatur error molestias mollitia, quasi sed totam
+    eveniet itaque inventore maxime praesentium laboriosam quos magni doloremque
+    possimus, quidem impedit obcaecati perspiciatis sit. Lorem ipsum dolor sit
+    amet consectetur adipisicing elit. Tempora nobis necessitatibus dolor
+    placeat quas cum harum cumque possimus, assumenda eligendi nisi incidunt
+    facilis quidem beatae dicta magnam alias! Fugit, non? Lorem ipsum, dolor sit
+    amet consectetur adipisicing elit. Illum consequuntur veniam quas, nihil
+    sunt voluptate blanditiis hic ut dignissimos, neque, facere quibusdam?
+    Veritatis recusandae ipsa iure odit libero ea tempore? Lorem ipsum dolor sit
+    amet consectetur, adipisicing elit. Quod ex ipsam nostrum soluta
+    perspiciatis illum repudiandae. Numquam, illo aliquid quos necessitatibus
+    consequuntur laboriosam nostrum nesciunt quod accusantium quo recusandae
+    corporis..
+    <script>
+      document
+        .querySelector(".modal__close-button")
+        .addEventListener("click", () => {
+          document.querySelector(".modal").style.display = "none";
+        });
+    </script>
+  </body>
+</html>
