@@ -1,0 +1,32 @@
+/*
+  OBJECT FIT Y OBJECT POSITION
+  Si cambiamos el tamñano de un elemento, este sigue teniendo un contenido
+
+  Object Fit: determina como se comporta la imagen o video si le damos un alto y un ancho.
+
+  - fill: propiedad por defecto, rellena el contenido y se adapta, no mantiene relación de aspecto.
+
+  - contain: hace lo mismo que background-contain, hace que la imagen entre por lo menos una vez en el contenedor y que una de las dimensiones de la imagen entre al 100%
+
+  - conver: lo único que hace es adaptarse llenando todo el espacio contenedor
+
+  - none: mantiene la resolución original de la imagen
+
+  object-position: permite ubicar la imagen dentro del contenedor con top, bottom, left, right, pixeles
+
+*/
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+img{
+  width: 1400px;
+  height: 1200px;
+  margin: auto;
+  object-fit: none;
+  border: 2px solid #000;
+  margin-top: 50px;
+  margin-left: 50px;
+}
