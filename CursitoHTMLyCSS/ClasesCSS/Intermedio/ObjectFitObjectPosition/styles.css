@@ -10,9 +10,11 @@
 
   - conver: lo único que hace es adaptarse llenando todo el espacio contenedor
 
-  - none: mantiene la resolución original de la imagen
+  - none: mantiene la resolución original de la imagen. no tomaen cuenta el alto y el ancho
 
-  object-position: permite ubicar la imagen dentro del contenedor con top, bottom, left, right, pixeles
+  - scale-down: toma la opción más chica
+
+  object-position: permite ubicar la imagen dentro del contenedor con top, bottom, left, right, pixeles. 
 
 */
 
