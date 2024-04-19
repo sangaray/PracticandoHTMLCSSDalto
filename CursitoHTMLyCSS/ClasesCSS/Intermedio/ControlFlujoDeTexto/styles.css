@@ -23,10 +23,10 @@
 
   - anywhere: las palabras largas las rompe
 
-  - balance: balancea la distribución de palabras para que quede algo estético
+  - balance: balancea la distribución de palabras para que quede algo estético. Aplica a títulos
 
   text-wrap
-  - pretty: evita las viudas y los huérfanos en los textos
+  - pretty: evita las viudas y los huérfanos en los textos. Aplica a 
 */
 
 body {
