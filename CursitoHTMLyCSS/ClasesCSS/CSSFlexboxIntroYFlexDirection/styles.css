@@ -1,0 +1,40 @@
+/*
+  FLEXBOX
+  Es un estilo de box model. Hay varios tipos de box model: en línea, en bloque, flexbox
+  Es un módulo de CSS, qué hacemos cuando los contenidos de las cajas sean dinámicos, no los conozcamos o vayan cambiando? Necesitamos cajas con cosas dentro que se adapten al tamaño, necesitamos que las cajas sen flexibles y el contenido también
+  A medida que cambia la resolución, el contenido va cambiando y se adapta, ubicándose de distintas maneras
+  A una caja (caja contenedora) le vamos a dar la propiedad display flex y esa propiedad hace que todas las cajas que están adentro tengan toda la magia. Esta caja va a tener un comportamiento de bloque, pero lo que está dentro va a tener un comportamiento flexible, a ellos es a quienes se le van a aplicar las propiedades
+  inline-flex permite tener dos cajas con los elementos de adentro flexibles
+  Las cajas contenedoras son prácticamente un bloque, pero cuando le decimos flex, el contenido de adentro para a ser flexible, entonces no es a la caja grande a quien se le van a aplicar estas propiedades sino que es a las cajas que están adentro pero para hacer esto debemos darle propiedades a la caja y propiedades a su contenido
+  Tenemos dos cosas:  
+  1. La caja contenedora: es el flexbos, la caja flexible
+  2. Los flex items: son los elementos que están dentro de la caja contendora y es donde pasa la magie
+  Una característica de flexbos es que es unidireccional, apunta en una sola dirección, y unidimensional porque tiene una sola dimensión, el eje x O el eje y. Esa es la diferencia con grid que es bidireccional y bidimensional porque se mueve en el eje x Y en el eje y
+  
+  Row: alinea los elementos en fila, horizontal, para nosotros de izquierda a derech
+  
+  Row-reverse: invierte la dirección, sigue estando horizontal, en fila, pero va de derecha a izquierda, en dirección contraria
+  
+  Column: alinea los items de arriba hacia abajo, en forma vertical
+
+  Column-reverse: invierte la dirección a de abajo hacia arriba, sigue estando en forma vertical
+
+  Tenemos dos ejex: 
+  Main Axis: 
+  Con Row en nuestro caso va de izquierda a derecha, horizontalmente. 
+  Con Column va de arriba hacia abajo, verticalmente. 
+  Con Row reserse sigue horizontal pero cambia la dirección, pasa a ir de derecha a izquierda. 
+  Con column reverse sigue vertical, pero pasa a ir de abajo hacia arriba
+  
+  Cross Axis: sirve para alinear los eleentos, para definir sus posiciones
+  Con Row va de arriba hacia abajo, verticalmente. Cruza al eje principal. 
+  Con Column va de izquierda a derecha, horizontalmente. 
+  Con Row reserse sigue vertical y no cambia la dirección, queda de arriba hacia abajo
+  Con column reverse sigue horizontal y no cambia la dirección, sigue de izquierda a derecha 
+
+  Dentro de la caja flexible voy a poder ubicar los elementos donde quiera
+
+  gap: separa los elementos entre sí, se usa en lugar de margin
+
+  Para que flexbox exista tenemos que tener una caja principal a la que le vamos a dar display flex y otras cajas que van a estar dentro de la principal que son los flex items. Algunas propiedades se le dan a la caja padre o flexbox y otras a las cajas hijas o flex items, estos últimos tienen que ser hijos directos
+*/
