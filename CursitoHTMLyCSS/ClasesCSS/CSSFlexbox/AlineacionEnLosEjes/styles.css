@@ -1,17 +1,30 @@
 /*
-  FLEX WRAP y FLEX FLOW
-  Flex wrap permite controlar los flex items cuando el espacio del contenedor es insuficienta. Se le da a la caja contenedora, no a los hijos
+  ALINEACIÓN EN LOS EJES
+  Flex Wrap - Flex Flow
+  Estamos aplicando propiedades a la caja padre o caja flexible.
 
-  - nowrap valor por defecto, no se pueden bajar los flex items
+  Propiedades:
+  justify-content es una propiedad que habla del eje principal, lo que hacemos es alinear el contenido en el eje principal, que va a depender si trabajamos row o column. Con jesta propiedad lo único que hacemos e mover los flex items en el eje principal, pero mantiene la separación y otras propiedades
+  - start: antes se usaba flex-start, pero ahora ya no es necesario usar flex delante del valor, este es el valor por defecto. Significa que va en dirección del texto
+  - end: alinea al final del eje
+  - center: centra los flex items
+  Con esos tres valores lo único que hacemos e mover los flex items en el eje principal, pero mantiene la separación y otras propiedades. Pero hay tres más
+  - space-between: pone el primer item al principio del eje, el último al final y los del medio distribuyen su espacio para queda a la misma distancia uno del otro, los únicos que cambian si agrego más elementos son los del medio
+  - space-around: hace que cada elemento tenga una separación igual, cada elemento tiene un margan izquierdo igual al margen derecho, los márgenes no se superponen y las distancias no son todas iguales. Los elementos de los extremos tiene un distancia al borde distinta de la que hay entre los elementos centrales
+  - space-evenly: dice que va a haber la misma distencia entre todos los elementos, y el primero y el segundo van a tener la misma distancia que hay entre los elementos centrales
+  Estos valores funcionan también con column sólo que se alinea verticalmente.
+  Los reverse sólo cambian el orden de los elementos pero no la posición de ordenamiento
+  
+  align-items: alinea sobre el eje cruzado. Lo usamos cuando tenemos sólo una línea
+  - stretch: estirate para llenar el corss axis completo, este es el valor por defecto. Los elementos va a crecer siempre en relación al ítem más alto
+  - start: mantiene el height de los elementos, y lo posiciona al comienzo
+  - end: posiciona al final
+  - center: centra los elementos
+  - baseline: los ítems se alinea en la línea base del texto, se pone a la misma altura para que quede el texto medianamente bien alineado
 
-  - wrap permite a los flex items pasar a la siguiente línea. Todos los elementos están alineados de una forma extraña
+  align-content: se alinea en el cross axis tambien. Sin esta propiedad es como que divide al contenedro en dos filas y el contenido se alinea en función de esas dos filas. La usamos cuando tenemos varias líneas aplican los mismos valores de justify-content
 
-  - wrap reverse es lo mismo pero los elementos se ordenan al revés
-
-  Flex flow permite definir dirección y wrap. No es muy usado
-
-  flex grow indica cuanto puede crecer
-  flex basis indica lo máximo que se puede recortar
+  Una técnica muy común y muy usada es usar el flexbox sólo para centra un elemento vertical y horizontalmente con margin auto, esto centra el elemento en el centro del contenedor
 */
 
 body{
@@ -28,12 +41,15 @@ div, body{
   flex-flow: row wrap;
   border: 2px solid #000;
   margin: 20px;
+  justify-content: space-evenly;
+  align-items: start;
+  align-content: start;
+  height: 300px;
 }
 
 .flex-item{
   width: 100px;
   background-color: #800;
-  margin: 10px;
   color: #fff;
   font-size: 40px;
   text-align: center;
