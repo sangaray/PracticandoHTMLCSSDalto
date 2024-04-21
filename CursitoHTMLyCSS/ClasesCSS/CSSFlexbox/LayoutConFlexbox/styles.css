@@ -1,0 +1,54 @@
+/*
+  LAYOUT CON FLEXBOX
+  Layout es básicamente la forma que tenemos nosotros de distribuir los elementos del contenido para que entre dentro de nuestra página
+*/
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #272117;
+  color: #fff;
+}
+
+.header{
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url("unicornio_real1.jpg");
+  display: flex;
+ background-size: cover;
+  }
+
+.header__overlay{
+  height: 100vh;
+  width: 100%;
+  background-color: #80562699;
+  position: absolute;
+  z-index: 1;
+}
+
+.header__item-container{
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+.header__item-container p{
+  text-wrap: pretty;
+}
+
+.header__img{
+  min-width: 250px;
+  max-width: 40%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 20px;
+}
+  
+h1{
+  margin: 0;
+  font-size: 3.6rem;
+  text-wrap: balance;
+}
