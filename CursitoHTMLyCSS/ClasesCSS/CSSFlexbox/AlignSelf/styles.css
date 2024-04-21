@@ -1,0 +1,44 @@
+/*
+  ALIGN SELF
+  Esta propiedad se le da al hijo, porque es para agarrar un elemento puntual y llevarlo donde quiera
+  Permite alinear a un hijo de forma diferente de la que se alineó
+  Sólo funciona cuando usamos la propiedad align items. Es igual que align item pero sólo para un elemento.
+  - center: es el valor por defecto 
+  Usa todos los valores de las otras propiedades de flexbox
+*/
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div, body{
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+
+.flexbox{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 20px;
+  align-items: center;
+  border: 2px solid #000;
+  gap: 30px;
+}
+
+.flex-item{
+  background-color: #800;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  flex: 1 1 100px;
+
+}
+
+.flex-item:nth-child(2n){
+  background-color: #f77;
+}
+
+.flex-item:last-child{
+  background-color: #000;
+}
