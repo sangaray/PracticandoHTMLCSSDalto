@@ -129,10 +129,3 @@ h1{
   width: 50px;
 }
 
-/* MAIN SECTION */
-main{
-  max-width: 800px;
-  margin: auto;
-  font-size: 30px;
-  text-wrap: pretty;
-}
