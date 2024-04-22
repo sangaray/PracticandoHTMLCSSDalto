@@ -1,12 +1,4 @@
-/*
-  LAYOUT CON FLEXBOX
-  Layout es básicamente la forma que tenemos nosotros de distribuir los elementos del contenido para que entre dentro de nuestra página
-  Si trabajamos con flexbox sin media query no se pueden cambiar ciertas características al cambiar de dispositivo
-  Ser lo más específicos posibles, por ejemplo usar background-color en lugar de sólo background, para evitar conflictos
-  Dar un height fijo al os elementos no se hace está mal y no es recomendado, es correcto usar min-height y no height solo
-*/
-
-body{
+body {
   margin: 0;
   font-family: sans-serif;
   box-sizing: border-box;
@@ -15,15 +7,15 @@ body{
 }
 
 /* HEADER SECTION */
-.header{
+.header {
   min-height: 100vh;
   box-sizing: border-box;
   background-image: url("unicornio_real1.jpg");
   display: flex;
- background-size: cover;
-  }
+  background-size: cover;
+}
 
-.header__overlay{
+.header__overlay {
   min-height: 100vh;
   width: 100%;
   background-color: #80562699;
@@ -31,7 +23,7 @@ body{
   z-index: 1;
 }
 
-.header__item-container{
+.header__item-container {
   position: relative;
   z-index: 10;
   margin: auto;
@@ -39,39 +31,39 @@ body{
   max-width: 700px;
 }
 
-.header__item-container p{
+.header__item-container p {
   text-wrap: pretty;
 }
 
-.header__img{
+.header__img {
   min-width: 250px;
   max-width: 40%;
   border-radius: 50%;
   border: 5px solid #fff;
   margin: 20px;
 }
-  
-h1{
+
+h1 {
   margin: 0;
   font-size: 3.6rem;
   text-wrap: balance;
 }
 
 /* NAVBAR SECTION */
-.nav{
+.nav {
   background-color: #272117;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 6px 20px;
-  border: 2px solid #EFC653 ;
+  justify-content: center; /* me gusta con space-evenly */
+  padding: 6px 20px; /* me gusta con padding-right 40px  */
+  border: 2px solid #efc653;
   position: sticky;
   top: 0;
   margin-bottom: 10px;
-  box-shadow: 0 0 25 px #efc553b9;
+  box-shadow: 0 0 25px #efc553b9;
 }
 
-.nav__ul{
+.nav__ul {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
@@ -79,60 +71,55 @@ h1{
   padding: 0;
 }
 
-.nav__item{
+.nav__item {
   list-style: none;
 }
 
-.nav__logo-container, .nav__ul-container{
-  flex-grow: 1;
-  text-align: center;
-} 
-
-.nav__ul-container{
+.nav__ul-container {
   flex-grow: 4;
 }
 
-.nav__link{
-  color: #EFC653;
+.nav__logo-container,
+.nav__ul-container {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav__link {
+  color: #efc653;
   text-decoration: none;
   display: inline-block;
-  padding: 8px 10px;
+  padding: 25px 10px 8px 10px;
   margin: 6px;
   border-radius: 0;
-  transition: background-color 0.24s, border-radius 0.2s, outline 0.2s, outline-offset 0.2s;
+  transition: background-color 0.24s, border-radius 0.2s outline 0.2 outline-offset 0.2;
   margin: 2px;
   outline: 0;
   outline-offset: 0;
+  font-size: 1.5em;
 }
 
-.nav__link:hover{
+.nav__link:hover {
   background-color: #f803;
   border-radius: 20px;
   outline: 2px solid #f803;
   outline-offset: -7px;
 }
 
-.link--login{
-  background-color: #EFC653;
-  color: #272117	;
+.link--login {
+  background-color: #efc653;
+  color: #272117;
   border-radius: 20px;
   padding: 8px 24px;
   margin-left: 6px;
+  margin-top: 17px;
 }
 
-.link--login:hover{
+.link--login:hover {
   background-color: #efc553b9;
   outline: none;
 }
 
-.nav__logo{
-  width: 50px;
-}
-
-/* MAIN SECTION */
-main{
-  max-width: 800px;
-  margin: auto;
-  font-size: 30px;
-  text-wrap: pretty;
+.nav__logo {
+  width: 70px;
 }
