@@ -1,3 +1,11 @@
+/*
+  LAYOUT CON FLEXBOX
+  Layout es básicamente la forma que tenemos nosotros de distribuir los elementos del contenido para que entre dentro de nuestra página
+  Si trabajamos con flexbox sin media query no se pueden cambiar ciertas características al cambiar de dispositivo
+  Ser lo más específicos posibles, por ejemplo usar background-color en lugar de sólo background, para evitar conflictos
+  Dar un height fijo al os elementos no se hace está mal y no es recomendado, es correcto usar min-height y no height solo
+*/
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -122,4 +130,12 @@ h1 {
 
 .nav__logo {
   width: 70px;
+}
+
+/* MAIN SECTION */
+main {
+  max-width: 800px;
+  margin: auto;
+  font-size: 30px;
+  text-wrap: pretty;
 }
