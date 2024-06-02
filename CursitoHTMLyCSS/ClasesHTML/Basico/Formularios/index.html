@@ -1,0 +1,48 @@
+<!--
+    FORMULARIOS
+    Todo es en base a petición-respuesta
+    Forma que tenemos nosotros para pedir datos al usuario.
+    Aunque todo es texto en formularios, las cosas se formatean los tipos de datos
+    Para crear un formulario usamos la etiqueta de bloque  
+    <form></form>.
+    Hasta ahora parece que no pasa nada, esto se debe a que nosotros somos quienes tenemos que definir los campos, los tipos de datos que queremos pedir
+    <input> forma en que decimos dame un dato
+    Atributos de input
+    type: que tipo de dato o input queremos recibir
+        - text: es el más comun de todos, permite tipear texto
+        - color permite seleccionar un color
+        - submit: crea un botón para enviar el formulario
+    Value: indica el texto que aparece en 
+        - emila: es igual a texto pero el formulario no se va a poder enviar hasta que no ese texto no tenga formato de email. texto@texto.extensión
+        - password: oculta con asteriscos el texto del input. Para ver la contraseña, vamos a inspeccionar y cambiamos el type password por texto y se muestra la contraseña oculta
+        - checkbox: permite marcar con un tilde una o varias opciones
+        - file: permite seleccionar y enviar un archivo
+    Cuando presionamos el  botón enviar el formulario va a recopilar todos los datos y los datos de los inputs y los va a enviar a un servidor para que los procese y haga algo, porque si estamos recogiendo los datos del usuario es para hacer algo. Con esto lo que hacemos es defini los datos del usuario para luego poder hacer algo
+        - fecha: muestra un calendaro para seleccionar la fecha solicitada
+    Hay cuatro atributos además del type de los input es muy importante saber_
+        - Required: lo que hace es obligar al usuario a escribir algo. No deja enviar el formulario si no sellenó el campo que tiene este atributo
+        - name: es como un identificador de los inputs, definimos como se va a llamar este campo, cuando lo envío el servidor recibe el campo nombre, los names son únicos. Si queremos acceder a dato enviado por el usuario le tenemos que poner un nombre
+        - placeholder: escribe un texto que desaparece cuando el usuario empieza a escribir, se usa para dar un ejemplo de lo que se epera en ese campo
+        - value: es lo que va a recibir el servidor, si queremos recuperar un dato enviado por el usuario lo hace a través del value
+        - minlength: no lo recomiendo, no es algo que usuaría siempre, pero limita el mínimo de caracteres a ingresar en el input
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+</head>
+<body>
+    <form>
+        <input type="text" required>
+        <input type="email" placeholder="nombre@gmail.com">
+        <input type="password" minlength="8">
+        <input type="checkbox">
+        <input type="file" name="file">
+        <input type="date">
+        <input type="color">
+        <input type="submit" value="Mandar Form"> 
+    </form>
+</html>

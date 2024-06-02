@@ -1,0 +1,42 @@
+<!-- 
+	ENLACES
+	También se pueden llamar hipervínculos.
+	Se usa la etiqueta za></a> o anchor o ancla pra crear los enlaces
+	Si pongo texto dentro de estas dos etiquetas lo único que voy a ver es ese texto, para que se un enlace y al hacer click me lleve a otro lado debo usar un atributo
+	Los atributos son características de los elementos, similar a las propiedades en css, sólo que van directamente en html
+
+	ATRIBUTOS
+	href (Referencia de Enlace): Crea un link
+	Los atributos que utiliamos en html son aquellos que agregan funcionalidad a la etiqueta, no aquellos que le dan estilo
+	Si queremos agregar una dirección externa para nuestros enlaces tenemos que sí o sí poner https:// delante de la dirección, si no lo hacemos va a buscar una ubicación local, en nuestra computadora
+	Si bien en html moderno no es necesario poner https, con poner las dos barras es suficiente, se recomienda ponerlo igual por distintas razones como seguridad, posicionamiento y otras
+	Para crear un enlace o otra página en nuestro sitio, en el href escribimow el nombre del archivo al que queremos movernos
+	Para que un enlace se abra en una nueva pestaña escribimos el atributo
+	target="_blank"
+	target="_self" abre la página en la misma pestaña, es la opción por defecto
+	El atributo title agrega una leyenda al link o cualquier elemento html, se muestra como un recuadro con el texto. Normalmente se usa en los enlaces, en las imágenes, campos de formularios y algunos botones. Sirven para los lectores de pantalla
+	Buena práctica: que lo elementos se reconozcan por lo que son, que se diferencien
+	Enlaces dentro de la misma página: se usa href="#id del elemento"
+	-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enlaces</title>
+  </head>
+  <body>
+    <h1>Una web con enlaces</h1>
+    <p>Cómo se siente saber lo básico de HTML?</p>
+    <h2>Enlaces</h2>
+    <a href="Enlace2.html" title="subtitulo de la pagina">Segundo Enlace</a>
+    <a href="Enlace3.html">Tercer Enlace</a>
+    <h2>Enlace target BLANK</h2>
+    <a href="Enlace2.html" target="_blank">Segundo Enlace</a
+    ><!-- pero se abre en otra pestaña-->
+    <h2>Enlace Externo</h2>
+    <p>
+      <a href="https://youtube.com/soydalto">Canal de Youtube</a>
+      <!-- El atributo href determina a donde nos lleva el enlace y el contenido entre las etiquetas de apertura y cierr es el texto que se ve en la págian -->
+    </p>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 
+	IMAGENES
+	Hay dos forma de clasificar las etiquetas en lo que a código se refiere
+	1. Las que necesitan un contenido, por lo que requieren una etiqueta de cierre que envuelva a su contenido
+	2. La que no lo necesitan, porlo tanto no es necesario cerrarlas, ya que no hay un contenido que encerrar
+	
+	IMÁGENES EN LA MISMA CARPETA DEL ARCHVIO INDEX
+	Para agregar una imagen se usa la etiqueta autocerrable image con el atributo source
+	<img src="nombre.estensión de la imagen">
+	El atributo alternative o alt sirve para los lectores dew pantalla y al usuaario para saber de qué se trata una imagen si por alguna razón esta no se cargó en la página, si la imagen carga este texto no aparece
+	Sirve también para el SEO, ya que describe la imagen y permite buscarlas en el buscador de imágenes
+	Atributo title muestra un texto al pasar el mouse por encima de la imagen
+	
+	IMAGEN DENTRO DE OTRA CARPETA
+	Al programar trabajamos con muchísimos archvios que si los pusieramos todos juntos crearía problemas, debido a esto es que organizamos los archivos separados en carpetas
+	En este caso creamos una carpeta images y dentro de ella colocamos las imágenes que vamos a necesitar
+
+	Atributos
+	alt: es un atributo que permite poner un texto enlugar de la imagen si esta no carga correctamente
+  la etiqueta img es autocerrable, se auto cierra a sí misma
+  title: muestra un pequeño rótulo con el texto que esté incluido en este atributo
+	-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Imagenes</title>
+  </head>
+  <body>
+    <h1>Imágenes</h1>
+    <!--Imagen en la misma carpeta que la página-->
+    <img src="SeverusandtheDoe.jpg" alt="Severus next to the doe" title="Severus and the doe" />
+
+    <!--Imagen dentro de otra carpeta-->
+    <img src="./Images/Severus.jpg" alt="Severus Snape" />
+  </body>
+</html>
