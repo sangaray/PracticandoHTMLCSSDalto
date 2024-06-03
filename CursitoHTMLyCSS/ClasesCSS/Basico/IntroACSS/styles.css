@@ -1,0 +1,34 @@
+/*
+    INTRODUCCIÓN A CSS
+    CSS (Cascading Style Sheet): significa hoja de estilo en cascada, porque al dar estilo a los elementos vamos a seleccionar varios estilos, dependiendo el orden en que damos los estilos, el código se sobreescribe.
+    Se usa para darle un estilo a cada componente de un html, para que el conjunto de estilos que le damos a cada elemento nos de como resultado final una página estática, funcional, navegable, etc. Lo importante es entender como funciona cada propiedade y cómo funcionan sus combinaciones, a nosotros nos oimporta como se relacionan las cajas entre sí
+    CSS no existe sin HTML, HTML es la base sobre la que vamos a trabajar CSS
+    Las propiedades CSS contienen a los elementos HTML pero no son atributos como tal. Al tener una sintaxis diferente la forma de escribir CSS es muy distinta de la forma en que escribimos HTML
+    Hay tres formas de escribir CSS de manera que podamos afectar a los elementos
+    - Estilos en línea: se llama así porque normalmente se escribe en una sola línea de código
+    Se usa poniendo en la etiqueta HTML el atributo style y a continuación las propiedades CSS que queremos utilizar entre comillas y separadas por punto y coma
+    Ejemplo: <p style="color:red">
+    Al usar esta opción hay dos malas prácticas, porque tenemos que usar cada lenguaje por separado, no podemos mezclar código HTML, con CSS con JS. Cada lenguaje debe estar en una sección específica.
+    - Style como etiqueta: permite dar estilos
+    Se usa colocando la etiqueta style justo encima de la etiqueta de cierre de body y dentro se coloca la declaración que implica el nombre del elemento y entre llaves las propiedades CSS
+    Ejemplo: 
+    p{
+      color: red
+    }
+    Si bien esta opción es mejor que la anterior, tampoco se recomienda utilizarla
+    Lo que se recomienda es tener todo en archivos separados porque vamos a tener mucho código en una página real, lo que complica el manejo del mismo tenerlo en una de las opciones anteriores
+    - Estilo en un archivo separado: impleca crear un archivo que va a contener todo el código CSS y para conectarlo con el HTML utilizamos la etiqueta link
+    Se usa colocando esta etiqueta en el head del archivo HTML
+    
+    Atributos de link
+    rel: viene de relationship e indica que el archivo que se va a vincular
+    href: es la ruta a la hoja de estilo
+    Ejemplo:
+    <link rel="stylesheet" href="styles.css" />
+    Repasando
+    Lo primero que tenemos que hacer es elegir un selector, hay muchas formas de selecciónar elementos, la forma más básica es seleccionar un elemento utilizando su nombre
+    Lo primero que hacemos para cambiar las propiedades de un elemento es utilizar un selector, tenermos que seleccionar de alguna forma el elemento que queremos modificar, luego se habre un bloque de declaraciones, esto se hace con llaves, dentro de ellas se pone la propiedad a modificar, uego se coloca el valor de esa propiedad separado con dos puntos
+*/
+h1 {
+  font-size: 50px;
+}
