@@ -1,7 +1,7 @@
 /*
     INTRODUCCIÓN A CSS
-    CSS (Cascading Style Sheet): significa hoja de estilo en cascada, porque al dar estilo a los elementos vamos a seleccionar varios estilos, dependiendo el orden en que damos los estilos, el código se sobreescribe.
-    Se usa para darle un estilo a cada componente de un html, para que el conjunto de estilos que le damos a cada elemento nos de como resultado final una página estática, funcional, navegable, etc. Lo importante es entender como funciona cada propiedade y cómo funcionan sus combinaciones, a nosotros nos oimporta como se relacionan las cajas entre sí
+    CSS (Cascading Style Sheet): significa hoja de estilo en cascada, porque al dar estilo a los elementos vamos a seleccionar varios elementos, dependiendo el orden en que damos los estilos, el código se sobreescribe.
+    Se usa para darle un estilo a cada componente de un html, para que el conjunto de estilos que le damos a cada elemento nos de como resultado final una página estática, funcional, navegable, etc. Lo importante es entender como funciona cada propiedad y cómo funcionan sus combinaciones, a nosotros nos oimporta como se relacionan las cajas entre sí
     CSS no existe sin HTML, HTML es la base sobre la que vamos a trabajar CSS
     Las propiedades CSS contienen a los elementos HTML pero no son atributos como tal. Al tener una sintaxis diferente la forma de escribir CSS es muy distinta de la forma en que escribimos HTML
     Hay tres formas de escribir CSS de manera que podamos afectar a los elementos

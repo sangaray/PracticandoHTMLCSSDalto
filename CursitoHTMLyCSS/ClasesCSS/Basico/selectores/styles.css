@@ -1,11 +1,38 @@
 /*
-Lo primero que ponemos en una propiedad css es con un selector
-Selector: el elemento html al que se aplica al estilo
-Propiedad: valor
-Selectores: formas de seleccionar los elementos de html
-Selector Elemento: busca el nombre de la etiquetahtml
-Clases: separar los elemento por clases o tema, permite modificar varios elementos al mismo tiempo con las mismas características. Se pueden aplicar a varios elementos. No son elementos únicos
-id: se le puede dar sólo a un elemento en toda la página, no puede haber dos elementos con el mismo id. Son elementos únicos
+SELECTORES (Básico)
+Selectores: hacen referencia a la forma de seleccionar uno o varios elementos dentro de un documento de html en CSS para poder modificarlo
+
+TRES FORMAS DE SELECCIONAR ELEMENTOS HTML
+Selector Element (Selección por Elemento): busca el nombre del elemento html indicado para modificarlo.
+Ejemplo HTML
+<p>texto a estilizar</p>
+Ejemplo CSS
+p{
+  color: blue
+}
+La peor práctica que hay es crear nuestros propios elementos, no se hace
+Si queremos seleccionar un solo elemento de la lista, por ejemplo, podemos utilizar el elemento span, pero esto deja el puntito o viñeta en color negro y además no está tan bien hacer esto. Estaría bien si queremos resaltar una palabra o frase específica
+
+Selector por Clase: permite asignar al elemento un nombre especial y separar los elemento por clases o tema, permite modificar varios elementos al mismo tiempo con las mismas características. Se pueden aplicar a varios elementos. No son elementos únicos.
+Se usa poniendo un punto delante del nombre de la clase
+Ejemplo HTML
+<li class="faltante">item</li>
+Ejemplo CSS
+.faltante{
+  color: red
+}
+Cada vez que agreguemos a un elemento el nombre de la clase se le va a aplicar la característica indicada para ella en CSS. De esta meanera podemos aplicarle a varios elementos la misma clase y las mismas propiedades. Está bien utilizar clases para muchos elementos
+Hay estrategias para poner el nombre a una clase, si viene otro desarrollador tiene que entender por qué se usa una determinada clase, que significa esa clase
+
+Selector por id: es un selector que se le puede dar a un sólo elemento en toda la página, no puede haber dos elementos con el mismo id. Son elementos únicos
+Se usa colocando un hashtag o numeral delante del nombre de id
+Ejemplo HTML
+<li id="ingrediente-secreto">item</li>
+Ejemplo CSS
+#ingrediente-secreto{
+  color: blue
+}
+En la práctica se puede usar más de un id en la misma página, pero es una mala práctica, no se recomienda hacerlo, y luego en javascript va a causar problemas. El id le dice al navegador este va a ser un identificador único para cada elemento
 */
 li {
   color: grey;
@@ -16,8 +43,3 @@ li {
 #ingrediente-secreto {
   color: blue;
 }
-
-/*
-Propiedades de fuente y texto 
-
-*/
