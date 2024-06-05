@@ -1,0 +1,14 @@
+/*
+BOX MODEL O MODELO DE CAJA
+Es un concepto, no una propiedad, y este concepto lo que hace es describir como se diseñan y como se deberían poner todos elementos HTML en una página web
+Un elemento en una página, se considera una caja rectangular, en HTML todo es es un bloque, como si fuera una cajita y este modelo lo que hace es describir como esas cajas se dimensionan, cambian su tamaño, cambian sus propiedades y también como interactúan entre sí
+
+Hay cuatro propiedades principales de las cajas
+- Contenido o content: el contenido es el núcleo del box model, básicamente es el área donde se muestra el texto, también pueden ser imágenes o cualquier otro contenido del elemento
+- Padding o Relleno: todos le dicen padding, que es el espacio entre el contendio y el borde del elemento, esta propiedad aumenta el área alrededor del contendio pero debajo del borde, lo que hace es separar más el contendio del borde
+- Borde o border: es una línea que rodea tanto al contendio como al padding, se puede controlar el estilo, el color y el grosor del borde
+- Margen o margin: es el espacio alrededor de la caja, está fuera del borde, este espacio separa al elemento de otros elementos en la págian, a diferencia de todos los anteriores el margin no forma parte de la caja. Cuando el margen aumenta el contenido se achica
+Estas propiedades pueden aplicarse hacia todos los lados o puede aplicarse a cada lado por separado
+- Border Radius: redondea los bordes
+- Box-sizing: define como se afectan todas las propiedades
+*/
