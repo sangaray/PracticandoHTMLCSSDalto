@@ -1,0 +1,51 @@
+/*
+TIPOGRAFÍAS EXTERNAS
+Son tipografías que no se encuentran en nuestro sitema.
+Hay dos formas de integrar fuentes externas a nuestra página
+1. Ingresar a google fonts, donde vamos a encontrar una gran cantidad de fuentes. Buscamos la que queremos
+Por ejemplo: montserrat, esta fuente trae diferentes grosores o weights.
+Seleccionamos la fuente que deseamos usar, hacemos click en el botón get font arriba a la derecha de la página, luego nos da dos opciones
+embeded: nos da un link para llamar a la fuente desde el repositorio donde se encuentra
+download: descarga las fuentes a nuestra computadora
+Tener en cuenta que el sitio de google fonts cambia periódicamnete y con ello la forma de utilizar o descargar las tipografías (esto no lo dijo Dalto, el muestra otro método, de una versión anterior del sitio).
+Si bien esta forma no está mal, recomienda hacer la segunda forma
+2. Con un archivo css que guarde las tipografías: nos permite definir un nuevo valor para una nueva propiedad.
+Para usar esta forma debemos primero descargar las tipografías a nuestro equipo, en la carpeta fonts, con los archivos de nuestra página, esta carpeta va a contener todas las tipografías descargadas
+Se usa escribiendo font-face y crea la estructura. 
+Puedo ponerle el nombre que quiera, pero lo correcto es usar el nombre de la tipografía, en un archivo llamado fonts.css.
+Ejemplo:
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-ExtraLight.ttf") format("truetype");
+  font-weight: 100;
+}
+De esta manera creamos una variable que contiene la tipografía que queremos utilizar de las disponibles en la que elegimos en google fonts u otro sitio de fonts
+Dentro de la variable debemos agregar el formato, ya que el navegador carga más rápido si sabe que tipo de archivo es e incluso navegadores que no soportan la tipografía la pueden mostrar también
+font-family: es el nombre que le estoy dando a la fuente que estoy definiendo
+src: url(); define la dirección o ruta donde se encuentra el archivo de la fuente a utilizar
+format: especifica el tipo de archvio de fuente a usar. ttf = truetype, es un formato de fuente
+font-weight: indica el grosor de la fuente asignada a esa variable. Esta propiedad funciona por cercanía, si no lo pongo el weight no me lo carga
+De esta forma configuramos nuestra tipografía
+*/
+
+h1 {
+  font-family: montserrat;
+}
+
+p {
+  color: blue;
+  font-family: montserrat;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: left;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+span {
+  text-decoration: line-through;
+  color: red;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 4px #f99;
+}

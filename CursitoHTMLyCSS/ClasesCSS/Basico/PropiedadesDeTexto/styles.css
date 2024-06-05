@@ -1,38 +1,67 @@
 /*
-Propiedades de fuente y texto 
-El punto y coma separa propiedades
-color: determina el color del texto al que hace referencia
+PROPIEDADES DE TEXTO Y FUENTE
+Son propiedades que le vamos a dar al texto para que se modifique
+El punto y coma separa las propiedades, la última no necesita llevarlo, si no lo pongo las propiedades no se aplican o no se aplican correctamente. Aunque no es necesario es una buena prácricta poner punto y coma luego de la última propiedad, ya que no sabemos si vamos a necesitar agregar más propiedades
+
+color: determina el color del texto al que hace referencia, se podría poner font-color pero ya no se usa, por lo que dejamos sólo color
 Colores relativos: es cuando usamos el nombre del color en inglés, pero el problema es que no todos los navegadores toman el mismo tono del color indicado y pueden verse distintos
-Colores absolutos: son en los que se usa RGB; hexadecimal, etc., que van a ser el mismo en todos los navegadores
+Colores absolutos: son en los que se usa RGB; hexadecimal, etc., que van a ser el mismo en todos los navegadores. esto da un color fijo y absoluto
+
 font-family: es la tipografía utilizada
-Se usa comillas en la tipografía cuando su nombre tiene más de una palabra, se pueden poner varias tipografía separadas por comas en caso de que la primera falle por alguna razón, el sistema va a buscar una por una hasta encontrar una que funcione
-font-size: define el tamaño de la fuente, por defecto es 16px
-font-weight: es poner la letra en negrita
-<b> ya no se usa en html, se usa <strong> en sulugar ya que google le da importancia a esta etiqueta en el seo y no a <b>
-bold: equivale a 700 de grosor
-bolder: equivale al siguiente más grueso
-100-900: rangos de grosor que va a depender de cada tipografía
+Se usa comillas en la tipografía cuando su nombre tiene más de una palabra, si el nombre de la tipografía es de una sola palabra o las palabras están separadas con un guión se puede poner sin comillas. 
+Se pueden poner varias tipografía separadas por comas en caso de que la primera falle por alguna razón, el sistema va a buscar una por una de izquierda a derecha hasta encontrar una que funcione
+
+font-size: define o cambia el tamaño de la fuente, por defecto es 16px
+
+font-weight: es poner la tipografía más o menos gruesa, básicamente define el grosor de la tipografía.
+Con <b> se pone la tipografía en negrita aunque ya no se usa en html, en su lugar lo podemos hacer con un span y modificarlo o se puede hacer con <strong> ya que google le va a dar más importancia a esta etiqueta en el seo y no a <b>
+Los creadores de fuentes crear distitnos grosores para la misma tipografía, a más chiquito el número más fina la letra
+  - bold: equivale a 700 de grosor
+  - bolder: equivale al siguiente más grueso
+  - 100-900: rangos de grosor que va a depender de cada tipografía
+
 font-style: es el estilo de la fuenta, 
-normal: la letra es derecha
-ilalic: la letra es inclinada (12 grados aprox)
-oblique: menos inclinada que italic
-oblique valordeg: permite establecer que tan inclinada queremos la letra en grados, propiedad aún experimental
+  - normal: la letra es derecha
+  - ilalic: pone la letra en cursiva, la letra es inclinada (entre 8 y 12 grados aprox)
+  - oblique: menos inclinada que italic
+  - oblique valordeg: permite establecer que tan inclinada queremos la letra en grados, es una propiedad aún experimental
 El estilo más usado es italic
-Text-align: ajusta el texto a su contenedor
-left: arranca a la izquiera
-right: arranca de la derecha
-center: la ubica en el centro del contenedor
-justified: ambos lados parejas
+
+Text-align: ajusta el texto a su contenedor, sólo funciona para elementos de bloque, no para los de línea
+  - left: valor por defecto, arranca a la izquiera
+  - right: arranca de la derecha
+  - center: la ubica en el centro del contenedor
+  - justified: aujuta el texto para que todas las líneas comiencen al inicio de la línea y termine al final, que se muestren ambos lados parejos
+
 elemento de bloque: ocupal todo el espacio disponible
+
 elemento de línea: el contenedor tiene el mismo tamaño que el elemento
-start: toma en consideración de que lado se escribe normalmente
-text-decoration: underline, overline, linethough, blink, none
-line-height: separación de línea, por defecto es 1
-letter-spacing: valorpx
+
+start: toma en consideración de que lado se escribe normalmente, comienza donde comienza la escritura
+end: toma también en consideración de que lado se escribe, y el texto termina donde termina la escritura
+
+text-decoration: 
+  - underline: subrayado inferior, por debajo del texto
+  - overline: subrayado superior, por encima del texto
+  - linethough: tacha el texto, lo cruza por el medio
+  - blink: el texto titila o parpadea, no se recomienda, no se usa
+  - none: es el más utilizado, no pone ninguno de los efectos anteriores
+  Se pueden mezclar las propiedades, puede tener más de una propiedad
+
+line-height: define el espaciado de la línea, por defecto es 1, es el mismo tamaño de la letra
+
+letter-spacing: es el espacio entre letra y letra, valorpx
+
+text-transform
+  - none: valor por defecto, no hace nada
+  - appercase: texto en mayúsculas, solo para la vista
+  - lowercase: texto en minúscula
+  - capitalize: primer letra de cada palabra lo convierte en mayúscula
+  - full-width: da al texto el ancho completo
 */
 p {
   color: blue;
-  font-family: montserrat;
+  font-family: sans-serif;
   font-size: 13px;
   font-weight: 500;
   font-style: italic;
