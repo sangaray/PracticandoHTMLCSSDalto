@@ -1,24 +1,66 @@
 /*
-  shorhand: es cuando resumimos en una propiedad varias juntas. por ejemplo: padding reune a padding-top, padding-bottom, padding-left padding-right
-  propiedad: top right bottom left Ejemplo padding: 10px 0 20px 40px
-  propiedad: (top bottom) (right left) Ejemplo padding: 10px 20px
+  PADDING Y MARGIN
+  Ahora nos toca hablar de dos propiedades que son muy importantes a la hora de trabajar con CSS. Son dos propiedades muy parecidas sólo que afectan a cosas distintas de la caja. El contendio simpre va a medir lo mismo, no cambia, lo que cambia es el relleno. Es necesario para muchas cosas
+
+  PADDING
+  Es básicamente la distancia que hay entre el contenido y el borde de una caja. Lo que hace es aumentar el tamaño del espacio alrededor del contenido pero dentro de los bordes de la caja. 
+  El padding básicamente está cambiando el tamaño de la caja
+
+  Shorhand: es una manera de abreviar propiedades, es cuando resumimos en una propiedad varias juntas. por ejemplo: padding reune:
+  padding-top: separa el contenido del borde superior
+  padding-bottom: separa el contendio del borde inferior
+  padding-left: separa el contendio del borde izquierdo
+  padding-right: separa el contenido del borde derecho
+  Ejemplo: en lugar de poner el mismo valor a cada una de las propiedades anteriores, usams
+  padding: 20px
+  esto aplica 20px de paddigan a cada uno de los lados del contenido
+  El orden en que se aplica el padding con el shorthand es siguiendo las agujas del reloj: top right bottom left
+  Ejemplo 
+  padding: 10px 0 20px 40px
+  Cuando usamos 0 no necesitamos poner la unidad que usamos, ya que en todos los casos daría 0
+
+  También puedo poner valores a las propiedades de a pares: (top bottom) (right left) 
+  Ejemplo padding: 10px 20px
+
   padding cambia el tamaño de la caja pero no el tamaño del contenido
-  margin colapse: la caja con el margen más grande es el que se queda cuando dos cajas tienen su propio margin
-*/
+
+  Un valor: igual para todos los lados
+  Dos valores: vertical y horizontal, arriba y abajo un valor, a izquierza y derecha otro valor
+  Cuatro valores: un valor distinto a cada lado del contenido
+
+  Afecta como se ve la caja pero no cambia el tamaño del contenido
+
+  background y background-color es lo mismo
+
+  MARGIN
+  Es una propiedad que permite separar los objetos. Si agrego margin, lo que hago es que las cajas se separen entre sí.
+  Ejemplo
+  margin: 10px
+  Agrega un margen de 10px a cada lado de la caja
+
+  margin colapse: deberíamos tener el mismo margen a cada lado de la caja, pero arriba y abajo los margenes se superponen el margen más grande es el que se queda cuando dos cajas tienen su propio margin. Los márgenes siempre colapsan, no se suman, sino que se superponen. La separación total no va a ser la suma del margen de arriba y el margen de abajo de dos cajas, sino el margen más grande
+
+  El body tiene un margin por defeto, para sacarlo debemos poner para body margin: 0
+
+  Elementos hermanos son los que estan consecutivo, es decir en el mismo rango jerárquico, están adentro de la misma caja contenedora o padre. En este caso se aplica el margin colapse. Esto se puede evitar utilizando flexbox, pero a su vez trae otros problemas porque se verían afectados por otras propiedades de flexbox
+  Antes si usabas un border o un padding o un overflow, no colapsaban, pero ahora esto no funciona y colapsan igual
+
+  El contenido, el padding y el borde forman parte de la caja, el margen no. Por lo que los tres primeros cambian el tamaño de la caja, pero el margen no. sólo cambia el espacio que ocupa la caja
+ */
 
 .formulario {
   background: red;
   padding: 30px;
 }
 
-.formulario-input {
+.formulario_input {
   width: 90%;
   background: black;
   color: wheat;
   margin: 10px;
 }
 
-.formulario-submit {
+.formulario_submit {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: black;
