@@ -1,7 +1,9 @@
 /*
   WIDTH Y HEIGHT
+  Al comenzar no veo el color del div, porque no tenemos ni width ni height
   Width y height: define el ancho y alto del elemento
-  Si el valor de la caja interna esta en porcenaje, este va a ser en función de la caja que lo contiene
+  Si el valor de la caja interna esta en porcenaje, este va a ser en función de la caja que lo contiene. El contenido se ajusta al tamaño de la caja que lo contiene
+  Lo que se hace para inputs en un celular podemos usar porcentajes
 */
 
 div {
