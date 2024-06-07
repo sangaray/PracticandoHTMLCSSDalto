@@ -1,20 +1,38 @@
 /* 
 BORDES
+Esta propiedad nos permite modificar tres aspectos fundamentales de los bordes
+1. Tamaño: todos los bordes tienen un tamaño un grosor
+2. Estilo: tipo o diseño del borde del elemento
+3. Color: color con que se mostrará el borde del objeto
+4. Redondeo: permite redondear las esquinas de un elemento
+
 border-width: permite definir el grosor del borde
 border-style: permite definir el estilo del borde liso, punteado, doble, línea, etc
+  - hidden: el borde se oculta y deja de afectar al flujo del elemento, se oculta hasta que lo llamemos, es como que no existe
 border-color: permite definir el color del borde
-border-radius: permite redondear las esquinas o vertices del borde
-Si usamos pixeles se redondea sólo las esquinas, tomando solo el centro vertical, si usamos porcentaje se redondea desde el medio horizonal y vertica
-border: reemplaza a las tres primeras propiedades
+  - transparent: el borde no se ve pero existe, no afecta a lo visual del elemento pero está ahí
+Para que el borde se vea debemos haber definidos las tres propiedades anteriores, de lo contrario no se va a mostrar
+
+border-radius: permite redondear las esquinas o vertices del borde, especifica cuanto quiero que se redondeen las esquinas
+Si usamos pixeles se redondea sólo las esquinas, tomando solo el centro vertical, si usamos porcentaje se redondea desde el medio horizonal y vertical.
+border: es un shorthand que reemplaza a las tres primeras propiedades
 Ejemplo
 border: tamaño estilo color
 border: 3px solid black
+Si queremos modificar sólo una de las propiedades puedo agregarla aparte
+
+Si queremos dar estilo sólo a uno de los lados del borde usamos una de las siguientes propiedades
 border-top:
 border-bottom:
 border-left:
 border-right
-Se pueden usar con width, style y color como border o simplificarlo para cada lado igual que con border
-puedo hacer lo mismo con border radius
+Se pueden usar con width, style y color como border o simplificarlo para cada lado igual que con border, actuando como shorthands
+
+border-radius: tambien se puede aplicar a cada esquina por separado, también se puede utilizar como shorthand
+border-radius: arriba a la izquierda arriba al a derecha abajo a la derecha abajo a la izquierda, sigue las agujas del reloj
+
+Hay que entender que muchas de las cosas que vamos a ver en CSS existen pero no se usan
+border-style: se usa solid, los otros estilos no se usan
 */
 
 body {
@@ -28,6 +46,7 @@ div {
   text-align: center;
 }
 
+/* No se hace de poner dos selectores iguales en el mismo archivo, en este caso se hizo para separar el tema de la clase*/
 div {
   border-width: 4px;
   border-color: aquamarine;
