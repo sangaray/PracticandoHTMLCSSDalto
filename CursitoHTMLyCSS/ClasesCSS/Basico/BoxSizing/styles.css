@@ -1,13 +1,28 @@
 /* 
   BOX SIZING
-  Como cada componente de la caja interactúa entre sí
+  Es una propiedad de CSS que normalmente utilizamos para afectar como cada componente de la caja interactúa entre sí. El modelo de caja es cómo los navegadores calculan el total del tamaño de un elemento.
   Porpiedad de css, afecta como funciona el modelo de caja predeterminado. 
   El modelo de caja determina como los navegadores calculen el tamaño de un elemento
-  content-box: tamaño aplica sólo al contenido, la caja se agranda si agrego el padding, border 
-  Al definir un alto y ancho se lo esto aplicando sólo al contenido, el padding y el border están fuera de esa medida y si se los agrego se agranda la caja
-  Es la opción por defecto
-  border-box; el contenido se ajusta a la caja, tamaño fijo que incluye al padding, border, etc
+
+  content-box: tamaño que aplica sólo para el contenido contenido, si se agrega padding, border y margin la caja se agranda. Es como añadir capas a la caja original.
+  Ejemplo
+  div{
+    width: 100px
+    heigh: 100px
+  }
+  Esos 100px son sólo para el contenido, no incluyen padding ni border
+
+  Al definir un alto y ancho se lo estoy aplicando sólo al contenido, el padding y el border están fuera de esa medida y si se los agrego se agranda la caja. Es la opción por defecto
+
+  border-box: no nos posicionamos ni en el padding, ni en el contenido sino en el borde, le dice al navegador el tamaño que te doy inclucye el padding, el contenido y el borde.  el contenido se ajusta a la caja, es de tamaño fijo que incluye al padding, border, etc
   Mantiene el alto y ancho especificado y ajusta o achica el contenido cuando agrego padding o border
+  Ejemplo
+  div{
+    box-sizing: border-box
+    width: 100px
+    heigh: 100px
+  }
+  En este caso los 100px van a ser el tamaño final de la caja incluyendo padding y border además del contenido. El contenido va a chicarse para ajustarse a las medidas del padding y del border de manera que entren en los 100px. El navegador hace los cálculos automáticamente
 */
 
 body {
