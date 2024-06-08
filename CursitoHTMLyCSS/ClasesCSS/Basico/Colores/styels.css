@@ -1,30 +1,47 @@
 /*
   COLORES
-  RGBA: red, green, blue. alfa Los tres colores primarios de la luz. Tiene 256 combinaciones posibles para cada uno de los tres colores, es decir 16777216 colores posibles. Alfa habla de la transparencia, detremina la opacidad del color.
-  Para definir el valor de cadda color podemos elegir entre 0 y 255 
+  Las siguiente son las formas más comunes de dar color.
+  RGB y RGBA: básicamente significa red, green, blue. alfa Los tres colores primarios de la luz. Tiene 256 combinaciones posibles para cada uno de los tres colores, es decir 16777216 colores posibles. Alfa habla de la transparencia, crea otro canal que detremina la opacidad del color.
+  RGB; para usarlo debemos definir el valor de cada color que podemos elegir entre 0 y 255, la mezcla de los tres valores va a dar el color final. 255 es el máximo del color, 0 es el mínimos del color. Si ponemos todos los valores de cada color iguales voy a tener diferentes grises 
 
-  hsl: tiene menos colores que los otros dos. También tiene.
+  hexadecimal y hexadecimala: tiene la misma cantidad de colores que el rgb, tiene 16 posibilidades, sistema de base 16. Para definirlo uso #rrggbb
+  0, 1, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, g
+  Hay 16 posibilidades para cada color que está dado por cada para de número.
+  Ejemplo
+  #RRGGBB
+  #550033
+  En el formato completo tenemos
+  #EEO9FF
+  EE es el rojo valor 1 permite elegir entre los 16 tonos posibles de rojo y valor 2 permite elegir entre otros 16 tonos posibles por cada uno del valor 1
+  09 es el verde, valor 1 y valor 2, sigue la misma lógica de tonos que el rojo para el verde
+  FF es el azul, valor 1 y valor 2, sigue la misma lógica de tonos que el rojo para el azul
+  Hay una forma abreviada de definir los colores en hexadecimal que es usar sólo tres valores, cuando no nos interesa la especificidad del segúndo valor de cada color, en este caso estaríamos escogiendo sólo entre los 16 tonos principales de cada color
+  Siguiendo el ejemplo anterior tendríamos
+  #rgb
+  #503
+  Cantidad de colores que hay en hexadecimal
+  4294967296
+  También tiene un canal alfa
+  https://rgbacolorpicker.com/ 
+
+  HSL y HSLA: tiene menos colores que los otros dos. También tiene.
+  El hue es básicamente una rueda que nos permite seleccionar el matiz
   hue es la color
-  saturación 
+  saturación o luminancia
   iluminación: los colores al 50% son los más fuertes
   Los colores pastel se caracterizan por tener poca saturación y mucha iluminación
+  Los colores que voy a usar de fondo siempre tienen que contrastar, si uso un fondo oscuro tengo que usar un texto claro
+  https://thumbs.dreamstime.com/z/la-rueda-de-colores-del-color-nombra-los-grados-rgb-78027630.jpg
 
-  hexadecimal: tiene la misma cantidad de colores que el rgb, tiene 16 posibilidad, sistema de base 16. Para definirlo uso #rrggbb
-  0, 1, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, g
-  hay 16 posibilidades para cada primer valor y otras 16 posibilidades por cada primer valor con el segundo valor
-  Hay una forma abreviada
-  #rgb
-  El segundo valor especifíca más el tono. 4294967296
-  También tiene un canal alfa
+  Selector de colores en los tres sistemas
+  https://htmlcolorcodes.com/
+
+  Cuando uno trabaja va a responder a la paleta colores de la empresa, pero es importante saber la teoría de colores para aprender y trabajar nuestros proyectos
 */
 
 .box {
   padding: 20px 50px;
-  background: hsl(
-    319,
-    24%,
-    86%
-  ); /* es lo mismo que escribir red, la capa del rojo esta al máximo */
+  background: hsl(319, 24%, 86%); /* es lo mismo que escribir red, la capa del rojo esta al máximo */
   margin: 20px;
   margin-left: 100px;
   text-align: center;
