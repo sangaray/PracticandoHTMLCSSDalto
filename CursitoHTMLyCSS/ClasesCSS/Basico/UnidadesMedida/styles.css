@@ -1,35 +1,49 @@
 /*
   UNIDADES DE MEDIDA
+  No es correcto utilizar siempre pixeles como unidad de medida para todo al hacer un diseño
+
   MEDIDAS ABSOLUTAS
+  Son ideales cuando queremos tener medidas precisas, para diseños muy específicos o imágenes que tienen tamaños fijos, pero no son la mejor opción para diseños responsive
   pixeles: unidad absoluta. Son pequeñitos área de luz en nuestra pantalla. El área mínima de luz que tenemos en nuestra pantalla es el pixel
   Medidas físicas y absolutas
+  Se usan por ejemplo para dar alto y ancho a las imágenes, para el tamaño de los textos para los márgenes y los padding
   Son aquellas que se van a aplicar a la vida real, en el mundo físico. Necesitamos control, funciona para responsive
 
-  puntos (pt) y picas (pc): se usan en el mundo de la impresion. También son medidas absolutas
+  puntos (pt) y picas (pc): provienen del mundo de la impresion, cuando queremos crear un diseño para imprimir. También son medidas absolutas. No vamos a profundizar en estas unidades porque no se usan
 
-  milimetros (cm), centímetros (mm) y pulgadas (in): se usan tembíen para impresión. 
+  milimetros (cm), centímetros (mm) y pulgadas (in): se usan tembíen para impresión. estas sí se usan un poquito más, en la pantalla puede cambiar, pero si lo imprimimos va a tener el tamaño exacto. Son formas de medir para definir cosas que se van a aplicar de forma físicas al mundo real, si lo voy a imprimir sí lo vamos a usar estas unidades, para banners, para maquetar interfaces táctiles, carteles
 
   UNIDADES RELATIVAS
-  El valor de la unidad depende de otro elemento, el tamaño del ontenedor, el tamaño de la fuente, etc. Estas unidades se usan en responsive design
+  El valor de la unidad depende de otro  valor, va a depender o otro elemento, el tamaño del contenedor, el tamaño de la fuente, etc. Estas unidades se usan en responsive design. Son ideales para crear diseños responsive
 
-  Porcentaje: responde al objeto contenedor. En texto el porentaje funciona sobre el tamaño que tenga la fuente en la caja contenedora. No se suele usar para margin, padding ni font-size
+  Porcentaje: es la más común, siempre es relativo al contenedor, responde al objeto contenedor. Definen algo respecto al objeto contenedor. En texto el porentaje funciona sobre el tamaño que tenga la fuente de la caja contenedora. En el margin usa como referencia al tamaño del padre, No se suele usar para margin, padding ni font-size. Se suele usar para dar a una imagen un porcentaje del contenedor
 
-  em: vale lo mismo que el font-size del elemento padre y este valor se multiplica por el numero delante de la unidad
+  em: es la mejor forma de definir muchas cosas. Vale lo mismo que el font-size del elemento padre y este valor se multiplica por el numero delante de la unidad. 
   Ejemplo: padre 14px, 2em = 28px
 
-  rem: busca el elemento raíz, que es <html>, luego funciona igual que el em
-  Si el elmente padre no tiene un font-size definido sigue hacia arriba buscando cual lo tiene y usa ese
-  font-size por defecto del navegador es 16px
+  rem: en lugar de busar el elemento padre va a busca el elemento raíz, que es <html>, luego funciona igual que el em
+  Si el elmento padre no tiene un font-size definido sigue hacia arriba buscando cual lo tiene y usa ese.
+  Si no lo encuentra en ningún lado usa el font-size por defecto del navegador que es 16px
 
   MEDIDAS DEL VIEWPORT
-  vh: tamaño viewport horizontal
-  vw: tamaño viewport vertical
+  Viewport es el espacio disponible que tengo en la ventana
+  vh: mide un porcentaje del tamaño viewport horizontal
+  vw: mide un porcentaje del tamaño viewport vertical
+  Estas unidades pueden usarse para hacer una ventana modal
+
   vmax: compara el valor de vh y vw y toma el más grande
   vmin: compara el valor de vh y vw y toma el más chico
 
+  Las siguientes unidades se aplican a tipografía
+  ex: Usualmente se lo usamos para el line-height, Toma el alto de la x y eso es un ex
+  ch: Toma el ancho del 0 y eso es 1ch
+  Estas dos unidades se utilizan para cosas muy específicas, nosotros no la vamos a trabajar
+
+  box-sizing: border-box hace que no aparezcan las barras de desplazamiento, y que el elemento entre en el espacio que tengo
+
   USOS
-  Para todo lo relacionado a tipografía em y rem son ideales
-  Para layout se usa cualquiera de las vistas
+  Para todo lo relacionado a tipografía y espaciado em y rem son ideales
+  Para layout se usa cualquiera de las unidades vistas
   Si queremos algo muy preciso usamos pixeles
   Entrar a páginas conocidas y ver cuando usan cada udidad
 */
