@@ -1,20 +1,31 @@
 /*
   FONDOS
-  Background; es un shorthand que reune varias propiedades
+  Background: es un shorthand engloba todas las posibilidades que tiene background, reune varias propiedades de background
+  Ejemplo
   background: imagen posición / size reapeat attachement color
+  Entre el position y el size sí o sí hay que poner la barra, de otra manera no funciona
+
+  Al fondo le puedo dar una transparencia, con el cuarto valor o quinto y sexto valores del hexadecimal podemos dar transparencia al color elegido o la opacidad. Es normal aplicar transparencias
 
   background-color: define el color del fondo
+  
   background-image: url("dirección de la imagen), permite usar una imagen como fondo
-  background-size: 100%, ajusta la imagen al ancho del contenedor,
-  con 100px la imagen se repite, 
-  con contain se ajusta lo más posible para que la imagen entre, es decir obliga a la imagen a adaptarse. Fuerza al navegador a mostrar la imagen entera auque sea una vez
-  con cover hace que no importa la resolución o tamaño la imagen entre entera en la pantalla
-  background-position: con center, left, right, top o bottom, acomoda la imagen en el contenedor. También se pueden dar valores específicos en pixeles
-  background-repeat: no-repeat, no repite la imagen aunque sobre espacio
-  con repeat-x se repite a la derech
-  con repeat-y se repite hacia abajo
-  background-attachment: fixed permite dejar una imagen u objeto como fondo detras de otro objeto al hacer scroll se ve como a través de una ventana
-  background-attachment: scroll
+  
+  background-size: puedo trabajar con porcentajes, 100%, ajusta la imagen al ancho del contenedor, con 100px la imagen se repite, 
+    - con contain se ajusta lo más posible para que la imagen entre, es decir obliga a la imagen a adaptarse. Fuerza al navegador a mostrar la imagen entera aunque sea una vez
+    - con cover hace que no importa la resolución o tamaño la imagen entre entera en la pantalla
+
+  background-position: con center, left, right, top o bottom, acomoda la imagen en el contenedor. También se pueden dar valores específicos en pixeles, da coordenadas específicos
+  
+  background-repeat: 
+    - no-repeat, no repite la imagen aunque sobre espacio
+    - con repeat-x se repite a la derech
+    - con repeat-y se repite hacia abajo
+  
+  background-attachment: 
+    - fixed permite dejar una imagen u objeto como fondo detrás de otro objeto al hacer scroll se ve como a través de una ventana
+  
+    - scroll: es la propiedad por defecto, para que no se salga de la página
 
 */
 
