@@ -1,11 +1,23 @@
 /* 
   GRADIENTES
-    Se puede aplicar gradiente tanto con background como con background-image
-    linear-gradient(color1, coloer2): es una función
-    Ejemplo: linear-gradient(red, green)
-    radial-gradient(igual lineal), pero desde el centro
-    conic-gradient(igual lineal): formato de cono
-    Si como primer parámetro en el lineal usamos un angulo (20deg) el degradado se logra en diagonal
+  Son una transición de colores, es una magnitud física en función de la distancia, tenemos dos valores en los extremos y en el medio hay una transición que muestra como los valores van cambiando
+    
+  Se puede aplicar gradiente tanto con background como con background-image
+  
+  linear-gradient(color1, color2): es una función
+  Ejemplo: linear-gradient(red, green)
+  Va a convertir el fondo en un gradiente lineal, es interesante para hacer gradientes transparentes
+  Para darle inclinación a los gradientes podemos usar to top, to bottom, to left, to right o un ángulo específico
+  Se puede indicar desde donde queremos que inicie cada color, para eso usamos un porcentaje al lado del color
+  
+  radial-gradient(igual lineal), pero desde el centro
+  
+  conic-gradient(igual lineal): formato de cono
+  Si como primer parámetro en el lineal usamos un angulo (20deg) el degradado se logra en diagonal
+
+  El uso más común en diseño para el gradiente es usarlo para separar un texto claro de un fondo en el que no contresta
+
+  Los gradientes conic y radial no se usan en diseño web
 */
 
 body {
