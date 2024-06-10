@@ -1,10 +1,20 @@
 /* 
   SOMBRAS
-  box-shadow: px derecha px abajo difuminado o desenfoque px expansión color
+  Las sombras son muy importantes en el diseño web, porque lo hacen ver más realista y hasta tridimensional. Después crear como una jerarquía visual porque te ayudan a destacar un elemento, además te ayudan a la legibilidad a veces cuando hay que estar separando contenido del fondo
+
+  Hay tres tipos de sombras
+  1. box-shadow: la sombra que le damos a una caja
+  2. text-shadow: la sombra que le damos a un texto
+  3. drop-shadow: es la sombre que le damos a un componente x
+
+  box-shadow: cuanto se corre la sombre hacia  derecha, cuanto se corre la sombre hacia abajo, difuminado o desenfoque, expansión de la sombre y finalmente color.
+  El primer parámetro es el movimiento horizontal, también se le puede dar valores negativos, el segundo parámetro es el moviemiento vertical, el tercer parámetro es la difuminación, el cuarto parámetro es la extensión de la sombra que se va a difuminar, el último parámetro es el color, que se suele usar con transparencia
 
   text-shadow: misma estructura que box-shadow sin la expansión
 
-  filter: drop-shadow(0px 0px 3px #000) por ejemplo, sólo sirve para imagenes png sin fondo o canal alfa
+  filter: drop-shadow(0px 0px 3px #000) por ejemplo, sólo sirve para imagenes png sin fondo o con un canal alfa
+
+  No exagerar con sombres muy marcadas, probar en varios navegadores para verificar compatibilidad 
 */
 
 body {
