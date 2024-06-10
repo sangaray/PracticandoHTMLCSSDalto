@@ -7,6 +7,7 @@
   linear-gradient(color1, color2): es una función
   Ejemplo: linear-gradient(red, green)
   Va a convertir el fondo en un gradiente lineal, es interesante para hacer gradientes transparentes
+  
   Para darle inclinación a los gradientes podemos usar to top, to bottom, to left, to right o un ángulo específico
   Se puede indicar desde donde queremos que inicie cada color, para eso usamos un porcentaje al lado del color
   
