@@ -26,7 +26,7 @@
     - fixed permite dejar una imagen u objeto como fondo detrás de otro objeto al hacer scroll se ve como a través de una ventana
   
     - scroll: es la propiedad por defecto, para que no se salga de la página
- */
+*/
 
 body {
   background-color: #0f0;
