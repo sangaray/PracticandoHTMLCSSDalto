@@ -1,0 +1,85 @@
+<!--
+  METATAGS, COMENTARIIOS E ÍCONOS
+  COMENTARIOS 
+  Es un código que escribimos que solamente es legible para el programador, el navegador también lo puede leer pero no lo va a hacer nada no lo va a interpretar
+  se escribe con signo menor, exclamación, dos guines medios para la apertura y dos guines medios y el simbolo de mayor para el cierre
+
+  FAVICONS  
+  Es el iconito o logo que aparece en la pestaña o parte superior de navegador junto al title del head.  
+  Imagen de 32 x 32 o 64 x 64 pixeles porque se ve muy chiquita
+  Se recomienda el atributo type="image/png" para que el navegador la cargue más rápido que sirve, suma y ayuda
+  En el atributo rel ponemos icons, rel viene de relationship e indica al navegador la relación del objeto que estamos incorporando
+  Hay quienes usan la extensión .ico para tener más compatibilidad con windows, pwro hay sistemas que no lo muestran, entonces recomiendo usar .png con fondo transparene
+
+  METATAGS
+  Son etiquetas que tienen como única finalidad brindar información.
+  Es un tag que proporcionar información de la página. Van en el head, son importante para el SEO, como se muestra en las redes sociales, y nadie va a ver nuestros metatags. Es importante también cuando un enlace la llame en una red social y también a veces para la accesibilidad
+  Todas las metatags tienen dos atributos 
+  - name: define que tipo de información estas declarando
+  - content: indica el contenido
+
+
+  ATRIBUTOS DE LOS METATAGS
+  
+  - meta charset es la etiqueta META permite especificar los caracteres que se utilizarán en la página, UTF-8, le dice al navegador que codificación va a utilizar la página, es importante para usuarios con navegadores antiguos, permiten todos tipo de caracteres 
+  Ejemplo
+  <meta charset="UTF-8">
+  
+  - lang de la etiqueta HTML: le indica al navegador en que idioma va a estar la página y le ahorra el tiempo de tener que entender en que lenguaje está la página
+  Ejemplo
+  <html lang="es">
+    
+  - meta viewport: con qué estamos trabajando
+  Valor width=device-width: ajusta nuestra página a la pantalla de cualquier dispositivo
+  initial-scale=1.0: se carga la página siempre en zoom 1
+  Clave al trabajar con responsive design
+  Ejemplo
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  width=device-width: dice que el ancho total de la página va a ser igual al ancho del dispositivo
+  initial-scale=1.0: hace que al abrir la página se cargue sin zoom o con zoom normal, haciendo que el contenido se adapte al dispositivo
+  
+  - meta description: una descripción de por lo menos 100 caracteres que descibe de qué trata la página
+
+  - meta keyword: indica todas las palabras clave de la página. Si en la búsqueda de alguien figura una de tus palabras clave tu página va a tener más posibilidades de aparecer porque se trata de ese tema. El SEO da más prioridad en las búsquedaº
+  
+  - meta author: indica quien es el autor o creador de la página
+
+  - meta robots: si content dice 
+      nofollow le dice a google no indixes me página en la busqueda
+      nosnippet no permite que los buscadores extraigan una sección de la página y la muestre 
+      noarchive no permite a google pueda guardar nuestra página en caché, está bueno cuando nuestra página depende los cambios, y se mantiene en constante actualización, en este caso no tiene sentido guardarla en caché
+      noimageindex es para que no se indexen las imágenes, no permite que las guarde o aparezcan en google fotos
+  
+  - meta title: guarda el título de la página
+
+  - meta og: indica que mostrar en la búsqueda, title, image, description, url esta última muestra la dirección a donde se debe redirigir a la persona
+
+  metatags.io
+  Para utilizar esta página ya debemos tener subida la página a internet
+  En esta página se puede crear los metatags necesarios para nuestra página y ayuda también a mejorar el SEO
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Esta página web se trata de bla bla bla y también se trata de bla bla bla" />
+    <meta name="keywords" content="frutas, fruta, banana, manzana, 1kg de papa" />
+    <meta name="author" content="Sandra Garaycochea" />
+    <meta name="og:title" content="" />
+    <meta name="og:image" content="" />
+    <meta name="og:description" content="" />
+
+    <title>Página de venta de fruta</title>
+    <link rel="icon" href="./iconos/icons8-estudiante-masculino-32.png" type="image/pngº" />
+  </head>
+  <body>
+    <!--Este es un títulos-->
+    <h1>adasdfadf</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus beatae vero iusto velit accusamus delectus
+      rem, perspiciatis, dolorem ullam veritatis adipisci quas voluptate quis quaerat iure? Odio distinctio saepe
+      libero.
+    </p>
+  </body>
+</html>
