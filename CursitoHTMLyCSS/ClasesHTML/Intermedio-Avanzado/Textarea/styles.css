@@ -1,14 +1,26 @@
 /* 
   TEXTAREA
-  min-width evita que se amplie hacia los costados
-  resize define si puede cambiarse el tamañno del textarea
-  - both puede cambiarse el tamaño en el eje x y en el eje y
+  min-width El textarea viene configurado para que si le ponemos un width del 100% no se pone al 100%, esto es por sus propiedades iniciales, las que trae configuradas por defecto, si quieren que se aplique ese porcentaje tenemos que usar min-width: 100%, esta propiedad evita que se amplie hacia los costados, pero solo hacia adentro, porque hacia afuera se puede cambiar el tamaño
+
+  min-heigth: como mínimo puede tener este alto
+
+  max-height: como máximo puede tener este alto
+
+  Al cargar la página lo hace con el alto y/o ancho mínimo
+
+  resize define si puede cambiarse el tamaño del textarea
+  - both permite cambiar el tamaño en el eje x y en el eje y
   - vertical se agranda solo en el eje vertical
   - horizontal se agranda solo en el eje horizontal
-  - none no se expande en ninguna dirección, sólo agrega una scroll bar
-  La tipografía es propia, si la queremos cambiar debemos hacerlo en el propio textarea, no va a tomar lo que pongamos en body
+  - none el tamaño no cambia, no se expande en ninguna dirección, sólo agrega una scroll bar
 
-  form-sizing permite que el textarea crezca con nuestro texto, esta propiedad todavía no está disponible
+  La tipografía no va a ser la que nosotros le pongamos en body, si la queremos cambiar debemos hacerlo en el propio textarea, no va a tomar lo que pongamos en body
+
+  form-sizing permite que el textarea crezca con nuestro texto, esta 
+  - content: el contenido se adapta 
+  propiedad todavía no está disponible
+
+  Lo que hace Dalto es dejar el resize en none y darle un min-width y dejarlo así
 */
 
 body {

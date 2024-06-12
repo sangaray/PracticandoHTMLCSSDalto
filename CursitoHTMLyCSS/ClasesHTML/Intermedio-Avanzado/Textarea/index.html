@@ -1,13 +1,28 @@
 <!-- 
-  Textarea: es una especie de input que te permite excribir texto más largo, texto en varias líneas
+  TEXTAREA
+  Es básicamente como un input que permite excribir texto más largo, texto en varias líneas
 
   div: es sólo un bloque, no tiene ninguna función especial o semántica, se pueden usar todos los que se quiera, pero no se pueden reemplazar las etiquetas específicas aunque funcionen igual
 
-  readonly en el textarea evita que se pueda modificar el contenido de la misma. El contenido se envia con el formulario y puedo hacer focus en el objeto
+  readonly en el textarea evita que se pueda modificar el contenido de la misma. El contenido se envia con el formulario y puedo hacer focus en el objeto, también se puede leer pero no modificar
 
-  disabled desactiva el campo, no se puede modificar y el contenido no es enviado con el formulario y no puedo hacer foco en él
+  Hay atributos que no necesitan valor, con ponerlos es suficientes, se llaman atributos booleanos. tienen sólo dos valores, si está puesto es true y si no es false, sólo asigna esos dos valores
 
-  max-length determina la cantidad de caracteres máximos que se pueden escribir en el cuadro
+  disabled desactiva el campo de texto, la diferencia es que no se puede modificar y el contenido no es enviado con el formulario y no puedo hacer foco en él
+
+  max-length determina la cantidad de caracteres máximos que se pueden escribir en el cuadro. Lo que se suele hacer en ese caso es que cuando alcance el límite de caracteres le aparezca un mensajitos diciendo que no puede escribir más de (la cantidad de caracteres límite)
+
+  Para hacer que el borde no se aplique a todos los lados, lo definimos primero en 0 y luego definimos el borde del lado que queremos estilizar
+
+  Para que el placeholder dentro del textarea se vea no hay que dejar espacio ni línea entre la etiqueta de apertura y la de cierre
+
+  wrap: controla como se controlan los saltos de línea
+  - soft: no incluye los saltos de línea en el texto
+  - hard: sí incluye los saltos de línea en el texto
+  Con el que viene por defecto es sufieciente porque en la mayoría de los casos lo usamos así, si lo vamos a usar es porque vamos a darle alguna funcionalidad puntual que dependa de esos espacios de línea, para esto tenemos que saber más de programación
+
+  col: es la cantidad de columnas que puede tener
+  rows: es la cantidad de filas o líneas que puede tener, esto lo usamos para no tener que calcular específicamente el alto del textarea
 -->
 
 <!DOCTYPE html>
