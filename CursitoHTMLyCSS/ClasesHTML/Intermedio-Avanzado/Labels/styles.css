@@ -1,6 +1,6 @@
 /* 
   LABELS
-  A los labels no podemos darle ni margins ni padding directamente por ser elementos en bloque
+  Los labels son elementos en lñínea y no podemos darles margen así nomás. Lo que se puede hacer es darle un line-height para separar las líneas de texto
 */
 
 body {

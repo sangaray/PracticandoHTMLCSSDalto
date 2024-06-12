@@ -1,12 +1,21 @@
 <!-- 
   LABEL
   El label acompaña a los imputs, permitiendo hacer foco en ellos cuando se hace click en su label
+  Todos los imputs tienen que estar etiquetados por un label. Mejora la accesibilidad
 
   Para enlazarla a los inputs podemos
   usar for en el label y id en el input con el mismo valor
-  envolver el input con el laber
+  envolver el input con el label. Otra forma de hacer esto es envolver el input con las etiquetas de label, esta forma no necesitamos agregar ni el for ni el id
+  Esta última forma es buena para dar click a términos y condiciones, ya que es difícil clickear el checkbox
+  Lo único malo de esta forma de asociar el label al input es que si los queremos por separado no los vamos a poder tener, ya que siempre van a ir de la mano
+  Los textos deben ser cortos, concisos y claros
   
   Sirve también con los checkbox para no tener que darle click al cuadradito que a veces se hace dificil, clickeamos en el label y ya está
+
+  No es bueno que el placeholder de un input diga lo mismo que el label de ese input, lo que hacemos es poner un ejemplo
+  nombre completo: John Doe
+  email: ejemploe@gmail.com
+  con esto le estamos dando una idea al usuario de como debe completar los campos
 -->
 
 <!DOCTYPE html>
