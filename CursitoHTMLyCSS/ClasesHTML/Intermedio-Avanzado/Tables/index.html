@@ -1,16 +1,24 @@
 <!-- 
   TABLAS
-  Son una forma de organizar la información en filas y columnas
-  Haces años las tablas se usaban para todo, estructurar páginas, diseño, etc. Hoy en dia la única razón para usar tablas es cuando queremos estructurar datos en forma tabular
+  Son una forma de organizar datos en filas y columnas
+  Haces años las tablas se usaban para todo, estructurar páginas, diseño, etc. Hoy en dia la única razón para usar tablas es principalmente cuando queremos mostrar datos tabulares y tenemos la necesidad de hacer algo, que tengan relación entre sí.
+  No se usa para listar datos de usuario, no para organizar elementos. Se usa para desarrollar correos. También se puede armar su firma
+  
   <table></table>: define la tabla
-  <tr></tr>: determina una fila
-  <td></td>: determina una celda para la fila en la que se encuentre
-  <th></th>: determina los encabezados de columna. Posiciona la página mejor, porque asocia el encabezado a su contenido
-  colspan: permite permite unir celdas de forma horizontal
-  rowspan: permite unir celdad de foma vertical
+  <tr></tr>: arma una fila
+  <td></td>: define celdas para esa fila. Son las celdas de la tabla 
+  Fila: se presentan en forma horizontal
+  columna: se muestra en forma vertical
+  No se pueden crear columnas, estas se crean a partir de las filas
+
+  <th></th>: determina los encabezados de columna. Posiciona la página mejor, porque asocia el encabezado a su contenido, van dentro de un tr. El navegador nos ayuda a tener mejor el SEO si utilizamos th para los encabezados en lugar de usar td, cuando google ve la página dice ah estos son los encabezados. También lo usamos para crear subtotales y totales
+  - colspan: permite permite unir celdas de forma horizontal
+  - rowspan: permite unir celdad de foma vertical
+
   <thead></thead>: indica una sección con encabezados y sin datos
   <tbody></tbody>: es donde van a estar todos los datos
   <tfoot></tfoot>:
+  Estas tres etiquetas determinan toda una sección
  -->
 
 <!DOCTYPE html>

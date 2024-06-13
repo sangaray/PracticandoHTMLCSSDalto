@@ -1,3 +1,7 @@
+/*
+Para visualizar la tabla le damos estilo de borde
+*/
+
 td,
 th {
   border: 1px solid #000;
