@@ -1,6 +1,7 @@
 /*
   Para dar estilo a un detail sólo cuando está abierto usamos
   details[open] {}
+  Se puede dar estilo a cada estado
 */
 
 body {
