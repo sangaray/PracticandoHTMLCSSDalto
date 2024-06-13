@@ -1,13 +1,25 @@
 <!-- 
+  ENLACES AVANZADOS
+  Un link permite navegar a través de la web, dentro y fuera de nuestro sitio web
+
   Link a un archivo local: se usa el elemento <a href="archivoalquevoy.extensión">
-  Link a un sección específica de una página: se coloca un id en el lugar de la página al que queremos ir y ponemos en el elemento <a href="#iddellugardondevamos". Es un enlace que nos manda a otro elemento en lugar de a otra página
+
+  Link a un sección específica de una página: se coloca un id en el lugar de la página al que queremos ir y ponemos en el elemento <a href="#iddellugardondevamos", El id del elemento al que queremos ir con un numeral. Es un enlace que nos manda a otro elemento en lugar de a otra página
+
   El atributo download en el elemento <a> permite descargar un archivo local
-  Target="_blank" abre la posibilidad a ser redirigido a sitios maliciosos u otro sitio que no es al que quiere ir a través de windows opener
+
+  Target="_blank" abre la posibilidad a ser redirigido a sitios maliciosos u otro sitio que no es al que quiere ir a través de windows opener. Al abrir la publicidad, esa página me puede redirigir a otra página, no va a poder hacer cambios
+
   rel="noopener" evita ese posible redireccionamiento. También puede mejorar el rendimiento porque la página se abre en separado y podemos evitar ataques de phishing
-  rel="noreferrer" además de no permitir el acceso al objeto windows.opener, tampoco permite ver los encabezados, por lo tanto la página no va a saber de donde vino el link, también evita el robo de datos
-  rel="nofollow" dice a los motores de búsqueda esta página no la sigas, no la indexes. Permite no darle identidad a enlaces que no conocemos que pueden compartir usuarios de nuestra página
+
+  rel="noreferrer" además de no permitir el acceso al objeto windows.opener, tampoco permite ver los encabezados, por lo tanto la página no va a saber de donde vino el link, también evita el robo de datos. 
+
+  rel="nofollow" dice a los motores de búsqueda esta página no la sigas, no la indexes. La web es una red de enlaces relacionados. Permite no darle identidad a enlaces que no conocemos que pueden compartir usuarios de nuestra página. Si una página de una empresa grande enlaza una página, google dice esa página tiene que ser importante, pero después ya no va a tomar encuenta las recomendaciones de esa empresa, de esta manera no se pierde posicionamiento
+
   href="mailto:correo@gmail.com" permite direccionar al editor de correo que usamos para enviar directamente un mensaje desde el link
- -->
+
+  href="tel:nrodeteléfono" permite llamar a ese número a partir del enlace
+-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -27,9 +39,7 @@
 
       <div>
         TERMINOS Y CONDICIONES EN:
-        <a href="https://probando.com" rel="noopener" target="_blank"
-          >DESCARGAR TÉRMINOS Y CONDICIONES</a
-        >
+        <a href="https://probando.com" rel="noopener" target="_blank">DESCARGAR TÉRMINOS Y CONDICIONES</a>
       </div>
       <div>
         <a href="mailto:email@gmail.com" download>MANDAR UN MAIL</a>
@@ -38,93 +48,81 @@
 
       <h1>Términos y Condiciones de Uso</h1>
       <p>
-        Por favor, lee atentamente estos términos y condiciones antes de
-        utilizar nuestro sitio web. Al acceder y utilizar este sitio web,
-        aceptas estos términos en su totalidad. Si no estás de acuerdo con estos
-        términos y condiciones, por favor no utilices nuestro sitio web.
+        Por favor, lee atentamente estos términos y condiciones antes de utilizar nuestro sitio web. Al acceder y
+        utilizar este sitio web, aceptas estos términos en su totalidad. Si no estás de acuerdo con estos términos y
+        condiciones, por favor no utilices nuestro sitio web.
       </p>
 
       <h2>1. Uso del Sitio Web</h2>
 
       <p>
-        1.1. Este sitio web es propiedad y está operado por TUMADRE. Todos los
-        contenidos, información, productos y servicios disponibles en este sitio
-        web están sujetos a estos términos y condiciones.
+        1.1. Este sitio web es propiedad y está operado por TUMADRE. Todos los contenidos, información, productos y
+        servicios disponibles en este sitio web están sujetos a estos términos y condiciones.
       </p>
 
       <p>
-        1.2. El uso de este sitio web está sujeto a las leyes y regulaciones
-        aplicables, y aceptas cumplir con todas las leyes y regulaciones locales
-        en relación con tu uso de este sitio web.
+        1.2. El uso de este sitio web está sujeto a las leyes y regulaciones aplicables, y aceptas cumplir con todas las
+        leyes y regulaciones locales en relación con tu uso de este sitio web.
       </p>
 
       <h2 id="buy-process">2. Proceso de Compra</h2>
 
       <p>
-        2.1. Al realizar una compra en nuestro sitio web, aceptas cumplir con
-        los términos y condiciones de venta aplicables, incluidos los precios,
-        la disponibilidad de productos y los métodos de pago.
+        2.1. Al realizar una compra en nuestro sitio web, aceptas cumplir con los términos y condiciones de venta
+        aplicables, incluidos los precios, la disponibilidad de productos y los métodos de pago.
       </p>
 
       <p>
-        2.2. Nos reservamos el derecho de modificar, suspender o discontinuar
-        cualquier aspecto de nuestros productos o servicios, incluidos los
-        precios y la disponibilidad, en cualquier momento sin previo aviso.
+        2.2. Nos reservamos el derecho de modificar, suspender o discontinuar cualquier aspecto de nuestros productos o
+        servicios, incluidos los precios y la disponibilidad, en cualquier momento sin previo aviso.
       </p>
 
       <h2 id="privacy">3. Política de Privacidad</h2>
 
       <p>
-        3.1. Respetamos tu privacidad y no recopilamos ningún dato personal sin
-        tu consentimiento. No almacenamos información personal de los usuarios
-        que visitan nuestro sitio web, a menos que decidas proporcionarla
+        3.1. Respetamos tu privacidad y no recopilamos ningún dato personal sin tu consentimiento. No almacenamos
+        información personal de los usuarios que visitan nuestro sitio web, a menos que decidas proporcionarla
         voluntariamente al realizar una compra.
       </p>
 
       <p>
-        3.2. Nuestro sitio web puede utilizar cookies para mejorar tu
-        experiencia de usuario. Puedes configurar tu navegador para rechazar
-        todas las cookies o para indicar cuándo se está enviando una cookie.
+        3.2. Nuestro sitio web puede utilizar cookies para mejorar tu experiencia de usuario. Puedes configurar tu
+        navegador para rechazar todas las cookies o para indicar cuándo se está enviando una cookie.
       </p>
 
       <h2>4. Propiedad Intelectual</h2>
 
       <p>
-        4.1. Todo el contenido disponible en este sitio web, incluidos textos,
-        gráficos, logotipos, imágenes y software, está protegido por derechos de
-        autor y otras leyes de propiedad intelectual.
+        4.1. Todo el contenido disponible en este sitio web, incluidos textos, gráficos, logotipos, imágenes y software,
+        está protegido por derechos de autor y otras leyes de propiedad intelectual.
       </p>
 
       <p>
-        4.2. No tienes permiso para reproducir, modificar, distribuir o utilizar
-        de cualquier otra manera el contenido de este sitio web sin nuestro
-        consentimiento expreso por escrito.
+        4.2. No tienes permiso para reproducir, modificar, distribuir o utilizar de cualquier otra manera el contenido
+        de este sitio web sin nuestro consentimiento expreso por escrito.
       </p>
 
       <h2>5. Limitación de Responsabilidad</h2>
 
       <p>
-        5.1. En ningún caso seremos responsables ante ti o cualquier tercero por
-        daños directos, indirectos, incidentales, especiales, consecuentes o
-        punitivos que surjan del uso de este sitio web o de la compra de
+        5.1. En ningún caso seremos responsables ante ti o cualquier tercero por daños directos, indirectos,
+        incidentales, especiales, consecuentes o punitivos que surjan del uso de este sitio web o de la compra de
         productos a través de este sitio web.
       </p>
 
       <h2>6. Ley Aplicable</h2>
 
       <p>
-        6.1. Estos términos y condiciones se regirán e interpretarán de acuerdo
-        con las leyes del [país], y cualquier disputa relacionada con estos
-        términos y condiciones estará sujeta a la jurisdicción exclusiva de los
-        tribunales de [ciudad].
+        6.1. Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes del [país], y cualquier
+        disputa relacionada con estos términos y condiciones estará sujeta a la jurisdicción exclusiva de los tribunales
+        de [ciudad].
       </p>
 
       <h2>7. Modificaciones de los Términos y Condiciones</h2>
 
       <p>
-        7.1. Nos reservamos el derecho de modificar estos términos y condiciones
-        en cualquier momento sin previo aviso. Cualquier modificación entrará en
-        vigor inmediatamente después de su publicación en este sitio web.
+        7.1. Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento sin previo aviso.
+        Cualquier modificación entrará en vigor inmediatamente después de su publicación en este sitio web.
       </p>
     </div>
   </body>
