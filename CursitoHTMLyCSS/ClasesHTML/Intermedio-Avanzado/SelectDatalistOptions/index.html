@@ -1,15 +1,23 @@
 <!-- 
-  SELECT (desplegable): permite seleccionar una opción de entre varias.
+  SELECT, DATALIST Y OPTION
+  SELECT (desplegable): es como un campo de entrada que nos permite seleccionar una opción de entre varias opciones.
   La primera vez aparece solo la flechita, no hay opciones, tenemos que agregárselas
-  value: es el que el servidor recibe una vez enviado el form en lugar de la opción seleccionada en la lista.
+  El select debe tener un name
+
+  value: es importante porque es el valor que el servidor va a recibir una vez enviado el form en lugar de la opción seleccionada en la lista.
   No tenemos que hacer que el servidor reciba acentos o espacios, etc. todo en una frase, todo en minúsculas
 
-  DATALIST: escribimos algo y autocompletamos con opciones predefinidas
+  Lo que el usuario ve son los options, pero el servidor recibe el value de la opción que eligió el usuario
+
+  DATALIST: es un input en el que escribimos algo y se completa automáticamente con opciones que nosotros predefinimos
   
-  OPTIONS: son los items de los select y los datalist.
+  OPTIONS: son los items de los select y los datalist. Los options tienen un value, esto es algo interno, no lovemos nosotros, es para cuando trabajamos con javascript saber leer este dato
   En el caso del datalist si no le pongo un value al option al enviar el formulario se le autoasigna el contenido del option
   También el contenido se puede poner como value y en el contenido usar un texto como descripción, este último no se va a enviar al servidor, sólo se envía el value, por eso esta es una mejor opción
 
+  El datalist tiene que tener un inputl que lleva un atributo list y el datalist lleva un atributo id igual al list del input
+
+  No es necesario cerrar la etiqueta option, cuando esta no se cierra, html le dice a los navegadores que la pueden cerrar ellos automáticamente. Si no lo cerramos los navegadores antiguos no lo van a ver. Es importante hacer las cosas para que los navegadores antiguos las puedan ver
 -->
 
 <!DOCTYPE html>

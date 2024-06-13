@@ -1,9 +1,7 @@
 /* 
   SELECT
   Para cambiar el color de fondo de las options debemos ponerle un background color del mismo color que el formulario
-  Los navegadores están programados para no tocar mucho las options por lo que no podemos usar padding, margin, etc
-
-
+  Los navegadores están programados para no retocar mucho las options por lo que no podemos usar padding, margin, etc. Para esto debemos utilizar una librería de javascript
 */
 
 body {
