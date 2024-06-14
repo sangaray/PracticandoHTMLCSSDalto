@@ -1,20 +1,29 @@
 <!-- 
   AUDIO Y VIDEO
+  Hace cinco años todavía se oía hablar de Flash, hoy eso ya prácticamente no existe, es completamente inseguro y ya no va más. En ese momento HTML5 dijo no puedo depender de flash para la carga del contenido multimedia
   Después de que flash dejó de ser soportado por los navegadores html5 creó dos nuevas etiquetas
+  Para reproducir videos se usa la etiqueta video y el atributo src con el nombre del archivo de video o el enlace al video. 
+  El video no se reproduce al cargar la página
+
   <audio> permite reproducir audio
   <video> permite reproducir video
-  autoplay: reproduce el video automáticamente, pero al recargar la página ya no lo hace
-  controls: agrega controles de reproducción al video
-  muted: mutea el video pero al recargar la página lo reproduce automáticamente  
-  autoplay sólo funciona si está con muted también, hace unos años se modificó para que el usuario tenga que interactuar sí o sí con la página aunque sea una vez
-  El texto entre la etiqueta de apertura y la de cierre de video sólo aparece si el navegador no soporta al video
-  El atributo poster="imagan.png" permite mostrar una pantalla de preloading o una miniatura
-  Si en lugar de video usamos audio con un archivo de video el navegador carga todo el video y luego reproduce sólo el audio, no es recomendable hacer esto porque tarda más en cargar el audio, primero se debe convertir a audio y luego usar este nuevo archivo en la etiquta audio
-  loop: permite reproducir el video en loop
+  - autoplay: reproduce el video automáticamente, pero al recargar la página ya no lo hace, el video no se puede reproducir a menos que el usuario haga click o interactúe de alguna manera con la página
+  - controls: agrega controles de reproducción al video, permite que el video se reproduzca automáticamente
+  - muted: mutea el video pero al recargar la página lo reproduce automáticamente, si no lo ponemos no se reproduce, y el usuario tiene que subir el volumen  
+  Autoplay sólo funciona si está con muted también, hace unos años se modificó para que el usuario tenga que interactuar sí o sí con la página aunque sea una vez
+  El texto entre la etiqueta de apertura y la de cierre de video sólo aparece si el navegador no soporta al video y no lo puede cargar
+  El atributo poster="imagen.png" permite mostrar una pantalla de preloading o una miniatura
+  Si en lugar de video usamos audio con un archivo de video el navegador carga todo el video completo y luego reproduce sólo el audio, no es recomendable hacer esto porque tarda más en cargar el audio, primero se debe convertir a audio y luego usar este nuevo archivo con la etiqueta audio
+
+  Antes el formato de youtube era 16:9, tenía un formato fijo, y si la resolución del video no era la correcta le ponía un fondo negro, que se veía como barras, a los costados o arriba y abajo
+
+  - loop: permite reproducir el video en loop
+  
   La etiqueta <track> permite agregar subtítulos al video, es autocerrable
-  src: permite agregar un archivo con el subtítulo
-  default: permite que aparezca por defecto, de lo contrario tenemos que ponerlos nosotros
-  kind: permite indicar si son subtítulos o caption
+  src: permite agregar un archivo con el subtítulo, idnicando el nombre del archivo
+  - default: permite que aparezca por defecto, de lo contrario tenemos que ponerlos nosotros
+  - kind: permite indicar si son subtítulos o caption
+  - srclang="lenguaj": indica el idioma de los subtítulos
 -->
 
 <!DOCTYPE html>
@@ -28,23 +37,11 @@
   <body>
     <div>
       <video loop controls autoplay muted src="video.mp4">
-        <track
-          src="subtitles.vtt"
-          default
-          kind="subtitles"
-          srclang="es"
-          label="Español (Latinoamérica)"
-        />
+        <track src="subtitles.vtt" default kind="subtitles" srclang="es" label="Español (Latinoamérica)" />
         Tu navegador no sopota el vdeo
       </video>
       <audio loop controls autoplay muted src="audio.mp3">
-        <track
-          src="subtitles.vtt"
-          default
-          kind="subtitles"
-          srclang="es"
-          label="Español (Latinoamérica)"
-        />
+        <track src="subtitles.vtt" default kind="subtitles" srclang="es" label="Español (Latinoamérica)" />
         Tu navegador no sopota el vdeo
       </audio>
     </div>

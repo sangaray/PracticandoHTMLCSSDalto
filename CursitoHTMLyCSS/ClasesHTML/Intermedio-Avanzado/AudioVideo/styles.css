@@ -1,3 +1,8 @@
+/*
+  Los archivos web vtt para subtítulos tienen un formato propio que no se puede modificar.
+  Si queremos darle formato al texto tenemos que formatear el archivo o utilizar javascript para hacerlo
+*/
+
 body {
   background-color: #000;
 }
