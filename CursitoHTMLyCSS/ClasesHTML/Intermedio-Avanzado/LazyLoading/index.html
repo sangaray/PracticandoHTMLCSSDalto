@@ -1,7 +1,10 @@
 <!-- 
   CARGA DIFERIDA O LAZY LOADING
-  Es un concepto que dice que el contenido de una página se tiene que ir cargando a medida que el usuario llega ahí. Va cargando lo que el usaurio va viendo, si hay imágenes más abajo fuera de la visión no las va a cargar
-  loading="lazy" permite cargar la imagen al último y cuando llego a ella, sin esto carga primero las imágenes y no carga el resto de la página. Damos prioridad de carga, le decimos al navegador cargá la imagen cuando puedas y le da prioridad a todo lo demás. Recomiendo no aplicarlo por ahora porque puede crear problemas y no cargar algunos elementos si se usa de manera peligrosa
+  Es un concepto que dice que el contenido de una página se tiene que ir cargando a medida que el usuario va llegando a esas secciones. Va cargando lo que el usaurio va viendo, si hay imágenes más abajo fuera de la visión no las va a cargar, primero carga lo que el usuario va viendo para que la página no se haga lenta.
+  Es la prioridad que le estamos dando a la imagen en cuanto a tiempo de carga
+  loading="lazy" permite cargar la imagen al último y cuando llego a ella, sin esto carga primero las imágenes y no carga el resto de la página. Damos prioridad de carga, le decimos al navegador cargá la imagen cuando puedas y le da prioridad a todo lo demás. Recomiendo no aplicarlo por ahora,  hasta que no sea necesario, porque puede crear problemas y no cargar algunos elementos si se usa de manera peligrosa
+
+  <br> son atributos que ya no se usan, que sirve para dejar línea en blanco
 -->
 
 <!DOCTYPE html>
@@ -14,16 +17,13 @@
   </head>
   <body>
     <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni eligendi
-      nobis aliquid ab voluptate corrupti? Aperiam dignissimos temporibus
-      officiis unde suscipit. Repudiandae autem aliquam quisquam magni sunt
-      perferendis natus fugiat. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Nobis illo voluptatem dolores. Eos hic expedita corporis
-      aspernatur a ducimus repellendus reiciendis voluptatibus? Accusantium
-      facere et alias itaque possimus. Nulla, dignissimos? Lorem ipsum dolor sit
-      amet consectetur adipisicing elit. Cumque eius aliquid sapiente laboriosam
-      facilis deleniti ducimus, autem vero nemo perferendis illum earum
-      explicabo pariatur facere accusamus voluptatum iste, tenetur sint.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni eligendi nobis aliquid ab voluptate corrupti?
+      Aperiam dignissimos temporibus officiis unde suscipit. Repudiandae autem aliquam quisquam magni sunt perferendis
+      natus fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis illo voluptatem dolores. Eos hic
+      expedita corporis aspernatur a ducimus repellendus reiciendis voluptatibus? Accusantium facere et alias itaque
+      possimus. Nulla, dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque eius aliquid
+      sapiente laboriosam facilis deleniti ducimus, autem vero nemo perferendis illum earum explicabo pariatur facere
+      accusamus voluptatum iste, tenetur sint.
     </p>
     <img loading="lazy" src="../../Basico/Imagenes/Severus.jpg" />
   </body>
