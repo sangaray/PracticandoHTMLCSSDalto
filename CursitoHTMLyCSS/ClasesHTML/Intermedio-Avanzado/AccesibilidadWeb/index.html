@@ -1,16 +1,35 @@
 <!--
   ACCESIBILIDAD WEB
-  Es hacer una página accesible para todos  
+  Es hacer una página  web que sea accesible para todos  
   Una página web con mejor accesibilidad es una página web con mejor posicionamiento en los buscadores
   Es una página que todos sin importar sus discapacidades o capacidades pueden utilizar
+
+  Entender el DOM
+  Decimos este codigo html lo lee el navegador y nos da un resultado lindo, esto no es así, el navegador crea un dom, un árbol que contiene todas las propiedades o elementos de html
+
+  Código html pasa al navegador que lo convierte en el dom y eso es lo que nosotros vemos al final la página web hermosa
+
+  Para las personas con discapacidad el navegador crea una copia del dom que pasa por tecnologías de accesibilidad que después el usuario que utiliza las tecnología accesible puede acceder al contenido, este es el flujo real del contenido. Esta copia está hecha especialmente para las tecnologías de accesibilidad
+
   Intención: crear un HTML que pueda ser entendido por las personas con discapacidad a través de sus herramientas de accesibilidad
   widows+ctrl+enter
-  Toda página web debería poder ser navegable con la tecla tab y el enter para hacer todo lo que se hace con el mouse
-  aria-label: es el alt para los lectores de pantalla en c ualquier elemento
+
+  Extensión chrome box especial para chrome, herramienta de accesibilidad
+
+  Para esto necesito usar texto alternativo, con el atributo alt de las imágenes, en los a el texto entre las etiquetas de apertura y cierre es lo que va a leer el lector de pantalla
+
+  Toda página web debería poder ser navegable con la tecla tab y el enter para hacer todo lo que se hace con el mouse, este es el principio más básico de todos
+
+  aria-label: es el alt para los lectores de pantalla en cualquier elemento
   role del id: indica el rol que va a cumplir una etiqueta
+
+  En los formularios
+
   TAREA: 
   1. Ver video: Cómo hacer PÁGINAS WEB INCLUSIVAS (Accesibilidad)
   Analizar->lighthouse sirve para analizar la página por accesibilidad
+
+  Todos los elementos tienen que ser focuseables, y tienen que seguir un orden para usar tab
 -->
 
 <!DOCTYPE html>
@@ -24,9 +43,7 @@
   <body>
     <h2>Menu</h2>
     <img src="../../Basico/Imagenes/Severus.jpg" alt="Severus Snape llorando" />
-    <a href="index.html" aria-label="Enlace que dirige a la web principal"
-      >Ir al menú</a
-    >
+    <a href="index.html" aria-label="Enlace que dirige a la web principal">Ir al menú</a>
     <nav>
       <div>
         <ul>
