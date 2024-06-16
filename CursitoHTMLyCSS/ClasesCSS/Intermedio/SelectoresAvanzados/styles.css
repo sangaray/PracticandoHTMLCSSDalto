@@ -1,16 +1,30 @@
 /*
 SELECTORES AVANZADOS
 CSS básicamente funciona tomando un elemento o seleccionando algo y cambiando o sobreescribiendo sus propiedades
-Dos cosas muy importantes para hacer cualquier cosa con CSS
+Dos cosas que son las más importantes para hacer cualquier cosa con CSS
 1. Saber cómo darle estilo a un elemento, conocer sus propiedades. Las propiedades nos permiten modificar las características de un elemento, las características que sobre todo son visibles
-2. Saber cómo seleccionar eso que queremos modificar. Porque tenemos muchas formas en las que podemos tener problemas si no sabemos seleccionar correctamente
+2. Saber cómo seleccionar eso que queremos modificar. Pero tenemos muchas formas en las que podemos tener problemas si no sabemos seleccionar correctamente
+Podemos utilizar condiciones para seleccionar elementos que cumplen esas condiciones, tambien podemos seleccionar por estados.
 
-Selector por atributo: elemento[atributo="valor"]{}. Si un elemento tienen un atributo definido o ese atributo tienen un valor específico. Si uso el signo $ después del atributo le digo que puede arrancar con algo pero tiene que terminar con lo que figura como valor. Significa termina con...
+Selector de atributo: vamos a dar estilo a un lemento que tenga un atributo específico.
+Se usa
+elemento[atributo="valor"]{}. 
+Si un elemento tienen un atributo definido o ese atributo tienen un valor específico. Si uso el signo $ después del atributo le digo que puede arrancar con algo pero tiene que terminar con lo que figura como valor. Significa termina con...
+Se usa
+img[src$="severus"]{}
+
 El símbolo ^ significa arranaca o comienza con...
 Los tres puntos que aparecen cuando me posiciono sobre el selector significa hay algo más
+Se usa
+img[src^="severus"]{}
+
 Sin los símbolos anteriores ($ o ^) tiene que ser el valor exacto
 
-Selectores descendientes: elemento1 elemento_dentro_elemento1{}. Selecciona de forma descendente
+
+Selectores descendientes: 
+Se usa
+elemento1 elemento_dentro_elemento1{}
+Selecciona de forma descendente
 
 Selector de hijo directo
 elemento_padre > elemento_hijo{}: indica que elemento interno tiene que ser hijo directo de elemento externo
@@ -18,6 +32,7 @@ elemento_padre > elemento_hijo{}: indica que elemento interno tiene que ser hijo
 Selector Hermano Adyascente: hermano1 + hermano2 {} Permite seleccionar al siguiente elemento, que sigue inmediatamente después del indicado
 
 Selector de Hermanos Generales: da estilo a todos los elementos que vengan después del indicado en su mismo nivel
+hermano1 ~ hermano2 {}
 
 Los selectores de hijos y hermanos se pueden usar con más de un elemento siguiendo a otro
 
@@ -46,5 +61,11 @@ h1 + p {
 
 /*SELECTOR DE HERMANOS GENERALES*/
 h1 ~ p {
+  color: brown;
+}
+
+/*SELECTOR DE ELEMENTOS MÚLTIPLES*/
+h1,
+p {
   color: brown;
 }
