@@ -1,25 +1,31 @@
 /*
 HERENCIA
-Dice que algunas propiedades se pueden heredar y otras no
+Dice que algunas propiedades pueden heredarse y otras no
+Por ejemplo a veces aplico un estilo que se termina aplicando al hijo pero no se aplica al padre
 
-Si le pongo un color al body, todo el texto dentro de él toma ese color
+Si le pongo un color al body, todo el texto dentro de él toma ese color. esto se debe a que body tiene una popiedad que dice que si le doy un estilo los hijos lo heredan, la propiedades que le doy a body se van heredando hasta que la cambio en un elemento especificamente y ahí ya no se aplica el estilo dado en body para ese elemento. Esto se aplica a todos los padres e hijos en el documento
 
-color: inherit es el color por defecto que el elemento hereda de su padre o del elemento siguiente hacia arriba
+color: inherit es el color por defecto que el elemento hereda de su padre o del elemento siguiente hacia arriba.
+inherit intenta agarrarse de un objeto que da la propiedad buscada más arriba
 
-La propiedad width no es heredable por defecto
-Los elementos en bloque por defecto tienen un width del 100%
+La propiedad width no es heredable por defecto, no tiene inherit por defecto, se lo tengo que dar manualmente
+
+Los elementos en bloque por defecto tienen un width del 100% y para los elementos en línea es auto
 
 initial: indica que la propiedad que tiene ese valor no hereda los valores de su padre, toma el valor que tiene el navegador por defecto.
 
-unset: restablece al valor inicial y actúa como inherit, revierte al valor del navegador
+unset: restablece al valor inicial y actúa como inherit, revierte al valor del navegador. El estilo del usuario es por ejemplo el que se le da a través de un plugin o modifia el navegador.
 
 revert: intenta primero encontrar el estilo del usuario, si el usuario definió un estilo lo revierte a eso y si no lo revierte a inherit, al valor del navegador
 
-Se define el font-family una vez y se hereda en los inputs de los formularios
-El a también podemos hacer que herede los colores
+inherit se puede usar para los textareas que no toman el formato a heredar, ya que los inputs y los textarea no tienen esta propiedad pof defecto
+
+Se define el font-family una vez y se hereda en los inputs de los formularios si usamos inherit
+El a también podemos hacer que herede los colores con esta propiedad
+
+En este caso todos los elementos toman estos estilos hasta que los cambie independientemente
 */
 
-/*En este caso todos los elementos toman estos estilos hasta que los cambie independientemente*/
 body {
   color: brown;
   font-family: sans-serif;
