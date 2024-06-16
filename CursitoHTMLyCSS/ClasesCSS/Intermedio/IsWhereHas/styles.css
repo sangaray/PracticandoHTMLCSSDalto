@@ -2,11 +2,11 @@
 IS, WHERE Y HAS
 Estas son tres nuevas pseudo-clases, has es la más nueva, y chrome recomienda su uso
 
-:is agrupa los elementos indicados entre paréntesis. Cambia la especificidad de selcción
+:is agrupa los elementos indicados entre paréntesis. Cambia la especificidad de selección
 
 :where no cambia la especificidad de selección. Tiene la misma función que is
 
-:has modifica el elemento indicado solo en el caso de que ese elemento tenga lo que se encuntra entre paréntesis, si eso no existe el cambio no se realiza. También sirve como un medio de validación más estético
+:has modifica el elemento indicado solo en el caso de que ese elemento tenga lo que se encuentra entre paréntesis, si eso no existe el cambio no se realiza. También sirve como un medio de validación más estético
 
 */
 
@@ -26,6 +26,7 @@ section:has(.elemento5) {
   color: #fff;
 }
 
+/*Busca un ul que siga a un div*/
 ul + div {
   color: blue;
 }
