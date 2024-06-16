@@ -1,28 +1,41 @@
 /*
 CASCADA Y ESPECIFICIDAD
-Resuelven los conflictos que ocurren cuando dos estilos chocan sobre un elemento
+CSS como ya sabemos significa Cascading Stylesheets u Hojas de EStilo en Cascada. Es una de las cosas que componen el CSS
+Cuando están trabajando en un sitio ustedes observan que aplican un estilo a un elemento y ese elemento no está tomando ese estilo, esto se debe a que ese estilo depende de una puntuación
+
+La especificidad y la cascada se encargan de resolver los conflictos que ocurren cuando dos estilos chocan sobre un elemento o se sobreescriben.
+Ciertas formas de seleccionar tienen mayor puntuación y se le va a dar prioridad a ella
 
 La especificidad: es como la puntuación de un estilo. Si tienen la misma especificidad sigue el orden en que aparecen las reglas. Si pongo dos selectores o aplico los métods de selección combinados se adicionan las especificidades
 Ejemplo: body .titulo{} es más específico que .título
 Esto puede aplicarse como fallback, cuando no se puede aplicar una regla, se pasa a la siguiente
 
 La cascada nos díce: el orden en el que damos los estilos sí importa
-Si dos reglas tienen el mismo valor de especificidad se va a decidir cual aplicar por el orden y va a quedar la última que apliquemos
+Si dos reglas tienen el mismo valor de especificidad se va a decidir cual aplicar por el orden y va a quedar la última regla que apliquemos
 
 Qué pasa si un elemento tiene más especificidad? Esto significa que ese elemento es más específico. Por ejemplo una clase es más específica que un elemento como selector
+Ejemplo
+.class (0, 1, 0)
+h1 (0, 0, 1)
+En este caso la cascada ya no aplica porque la clase tiene mayor especifididad, la importancia está dada de derecha a izquierda 
+#id (1, 0, 0) este tiene la mayor especificidad
+En estos casos el orden no es importante
+La especificidad es la forma de resolver confilctos
 
 La prioridad la da la especificidad, la cual es un concepto de cascada
 
 Hay algo aún más importante al aplicar estilos y es el estilo en línea, cuando se aplica directamente a un elemento en el archivo HTML
+Acá ya no funciona la especificidad, lo menos importante es lo que indica el navegador
 
 Niveles de importancia
 De mayor a menor los niveles son los siguiente:
-!IMPORTANT: tiene más importancia que todo lo demás en los estilos
-Atributo Style
-Etiqueta Style - Archivo CSS externo: tienen el mismo nivel de importancia
-Cambios hechos por el usuario (extensiones, configuración, etc)
-Navegador
+- !IMPORTANT: tiene más importancia que todo lo demás en los estilos
+- Atributo Style
+- Etiqueta Style - Archivo CSS externo: tienen el mismo nivel de importancia
+- Cambios hechos por el usuario (extensiones, configuración, etc)
+- Navegador
 
+fallback: es un estilo que se usa en caso que no funcione lo que aplicamos, son opciones de respaldo
 */
 
 #titulo {
