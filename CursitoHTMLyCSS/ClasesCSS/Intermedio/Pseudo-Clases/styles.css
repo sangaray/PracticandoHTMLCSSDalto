@@ -1,13 +1,15 @@
 /*
   PSEUDO-CLASES
-  Son palabras clave que nos permiten seleccionar un estado específico de un elemento. Cuando la agrego voy a poder modificar el elemento cuando esté eneste estado
-  :hover selecciona el elemento cuando paso el mouse por encima. Este evento es mouse over, cuando el mouse está por encima del elemento se activa la regla 
+  una forma de seleccionar ciertos estados o momentos putuales de un elemento
+  Son palabras clave que nos permiten seleccionar un estado específico de un elemento que seleccionamos. Cuando la agrego voy a poder modificar el elemento cuando esté en este estado
 
-  :active define el color de un elemento cuando está activo. Se aplica con los dos clicks izquierdo y derecho
+  :hover selecciona el elemento cuando paso el mouse por encima. Este evento es mouse over, cuando el mouse está por encima del elemento se activa la regla. Es la pseudoclase más utilizada 
+
+  :active define el color de un elemento cuando está activo, mientras se esté clickeando el elemento. Se aplica con los dos clicks izquierdo y derecho
 
   :first-child aplica la regla sólo al primer elemento que encuentra del tipo indicado
 
-  :last-child aplica la regla sóloal último elemente que encuentre dde ese tipo
+  :last-child aplica la regla sólo al último elemento que encuentre de ese tipo
 
   :nth-child(número elemento) selecciona al elemento indicado entre los paréntesis. Si entre paréntesis ponemos un número acompañado por n, va a comenzar en el elemento indicado y va a saltar de número en numero. Por ejemplo
   :nth-child(3n) a partir del tercer elemento va a saltar de tres en tres. Esta pseudo-clase se usa para dar estilo a tablas. Tiene en cuenta a todos los hijos
@@ -30,7 +32,6 @@
 
   Material de referencia
   mdn pseudo-clases, muestra toda la lista de pseudo-clases de css.
-
 */
 
 :root {
