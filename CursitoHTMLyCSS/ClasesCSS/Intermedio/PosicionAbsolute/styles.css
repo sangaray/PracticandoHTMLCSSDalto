@@ -1,11 +1,20 @@
 /*
   POSICIÓN ABSOLUTA
-  El elemento ya no ocupa espacio en la página, y se coloca encima del elemetno que le sigue. Le dice al objeto que no ocupe lugar en el flujo de la página pero su posición sigue siendo absoluta
-  El desplazamiento va aser en función del html, del margen superior iquierdo y no relativo a su posición original como en el caso de relative
-  Pero si el contenedor está posicionado con relative, el punto de referencia o de partida del elemento con posición absoluta va a ser el contenedor
+  Las cajas que están posicionadas crear un contexto de apilamiento y se posicionan más adelante, el elemento no desaparece, sigue atrás
+
+  El elemento ya no ocupa espacio en la página, y se coloca encima del elemento que le sigue. Le dice al objeto que no ocupe lugar en el flujo de la página pero su posición sigue siendo absoluta, no mantiene el lugar
+
+  El desplazamiento va a ser en función del html, del margen superior iquierdo y no relativo a su posición original como en el caso de relative
+  Pero si queremos que el punto de referencia sea un contenedor, si a este le asignamos position relative el punto de referencia o de partida del elemento con posición absoluta va a ser el contenedor 
+
   Para top, bottom, left y right el elemento con position absolute va a tomar como referencia los bordes del contenedor que tenga posicion relativ. Si ponemos estas cuatro propiedades en cero y damos margin auto al elemento, este se centra. 
   Pierde el espacio en la página.
   Con relative los objetos toman como punto de referencia su propia posición original, pero con absolute toman como pumto de referencia al elemento contenedor
+
+  Si al objeto le damos top, botton, left, right en 0 y a margin auto el elemento se centra en el contenedor
+
+  Los objetos con posicion absoluta se mueven de forma diferente
+  Son relativos a su contenedor si ningún contenedor tiene posición relativa toma como refeerencia al html
 */
 
 body {
