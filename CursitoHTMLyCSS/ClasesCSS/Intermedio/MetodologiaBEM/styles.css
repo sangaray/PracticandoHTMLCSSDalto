@@ -6,10 +6,10 @@ En CSS se utiliza una metodología porque:
 1. Nos permite reutilizar código que es el propósito principal de esta metodología, que es optimizar código
 Por ejemplo: si tenemos dos botones diferentes lo que hacemos es darle un estilo a un botón y otro estilo a otro botón, entonces tenemos dos botones diferentes pero hay partes del código que se repiten. 
 Esta metodología es una clase de estilo predefinido nos permite crear una base que luego con los modificadores podemos ir modificando para no tener que estar escribiendo el código una y otra y otra vez
-2. Se resuelven problemas de especificidad. Si van a generadores de especificidad o páginas que revisan la especificidad de su código normalmente es complicada la forma con que manejan la especificidad los proyectos que no trabajan con una metodología. BEM nos permite crear clases para con sólo verlas saber a que se refieren
+2. Se resuelven problemas de especificidad. Si van a generadores de especificidad o páginas que revisan la especificidad de su código normalmente es complicada la forma con que manejan la especificidad los proyectos que no trabajan con una metodología. BEM nos permite crear clases para con sólo verlas saber a que se refieren. 
 3. Tienen código más legible. Si voy a un elemento sé que hace, donde está y qué quiero modificar
 
-Bloque: componente independiente que no depende de nadie para existir. Ejemplo: una barra de navegación
+Bloque: componente independiente que no depende de nadie para existir. Ejemplo: una barra de navegación, una tarjeta es un bloque, un formulario es un bloque
 
 Elemento: hace refeencia a una parte de un bloque, un pedazo del bloque que por sí solo no tiene sentido pero dentro del bloque sí
 
@@ -37,6 +37,14 @@ ESTILO SIN METODOLOGÍA BEM
   margin: 10px 0;
   list-style: square;
 }
+
+Con la metodología BEM vamos a no repetir código
+Ejemplo
+El bloque principal es lista
+Los elementos de la lista se esriben lista__item, se usan dos guiones bajos para no confundir con un nombre u otro valor
+La clase modificadora se agrega luego de dejar un espacio después de la clase de cada elemento, y se escribe con el nombre del elemento, en este caso item, dos guienes medios y el nombre de la modificación que vamos a hacer, en este caso danino e importante, entonces ambos elementos quedarían;
+item--danino e item--importante
+Si quisiéramos modificar un bloque en lugar de poner el nombre del elemento ponemos el nombre del bloque, en este caso sería lista lista--vieja
 
 La propiedad opacity cambia la opacidad o transparencia de un elemento
 */
