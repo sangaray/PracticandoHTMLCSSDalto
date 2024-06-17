@@ -1,20 +1,22 @@
 /* 
   PSEUDO-ELEMENTOS
-  Son palabras clave que trabajan con partes de un elemento
+  Son palabras clave que trabajan con partes de un elemento, no es un elemento como tal sino una parte de un elemento
   Los pseudoelementos empiezan con dos puntos ::seudoelemento
   Los pseudoelementos tienen sus dificultades, hay propidades o estilos que no funcionan en ellos
 
   ::first-letter toma la primera letra de un texto
 
-  ::first-line toma la primera línea de un texto
+  ::first-line toma la primera línea de un texto, a medida que se agranda la línea va tomando el estilo indicado para la primera línea
 
   ::selection permite cambiar el estilo de selección del contenido de la página o del elemento indicado
 
-  ::placeholder permite cambiar el estilo del texto en el placeholder de los inputs
+  ::placeholder permite cambiar el estilo del texto en el placeholder de los inputs. El padding se aplica lateralmente
 
   ::marker cambia el color de las viñetas de los li
 
   ::before permite poner un texto antes del elemento indicado utilizando la propiedad content. Este texto no va a aparecer si inspeccionamos la página y no puede seleccionarse 
+
+  ::after hace lo mismo pero coloca el texto al después de un elemento
 */
 
 div {
