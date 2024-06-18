@@ -1,6 +1,6 @@
 /*
   DIALOG
-  backdrop: es un pseudo elemento que permite estilizar un elemento dialog
+  ::backdrop: es un pseudo elemento que permite estilizar un elemento dialog
   Viene con la propiedad position absolute por defecto
 */
 
