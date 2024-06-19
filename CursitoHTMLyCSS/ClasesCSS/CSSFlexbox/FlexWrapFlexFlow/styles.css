@@ -1,6 +1,6 @@
 /*
   FLEX WRAP y FLEX FLOW
-  Flex wrap permite controlar los flex items cuando el espacio del contenedor es insuficienta. Se le da a la caja contenedora, no a los hijos
+  Flex wrap permite controlar el comportamiento de los flex items cuando el espacio del contenedor es insuficienta. Se le da a la caja contenedora, no a los hijos
 
   - nowrap valor por defecto, no se pueden bajar los flex items
 
@@ -11,26 +11,28 @@
   Flex flow permite definir dirección y wrap. No es muy usado
 
   flex grow indica cuanto puede crecer
+  
   flex basis indica lo máximo que se puede recortar
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-div, body{
+div,
+body {
   box-sizing: border-box;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
   flex-flow: row wrap;
   border: 2px solid #000;
   margin: 20px;
 }
 
-.flex-item{
+.flex-item {
   width: 100px;
   background-color: #800;
   margin: 10px;
@@ -39,9 +41,9 @@ div, body{
   text-align: center;
 }
 
-.flex-item:first-child{
+.flex-item:first-child {
   background-color: #f77;
 }
-.flex-item:last-child{
+.flex-item:last-child {
   background-color: #000;
 }
