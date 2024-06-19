@@ -1,14 +1,16 @@
 <!--
     EMMET
-  Es un plugin que básicamente sirve para facilitarnos hacer ciertas cosas con HTML y CSS
+  Es un plugin que básicamente sirve para facilitarnos hacer ciertas cosas con HTML y CSS. Es específico para html y css
   Funciona por abreviaturas, y lo que hace es convertir una abreviatura en todo un código
-  Cualquier elemento de HTML puede ser creado con emmet
+  Cualquier elemento de HTML puede ser creado con emmet, es parecido a un snippet
 
   SNIPPET
   Es una forma de guardarun código específico para llamarlo desde el editor y poder usarlo sin escribirlo todo desde cero
 
   Usos
   nombre de la etiqueta enter crear al etiqueta de apertura y cierre para el elemento indicado
+
+  Si pongo lorem se pone un texto de relleno falso llamado lorem ipsum
 
   elementopadre>elementohijo crear las dos etiqutas una dentro de la otra
   
@@ -18,122 +20,130 @@
 
   elemento.clase agrega una clase al elemento indicado
 
+  Se pueden combinar las opciones
+  Ejemplo
+  li*4>a
+  crea
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+
   Repaso:
   El punto es para las clases
   El > indica que dentro del elemento de la izquierda va el elemento de la derecha del símbolo
   Elemento*n indica que debe crear n cantidad de elementos
-  {texto $} indica que texto es contenido y el $ crea un autoincrementable del 1 a la cantidad dada por n
+  {texto $} indica qué texto es contenido y el $ crea un autoincrementable del 1 a la cantidad dada por n
   elemento:atributo crea el elemento indicado con el atributo indicado
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmet</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- ul>li  -->
-  <ul>
-    <li></li>
-  </ul>
-  <!-- ul>li>a -->
-  <ul>
-    <li><a href=""></a></li>
-  </ul>
-  <!-- ul>li*4>a -->
-  <ul>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
-  <!-- ul>(li>a)*4 -->
-  <ul>
-    <li><a href=""></a><a href=""></a><a href=""></a></li>
-  </ul>
-  <!-- ul>li>a.link -->
-  <ul>
-    <li><a href="" class="link"></a></li>
-  </ul>
-  <!-- ul>li>a#link -->
-  <u>
-    <li><a href="" id="link"></a></li>
-  </u>
-  <!-- ul>(li.list-item>a#link)*4 -->
-  <ul>
-    <li class="list-item"><a href="" id="link"></a></li>
-    <li class="list-item"><a href="" id="link"></a></li>
-    <li class="list-item"><a href="" id="link"></a></li>
-    <li class="list-item"><a href="" id="link"></a></li>
-  </ul>
-  <!-- ul.header-ul>li.list-item*4>a.link -->
-  <ul class="header-ul">
-    <li class="list-item"><a href="" class="link"></a></li>
-    <li class="list-item"><a href="" class="link"></a></li>
-    <li class="list-item"><a href="" class="link"></a></li>
-    <li class="list-item"><a href="" class="link"></a></li>
-  </ul>
-  <!-- header>nav>ul.header-ul>li.list-item*4>a.link -->
-  <header>
-    <nav>
-      <ul class="header-ul">
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- header>nav>ul.header-ul>li.list-item*4>a.link -->
-  <header class="header">
-    <nav class="header-nav">
-      <ul class="header-ul">
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-        <li class="list-item"><a href="" class="link"></a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- header>nav>ul.header-ul>li.list-item*4>a.link{link} -->
-  <header>
-    <nav>
-      <ul class="header-ul">
-        <li class="list-item"><a href="" class="link">link</a></li>
-        <li class="list-item"><a href="" class="link">link</a></li>
-        <li class="list-item"><a href="" class="link">link</a></li>
-        <li class="list-item"><a href="" class="link">link</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- header>nav>ul.header-ul>li.list-item*4>a.link{link $} -->
-  <header>
-    <nav>
-      <ul class="header-ul">
-        <li class="list-item"><a href="" class="link">link 1</a></li>
-        <li class="list-item"><a href="" class="link">link 2</a></li>
-        <li class="list-item"><a href="" class="link">link 3</a></li>
-        <li class="list-item"><a href="" class="link">link 4</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ul>li  -->
+    <ul>
+      <li></li>
+    </ul>
+    <!-- ul>li>a -->
+    <ul>
+      <li><a href=""></a></li>
+    </ul>
+    <!-- ul>li*4>a -->
+    <ul>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+    </ul>
+    <!-- ul>(li>a)*4 -->
+    <ul>
+      <li><a href=""></a><a href=""></a><a href=""></a></li>
+    </ul>
+    <!-- ul>li>a.link -->
+    <ul>
+      <li><a href="" class="link"></a></li>
+    </ul>
+    <!-- ul>li>a#link -->
+    <u>
+      <li><a href="" id="link"></a></li>
+    </u>
+    <!-- ul>(li.list-item>a#link)*4 -->
+    <ul>
+      <li class="list-item"><a href="" id="link"></a></li>
+      <li class="list-item"><a href="" id="link"></a></li>
+      <li class="list-item"><a href="" id="link"></a></li>
+      <li class="list-item"><a href="" id="link"></a></li>
+    </ul>
+    <!-- ul.header-ul>li.list-item*4>a.link -->
+    <ul class="header-ul">
+      <li class="list-item"><a href="" class="link"></a></li>
+      <li class="list-item"><a href="" class="link"></a></li>
+      <li class="list-item"><a href="" class="link"></a></li>
+      <li class="list-item"><a href="" class="link"></a></li>
+    </ul>
+    <!-- header>nav>ul.header-ul>li.list-item*4>a.link -->
+    <header>
+      <nav>
+        <ul class="header-ul">
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header>nav>ul.header-ul>li.list-item*4>a.link -->
+    <header class="header">
+      <nav class="header-nav">
+        <ul class="header-ul">
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+          <li class="list-item"><a href="" class="link"></a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header>nav>ul.header-ul>li.list-item*4>a.link{link} -->
+    <header>
+      <nav>
+        <ul class="header-ul">
+          <li class="list-item"><a href="" class="link">link</a></li>
+          <li class="list-item"><a href="" class="link">link</a></li>
+          <li class="list-item"><a href="" class="link">link</a></li>
+          <li class="list-item"><a href="" class="link">link</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header>nav>ul.header-ul>li.list-item*4>a.link{link $} -->
+    <header>
+      <nav>
+        <ul class="header-ul">
+          <li class="list-item"><a href="" class="link">link 1</a></li>
+          <li class="list-item"><a href="" class="link">link 2</a></li>
+          <li class="list-item"><a href="" class="link">link 3</a></li>
+          <li class="list-item"><a href="" class="link">link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
 
 <!--  -->

@@ -4,11 +4,16 @@
   numerop %
   nuemroe em
   m margin
+  mnúmero indica margin 10px
+  mnúmero-numero indica margin 10px 10px
   p padding
   bgc background-color
   c color
+  w width
+  c# da el color en hexadecimal
+  Se pueden combinar
 */
-header{
+header {
   margin: 10%;
   padding: 10px;
 }
