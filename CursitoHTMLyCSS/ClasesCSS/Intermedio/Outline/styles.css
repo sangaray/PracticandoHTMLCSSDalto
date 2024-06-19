@@ -1,25 +1,36 @@
 /*
   OUTLINE
+  Sabemos que el borde afecta al tamaño del elemento.
   Es una propiedad que se encuentra entre el borde y el margen Tiene sólo una utilidad visual, no ocupa espacio. Es sólo una guía para el usuario, si le cambio el grosor no cambia nada en la caja o el elemento
 
+  Para que se vea tengo que definir las tres propiedades anteriores
   outline-width: define el ancho
   outline-color: define el color
   outline-style: define el estilo
-  outline-offset: define la distancia de sí mismo hasta el borde, no está incluido en el shorhand
 
-  outline: shorthand de esta propiedad
+  outline-offset: define la distancia de sí mismo hasta el borde, no está incluido en el shorhand, por lo que debe darse aparte
+
+  outline: shorthand de esta propiedad, es igual que el borde: grosor estilo color
 
   Nunca se debe dar un outline invisible a los elementos que tienen que estar focuseados para evitar problemas de accesibilidad
+  Para poder ocultar el outline tenemos que usar primero
+  input:focus-visible{
+    outline: none;
+  }
+  de esta manera no se muestra en pantalla, pero las herramientas de accesibilidad igual lo detectan
 
+  No afecta al flujo de la página
+
+  En transiciones si quiero poner dos propiedades distintas con distinto valor se separan con comas
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
   background-color: #ccc;
 }
 
-.box{
+.box {
   width: 150px;
   background-color: #f00;
   margin: auto;
@@ -29,14 +40,13 @@ body{
   outline-width: 10px;
   outline-color: linear-gradient(to top red, green);
   outline-style: solid;
-
 }
 
-.box:hover{
+.box:hover {
   outline-offset: 10px;
 }
 
-input{
+input {
   margin: 50px;
   border: none;
   border-top: 3px solid #000;
@@ -46,12 +56,12 @@ input{
   transition: outline 1s outline-offset 1s;
 }
 
-input:focus{
+input:focus {
   border-color: blue;
   color: blue;
   /* outline: none; esto no se usa así ya que da problemas de accesibilidad */
 }
 
-input:focus-visible{
+input:focus-visible {
   outline: none;
 }
