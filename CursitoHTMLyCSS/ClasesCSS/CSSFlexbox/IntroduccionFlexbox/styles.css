@@ -1,17 +1,19 @@
 /*
   FLEXBOX y FLEX DIRECTION
   Es un estilo de box model. Hay varios tipos de box model: en línea, en bloque, flexbox
-  Es un módulo de CSS, qué hacemos cuando los contenidos de las cajas sean dinámicos, no los conozcamos o vayan cambiando? Necesitamos cajas con cosas dentro que se adapten al tamaño, necesitamos que las cajas sen flexibles y el contenido también
+  Es un módulo de CSS, qué hacemos cuando los contenidos de las cajas o los tamaños sean dinámicos, no los conozcamos o vayan cambiando? Necesitamos cajas con cosas dentro que se adapten al tamaño, necesitamos que las cajas sen flexibles y el contenido también
   A medida que cambia la resolución, el contenido va cambiando y se adapta, ubicándose de distintas maneras
+
   A una caja (caja contenedora) le vamos a dar la propiedad display flex y esa propiedad hace que todas las cajas que están adentro tengan toda la magia. Esta caja va a tener un comportamiento de bloque, pero lo que está dentro va a tener un comportamiento flexible, a ellos es a quienes se le van a aplicar las propiedades
   inline-flex permite tener dos cajas con los elementos de adentro flexibles
-  Las cajas contenedoras son prácticamente un bloque, pero cuando le decimos flex, el contenido de adentro para a ser flexible, entonces no es a la caja grande a quien se le van a aplicar estas propiedades sino que es a las cajas que están adentro pero para hacer esto debemos darle propiedades a la caja y propiedades a su contenido
+  Las cajas contenedoras son prácticamente un bloque, pero cuando le decimos flex, el contenido de adentro pasa a ser flexible, entonces no es a la caja grande a quien se le van a aplicar estas propiedades sino que es a las cajas que están adentro pero para hacer esto debemos darle propiedades a la caja y propiedades a su contenido
   Tenemos dos cosas:  
   1. La caja contenedora: es el flexbos, la caja flexible
   2. Los flex items: son los elementos que están dentro de la caja contendora y es donde pasa la magie
-  Una característica de flexbos es que es unidireccional, apunta en una sola dirección, y unidimensional porque tiene una sola dimensión, el eje x O el eje y. Esa es la diferencia con grid que es bidireccional y bidimensional porque se mueve en el eje x Y en el eje y
+
+  Una característica de flexbos es que es unidireccional, apunta en una sola dirección, y unidimensional porque tiene una sola dimensión, lo movemos en el eje x o en el eje y. Esa es la diferencia con grid que es bidireccional y bidimensional porque se mueve en el eje x y en el eje y
   
-  Row: alinea los elementos en fila, horizontal, para nosotros de izquierda a derech
+  Row: alinea los elementos en fila, horizontal, para nosotros de izquierda a derecha
   
   Row-reverse: invierte la dirección, sigue estando horizontal, en fila, pero va de derecha a izquierda, en dirección contraria
   
@@ -26,7 +28,7 @@
   Con Row reserse sigue horizontal pero cambia la dirección, pasa a ir de derecha a izquierda. 
   Con column reverse sigue vertical, pero pasa a ir de abajo hacia arriba
   
-  Cross Axis: sirve para alinear los eleentos, para definir sus posiciones
+  Cross Axis: sirve para alinear los elementos, para definir sus posiciones
   Con Row va de arriba hacia abajo, verticalmente. Cruza al eje principal. 
   Con Column va de izquierda a derecha, horizontalmente. 
   Con Row reserse sigue vertical y no cambia la dirección, queda de arriba hacia abajo
@@ -38,7 +40,7 @@
 
   Para que flexbox exista tenemos que tener una caja principal a la que le vamos a dar display flex y otras cajas que van a estar dentro de la principal que son los flex items. Algunas propiedades se le dan a la caja padre o flexbox y otras a las cajas hijas o flex items, estos últimos tienen que ser hijos directos
 
-  Los flex-ítems se pueden enconger pero no pueden crecer más alla del tamaño que se les ió en el width o en el height
+  Los flex-ítems se pueden enconger pero no pueden crecer más alla del tamaño que se les dió en el width o en el height
   Todo lo que pasa con los elementos dentro de la caja se puede definir
   Si definimos a los elementos por su padding ya la caja deja de ser flexible
   Por defecto el alto del cross axis se ocupa por completo y si no le doy un width toma el 100% del ancho de la pantalla
@@ -57,17 +59,17 @@
   direction: con row define la dirección del texto en la página, con column cambia la posición delos items en el cross axis solamente
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.flex-item{
+.flex-item {
   width: 180px;
   background-color: #800;
   margin: 10px;
@@ -76,9 +78,9 @@ body{
   text-align: center;
 }
 
-.flex-item:first-child{
+.flex-item:first-child {
   background-color: #f77;
 }
-.flex-item:last-child{
+.flex-item:last-child {
   background-color: #000;
 }
