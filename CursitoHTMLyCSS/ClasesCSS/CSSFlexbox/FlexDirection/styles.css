@@ -1,5 +1,5 @@
 /*
-  FLEXBOX
+  FLEXBOX y FLEX DIRECTION
   Es un estilo de box model. Hay varios tipos de box model: en línea, en bloque, flexbox
   Es un módulo de CSS, qué hacemos cuando los contenidos de las cajas o los tamaños sean dinámicos, no los conozcamos o vayan cambiando? Necesitamos cajas con cosas dentro que se adapten al tamaño, necesitamos que las cajas sen flexibles y el contenido también
   A medida que cambia la resolución, el contenido va cambiando y se adapta, ubicándose de distintas maneras
@@ -39,6 +39,24 @@
   gap: separa los elementos entre sí, se usa en lugar de margin
 
   Para que flexbox exista tenemos que tener una caja principal a la que le vamos a dar display flex y otras cajas que van a estar dentro de la principal que son los flex items. Algunas propiedades se le dan a la caja padre o flexbox y otras a las cajas hijas o flex items, estos últimos tienen que ser hijos directos
+
+  Los flex-ítems se pueden enconger pero no pueden crecer más alla del tamaño que se les dió en el width o en el height
+  Todo lo que pasa con los elementos dentro de la caja se puede definir
+  Si definimos a los elementos por su padding ya la caja deja de ser flexible
+  Por defecto el alto del cross axis se ocupa por completo y si no le doy un width toma el 100% del ancho de la pantalla
+
+  Propiedades;
+  display:flex va en la caja padre la hace flexible para su contenido
+
+  flex-direction:row es la propiedad por defecto del flexbox, los elementos se ordena en fila en la dirección del texto
+
+  flex-direction:row-reverse va en la caja padre, e invierte la dirección de los ítems, van en contra de la dirección del texto
+
+  flex-direction:column los elementos se acomodan de arriba hacia abajo y mantienen su width
+
+  flex-direction:column-reverse los elementos se acomodan de abajo hacia arriba y mantienen su width
+
+  direction: con row define la dirección del texto en la página, con column cambia la posición delos items en el cross axis solamente
 */
 
 body {
