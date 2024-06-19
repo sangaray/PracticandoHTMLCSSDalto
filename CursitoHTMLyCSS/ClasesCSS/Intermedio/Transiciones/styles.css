@@ -1,28 +1,32 @@
 /*
   TRANSICIONES
-  Son el cambio de una propiedad entre un valor y otro
-  Para que la tansición se aplique ya tiene que estar en el elemento original
+  Son el intervalo de cambio de una propiedad entre un valor y otro
+  Puedo hacer que al cambiar de color en un hover por ejemplo se vea el paso por todos los valores de color entre el primer color y el segundo
+  Para que la tansición se aplique ya tiene que estar en el elemento original, no en el cambio en sí
   
   transition-property: cuál es la propiedad que se quiere transicionar.
-  Usar el valor all para eta propiedade es una mala práctica porque hace que el navegador trabaje mucho, se recomienda indicar cada propiedad en la que se quiere aplicar la transición separadas por comas
+  Usar el valor allí para esta propiedad es una mala práctica porque hace que el navegador trabaje mucho, se recomienda indicar cada propiedad en la que se quiere aplicar la transición separadas por comas
+  Cuando cargamos la caja pasa del estado nativo del navegador al que nosotros le pedimos
 
   transition-duration: cuánto queremos que dure la transición
 
   transition-delay: cuánto tiempo va a tardar en comenzar la transición
 
-  Hay que tener cuidado cuando se transiciona entre valores que no son compatibles, como auto a 20px por ejemplo
+  Hay que tener cuidado cuando se transiciona entre valores que no son matemáticamente compatibles, como auto a 20px por ejemplo
 
   Curvas de Bezier: es una ecuación matemática que permite definir una curva paramétrica, tiene cuatrao parámetros que controlan la dirección y la intensidad de la animación
 
   Material de referencia:
-  cubic-bezier.com
+  cubic-bezier.com 
+  o en el inspector del navegador
 
-  transition-timing-function: cambiar la aceleración
+  transition-timing-function:cambiar la aceleración
   ease: rápido a lento
-  ease-in:
-  ease-in-out:
-  ease-out:
+  ease-in: arranca lento y termina abrupto
+  ease-in-out: arranca lento y termina lento
+  ease-out: muy lento, casi lenea y termina abrupto
 
+  transition solo es un shorthand que reune las cuatro propiedades 
 */
 
 body {
