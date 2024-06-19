@@ -1,10 +1,10 @@
 /*
   DESBORDAMIENTO U OVERFLOW
-Determina cómo s maneja el contenido que se sale de su contenedor
+Determina cómo se maneja el contenido que se sale de su contenedor
 
-Si no le doy una algura fija a un elemento al agregar texto se va ajustando automáticamente, pero si le doy un algo fijo el texto se sale del mismo (en este caso estamos hablando de un div), esto se maneja con la propiedad overflow
+Si no le doy una altura fija a un elemento al agregar texto se va ajustando automáticamente, pero si le doy un alto fijo el texto se sale del mismo (en este caso estamos hablando de un div), esto se maneja con la propiedad overflow
 
-visible: es el valor por defeto y dice que lo que sobresalga del contenedor se vea, sea visible
+visible: es el valor por defecto y dice que lo que sobresalga del contenedor se vea, sea visible
 
 hidden: oculta todo lo que se salga del contenedor. El navegador guarda el espacio de las barras de desplazamiento aún cuando no se vean
 
@@ -12,13 +12,15 @@ clip: no muestra las barras pero el navegador tampoco guarda el espacio para ell
 
 scroll: muestra una barra de desplazamiento vertical que permite ver el texto o contenido oculto, pero también muestra una barra de desplazamiento horizontal que se ve horrible
 
-auto: la barra de desplazamiento sólo aparece cuando hay desbordamiento, si no, no lo hace
+auto: la barra de desplazamiento sólo aparece cuando hay desbordamiento, si no, no lo hace, el contenido se ajusta y sólo muestra el scroll si es necesario, de lo contrario no lo hace
 
 overflow-y: con hidden oculta la barra vertical
 
 overflow-x: con hidden oculta la barra horizontal
 
 overflow-scroll: muestra la barra de desplazamiento vertical, el problema de esta opción es que si el contenido no desborda la barra se sigue viendo igual
+
+Esto se aplica a todos tipo de elemento, imagenes, video, texto, etc
 */
 
 body {
