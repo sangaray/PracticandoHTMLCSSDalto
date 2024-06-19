@@ -1,32 +1,29 @@
 /*
   CONTROL DEL FLUJO DE TEXTO
-   white-space: define cómo se comportan los espacios en blanco
+  Control del texto
+  white-space: define cómo se comportan los espacios en blanco
   - normal: es el valor por defecto
   - nowrap: indica que no hay saltos de línea, deja todo el texto en una sola línea. Es algo que no deberíamos usar
   - pre: detecta los saltos de línea tal cual nosotros los ponemos. Pero si una palabra se desborda no hace nada y deja que los haga
+  pero el texto se desborda igual
   - pre-wrap: respeta los saltos de líneas puestos por el programador pero si una palabra se desborda la pasa abajo. Es una mezcla entre normal y pre
 
   text-overflow
   - clip: es la opción por defecto recorta el texto 
-
   - ellipsis: junto con white-space: nowrap o pre y overflow: hidden se ve en el contenedor solo lo que entra y tres puntitos al final del texto. Sólo aparecen los tres puntitos cuando se desborde
 
   word-break
-  - breack- all: corta todas las palabras junto con white-space:normal
-
+  - break-all: corta todas las palabras junto con white-space:normal
   - keep-all: evita la ruptura de palabras en algunos idiomas
-
   - auto-phrase: todavía es experimental, no salió, pero lo que hace es cuando una palabra se está por cortas busca crear una frase inteligente
 
   word-wrap: 
   - break-word: separa en sílabas y si la palabra se puede romper lo hace y tira para abajo el resto
-
-  - anywhere: las palabras largas las rompe
-
-  - balance: balancea la distribución de palabras para que quede algo estético. Aplica a títulos
+  - anywhere: las palabras largas las rompe si se desborda del contenedor
+  - balance: balancea la distribución de palabras para que quede algo estético. Aplica a títulos, balancea el texto para que no queden palabras solas. Balance palabras
 
   text-wrap
-  - pretty: evita las viudas y los huérfanos en los textos. Aplica a 
+  - pretty: evita las viudas y los huérfanos en los textos. Balancea párrafos  
 */
 
 body {
@@ -44,8 +41,8 @@ body {
   border: 1px solid #0006;
   white-space: normal;
   text-wrap: pretty;
-  }
+}
 
-  h1{
-    text-wrap: balance;
-  }
+h1 {
+  text-wrap: balance;
+}
