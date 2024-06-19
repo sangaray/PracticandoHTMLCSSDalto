@@ -8,22 +8,23 @@
 
   - contain: hace lo mismo que background-contain, hace que la imagen entre por lo menos una vez en el contenedor y que una de las dimensiones de la imagen entre al 100%
 
-  - conver: lo único que hace es adaptarse llenando todo el espacio contenedor
+  - cover: lo único que hace es adaptarse llenando todo el espacio contenedor
 
-  - none: mantiene la resolución original de la imagen. no tomaen cuenta el alto y el ancho
+  - none: mantiene la resolución original de la imagen. no toma en cuenta el alto y el ancho
 
-  - scale-down: toma la opción más chica
+  - scale-down: toma el valor de propiedad  más chica
 
   object-position: permite ubicar la imagen dentro del contenedor con top, bottom, left, right, pixeles. 
 
+  Esto no se aplica al fondo sino a las imágenes y los videos
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-img{
+img {
   width: 1400px;
   height: 1200px;
   margin: auto;
