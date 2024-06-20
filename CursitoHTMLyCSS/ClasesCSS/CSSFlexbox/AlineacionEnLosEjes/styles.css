@@ -1,7 +1,6 @@
 /*
   ALINEACIÓN EN LOS EJES
-  Flex Wrap - Flex Flow
-  Estamos aplicando propiedades a la caja padre o caja flexible. No a las cajas hijo o flex items
+  Estamos aplicando propiedades a la caja padre o caja flexible, no a las cajas hijo o flex items
 
   Propiedades:
   justify-content es una propiedad que habla del eje principal, lo que vamos a hacer es alinear el contenido en el eje principal, que va a depender si trabajamos row o column. Con esta propiedad lo único que hacemos e mover los flex items en el eje principal, pero mantiene la separación y otras propiedades
