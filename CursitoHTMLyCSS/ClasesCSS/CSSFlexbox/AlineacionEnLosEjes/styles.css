@@ -1,42 +1,49 @@
 /*
   ALINEACIÓN EN LOS EJES
   Flex Wrap - Flex Flow
-  Estamos aplicando propiedades a la caja padre o caja flexible.
+  Estamos aplicando propiedades a la caja padre o caja flexible. No a las cajas hijo o flex items
 
   Propiedades:
-  justify-content es una propiedad que habla del eje principal, lo que hacemos es alinear el contenido en el eje principal, que va a depender si trabajamos row o column. Con jesta propiedad lo único que hacemos e mover los flex items en el eje principal, pero mantiene la separación y otras propiedades
+  justify-content es una propiedad que habla del eje principal, lo que vamos a hacer es alinear el contenido en el eje principal, que va a depender si trabajamos row o column. Con esta propiedad lo único que hacemos e mover los flex items en el eje principal, pero mantiene la separación y otras propiedades
   - start: antes se usaba flex-start, pero ahora ya no es necesario usar flex delante del valor, este es el valor por defecto. Significa que va en dirección del texto
   - end: alinea al final del eje
   - center: centra los flex items
   Con esos tres valores lo único que hacemos e mover los flex items en el eje principal, pero mantiene la separación y otras propiedades. Pero hay tres más
-  - space-between: pone el primer item al principio del eje, el último al final y los del medio distribuyen su espacio para queda a la misma distancia uno del otro, los únicos que cambian si agrego más elementos son los del medio
-  - space-around: hace que cada elemento tenga una separación igual, cada elemento tiene un margan izquierdo igual al margen derecho, los márgenes no se superponen y las distancias no son todas iguales. Los elementos de los extremos tiene un distancia al borde distinta de la que hay entre los elementos centrales
+  - space-between: pone el primer item al principio del eje, el último al final y los del medio van a  distribuir su espacio para quedar a la misma distancia uno del otro, los únicos que cambian si agrego más elementos son los del medio
+  - space-around: hace que cada elemento tenga una separación igual, cada elemento tiene un margan izquierdo igual al margen derecho, los márgenes no se superponen y las distancias no son todas iguales. Los elementos de los extremos tiene una distancia al borde distinta de la que hay entre los elementos centrales
   - space-evenly: dice que va a haber la misma distencia entre todos los elementos, y el primero y el segundo van a tener la misma distancia que hay entre los elementos centrales
   Estos valores funcionan también con column sólo que se alinea verticalmente.
   Los reverse sólo cambian el orden de los elementos pero no la posición de ordenamiento
   
   align-items: alinea sobre el eje cruzado. Lo usamos cuando tenemos sólo una línea
-  - stretch: estirate para llenar el corss axis completo, este es el valor por defecto. Los elementos va a crecer siempre en relación al ítem más alto
-  - start: mantiene el height de los elementos, y lo posiciona al comienzo
-  - end: posiciona al final
+  - stretch: estirate para llenar el corss axis completo, este es el valor por defecto. Los elementos van a crecer siempre en relación al ítem más alto
+  - start: mantiene el height de los elementos, y los posiciona al comienzo
+  - end: posiciona los elementos al final
   - center: centra los elementos
-  - baseline: los ítems se alinea en la línea base del texto, se pone a la misma altura para que quede el texto medianamente bien alineado
+  - baseline: los ítems se alinea en la línea base del texto, se pone a la misma altura para que quede el texto relativamente alineado
 
-  align-content: se alinea en el cross axis tambien. Sin esta propiedad es como que divide al contenedro en dos filas y el contenido se alinea en función de esas dos filas. La usamos cuando tenemos varias líneas aplican los mismos valores de justify-content
+  align-content: se alinea en el cross axis tambien. Sin esta propiedad es como que divide al contenedir en dos filas y el contenido se alinea en función de esas dos filas. La usamos cuando tenemos varias líneas aplican los mismos valores de justify-content
 
-  Una técnica muy común y muy usada es usar el flexbox sólo para centra un elemento vertical y horizontalmente con margin auto, esto centra el elemento en el centro del contenedor
+  Una técnica muy común y muy usada es usar el flexbox sólo para centrar un elemento vertical y horizontalmente con margin auto, esto centra el elemento en el centro del contenedor
+
+  margin: auto solamente para centrar elementos en ambos ejes, poniendo una caja dentro de otro. 
+  También podemos usar 
+  align-content: center
+  align-item: center
+  así obtenemos lo mismo, el objeto centrado tanto en vertical como en horizontal
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-div, body{
+div,
+body {
   box-sizing: border-box;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
   flex-flow: row wrap;
   border: 2px solid #000;
@@ -47,7 +54,7 @@ div, body{
   height: 300px;
 }
 
-.flex-item{
+.flex-item {
   width: 100px;
   background-color: #800;
   color: #fff;
@@ -55,9 +62,9 @@ div, body{
   text-align: center;
 }
 
-.flex-item:first-child{
+.flex-item:first-child {
   background-color: #f77;
 }
-.flex-item:last-child{
+.flex-item:last-child {
   background-color: #000;
 }
