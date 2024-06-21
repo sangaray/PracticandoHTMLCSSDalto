@@ -6,7 +6,7 @@
   Acepta también números negtivos
   Se usa
   order: número de orden
-  Esta propiedad sólo cambia el orden visual, no el orden real
+  Esta propiedad sólo cambia el orden visual, no el orden real, esta propiedad no se le da al padro sino a los hijos
   Esto sirve para por ejemplo en un movil se puede cambiar el orden en que se ven los elementos
   Podemos dar números negativos, ejemplo
   order: -1
