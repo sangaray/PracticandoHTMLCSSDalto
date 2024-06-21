@@ -1,30 +1,41 @@
 /*
   FLEX BASIS, SHRINK Y GROW
-  Estas propiedades se aplican a los hijos no al contenedor
+  Flex items son los elementos hijos de una caja flexible
+  Estas propiedades se aplican a los hijos no al contenedor o padre
   Flex items: hijos de un contenedor flex
+  El problema que tenemos es que el tamaño de los hijos no se agranda
   Propiedades:
-  grow: por defecto viene en 0, dice que del espacio disponible puede ocupar algo. Como las cajas van a cambiar, ya no las afecta la alineación. Si se les da un max-width no va a funcionar el grow o va a funcionar hasta ese tamaño. Todo el espacio disponible lo va a ocupar. Es como si agarraramos el espacio disponible y lo rompiéramos en muchas partes, que van a depender de qué valor le demos a la propiedad grow
+  flex-grow: por defecto viene en 0, dice que del espacio disponible puede ocupar algo. Como las cajas van a cambiar, ya no las afecta la alineación. Si se les da un max-width no va a funcionar el grow o va a funcionar hasta ese tamaño. Todo el espacio disponible lo va a ocupar. Es como si agarraramos el espacio disponible y lo rompiéramos en muchas partes, que van a depender de qué valor le demos a la propiedad grow
+  El espacio disponible es el espacio que falta para que la caja padre se llene
+
 
   flex-shrink: determina la capacidad para encogerse. Por defecto su valor es 1. Determinamos cuánto se van a enconger los elementos
+  Si le doy 0 los elementos no se van a encoger
 
-  flex-basis: por defecto es 0, no necesitamos usar el width, con column es como min-height y en rów es como que uso min-width
+  flex-basis: por defecto es 0, no necesitamos usar el width, con column es como min-height y en rów es como si usara min-width. Se usa flex-basis en lugar de width porque es el tamaño base, de donde parten los objetos. Da el tamaño mínimo que van a tener los hijos
+  Si el tamaño base es más chico se van encoger si es más grande se van a estirar
+  Estamos definiendo en la dirección que apunta el elemento el tamaño base que tiene este elemento
+  La diferencia entre min-width y flex-basis es que uno establece el tamaño mínimo del objeto y el otro el tamaño base
+  Lo recomendado es usar un flex-basis: 0 y también un min-width: (de algo)
 
   flex: define las tres propiedades juntas. flex:0 1 auto por defecto.
   Uso: flex: 1 1 100px. flex: grow shrink basis
-  
+  Recomiendo que usen flex y flex-flow
+  gap: en el padre da la separación entre elementos
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-div, body{
+div,
+body {
   box-sizing: border-box;
   background-color: #ccc;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
   flex-flow: row wrap;
   margin: 20px;
@@ -33,19 +44,18 @@ div, body{
   gap: 5px;
 }
 
-.flex-item{
+.flex-item {
   background-color: #800;
   color: #fff;
   font-size: 40px;
   text-align: center;
   flex: 1 1 100px;
-
 }
 
-.flex-item:nth-child(2n){
+.flex-item:nth-child(2n) {
   background-color: #f77;
 }
 
-.flex-item:last-child{
+.flex-item:last-child {
   background-color: #000;
 }
