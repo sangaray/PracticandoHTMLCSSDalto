@@ -1,9 +1,16 @@
 /*
   LAYOUT CON FLEXBOX
-  Layout es básicamente la forma que tenemos nosotros de distribuir los elementos del contenido para que entre dentro de nuestra página
+  Layout es básicamente la forma que tenemos nosotros de distribuir los elementos, el contenido para que entre dentro de nuestra página
   Si trabajamos con flexbox sin media query no se pueden cambiar ciertas características al cambiar de dispositivo
   Ser lo más específicos posibles, por ejemplo usar background-color en lugar de sólo background, para evitar conflictos
   Dar un height fijo al os elementos no se hace está mal y no es recomendado, es correcto usar min-height y no height solo
+  Técnica del checkbox, es una especie de trampa, cuando está cliqueado el checkbox se abre el menú y cuando no se oculta
+
+  Al h1 se le puede dar estilo poniendo el nombre de la etiqueta en lugar de asignar una clase porque va a se él único que tengamos
+
+  Con flex solo no podemos cambiar ciertos estilo cuando el dispositivo se achica. Hay muchas limitaciones con este diseño
+
+  No es recomendable usar height, ni width fijos, se usa min-width o min-height
 */
 
 body {
