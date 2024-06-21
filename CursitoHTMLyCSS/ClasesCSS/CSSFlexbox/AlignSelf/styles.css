@@ -5,19 +5,23 @@
   Sólo funciona cuando usamos la propiedad align items. Es igual que align item pero sólo para un elemento.
   - center: es el valor por defecto 
   Usa todos los valores de las otras propiedades de flexbox
+  La propiedad por defecto es auto, que lo determine el navegador
+  La única forma de que se estire es escribir stretch
+  align-items aplica a todos los hijos, mientras que align-selt aplica sólo a uno de ellos
 */
 
-body{
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-div, body{
+div,
+body {
   box-sizing: border-box;
   background-color: #ccc;
 }
 
-.flexbox{
+.flexbox {
   display: flex;
   flex-flow: row wrap;
   margin: 20px;
@@ -26,19 +30,18 @@ div, body{
   gap: 30px;
 }
 
-.flex-item{
+.flex-item {
   background-color: #800;
   color: #fff;
   font-size: 40px;
   text-align: center;
   flex: 1 1 100px;
-
 }
 
-.flex-item:nth-child(2n){
+.flex-item:nth-child(2n) {
   background-color: #f77;
 }
 
-.flex-item:last-child{
+.flex-item:last-child {
   background-color: #000;
 }
