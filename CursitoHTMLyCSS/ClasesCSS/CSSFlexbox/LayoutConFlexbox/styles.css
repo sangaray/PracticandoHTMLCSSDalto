@@ -27,6 +27,7 @@ body {
   box-sizing: border-box;
   background-image: url("unicornio_real1.jpg");
   display: flex;
+  top: 610px;
   background-size: cover;
 }
 
