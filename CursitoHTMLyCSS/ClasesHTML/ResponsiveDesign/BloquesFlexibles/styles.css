@@ -1,0 +1,61 @@
+/*
+BLOQUES FLEXIBLES
+Problemas a resolver y resolución
+- El bloque no se adapta al tamaño de la pantalla, para solucionar esto usamos:
+min-width: indica el menor ancho que el objeto puede alcanzar el objeto
+max-width: indica el mayor ancho que puede alcanzar el objeto
+Por defecto tiene 100% de la pantalla
+De esta manera ya encontramos una forma de hacer que el objeto se adapte a la resolución del navegador o dispositivo. Cuando le damos un valor a cada uno le estamos diciendo que el 100% tiene que ser mayor que el min-width y menor que el max-width
+
+- El texto no se adapta al bloque, no lo llena por completo o se deborda
+Si no se llena y puedo omitir el height lo hago, no es correcto o ideal utilizar un height 
+Si se desborda la sugerencia salvo que sea muy estricto el uso del alto es utilizar
+min-height: le da un alto mínimo al bloque y va a cumplir con el alto pedido, pero al agregar texto se va a ir extendiendo para contenerlo
+Con estas dos soluciones tenemos contenido que se ajusta vertical y horizontalmente sin necesidad de utilizar flexbox
+- Si queremos ponerlos en una línea usamos
+display: inline-block
+Pero el problema de esta solución es que aun cuando les doy min-widht y un width de 100% los bloque no se adaptan. Para solucionar esto se creo flexbox
+En realidad permiten que se adapten moviendo abajo los bloque que no entren pero lo que quiero es que crezcan. Para esto usamos
+En la caja contenedora
+display: flex
+flex-wrap: wrap
+se adaptan pero seguimos teniendo el mismo problema de que no cambian su tamaño
+Entonces usamos en el elemento hijo
+flex-grow: 1
+flex-basis: 0
+Si no uso las dos propiedades no funciona
+Esta es la forma correcta
+También puedo usar 
+flex: 1
+así aplica también al shrink
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.bloque {
+  display: inline-block;
+  min-width: 200px;
+  background-color: #7bf;
+  margin: auto;
+  width: 100%;
+  flex: 1;
+  font-size: 12px;
+  padding: 10px;
+  margin: 4px;
+}
