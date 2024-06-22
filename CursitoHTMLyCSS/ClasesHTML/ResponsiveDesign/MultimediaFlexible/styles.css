@@ -1,0 +1,73 @@
+/*
+MULTIMEDIA FLEXIBLE
+Pensamos que trabajar con imágenes y con videos es igual a trabajar con otro tipo de contenido, pero presente otros problemas
+
+Imagenes Flexibles
+Son imágenes que se cambian para adaptarse al tamaño de la pantalla o a la resolución en la que se encuentran, también puede ser al contenedor
+
+La forma más típica o clásica de hacerlo es
+Cuando trabajamos con imágenes no está bien poner
+width: 100% 
+porque si la imagen es pequeña se va a pixelar y ver mal, lo que hacemos es poner
+max-width: 100%
+con esto la imagen se achica, pero se agranda sólo hasta el valor indicado
+Para que el height no nos juegue en contra ponemos
+height: auto
+y con estas dos propiedades tenemos todo lo que queríamos difinir.
+La imagen se ajusta hasta el 100% del dispositivo que la está mostrando. Siempre se va a estar adaptando a una pantalla que sea mayor a él, pero cuando llega a la resolución de la imagen ya no crece más y no se pixelea
+
+Videos flexibles
+Si queremos hacer lo mismo con los videos que hicimos con las imágenes vamos a tener un probleam y hay una razón para ello y es por cómo los navegadores manejan el iframe y demás. Una imagen tiene un tamaño intrínseco, es decir le permiten a los navegadores redimensionarlos y que pueden mantener su relación de aspecto cuando cambiamos su tamaño. En los videos las cosas funcionan diferente y si bien podemos darle un width del 100% no se ajustan para mantener una relación de aspecto interesante, esta relación no la hacen, esto hace que el video se salga del contenedor o se deforme, lo que no está bueno
+Por lo tanto esto que es lo que hicimos con la imagen no funciona
+video {
+  max-width: 100%;
+}
+
+Una forma de hacer es usando padding top hacking
+
+Antes los que se hacía es tomar el contenedor del video y poner
+.container {
+  position: relative;
+  max-width: 100%;
+  padding-top: 56.25%;
+  height: 0;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+
+La forma moderna es usar una relación de aspecto, de esta manera la relación se mantiene, porque lo que hicimos fue adaptar el contenedor
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  margin: auto;
+}
+
+video {
+  max-width: 100%;
+}
+
+div {
+  margin: auto;
+}
