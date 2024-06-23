@@ -1,0 +1,45 @@
+<!-- 
+  ATRIBUTOS SRCSET Y SIZES
+  Hay muchas cosas de responsive que tienen que ver con HTML, no es puramente de CSS
+
+  SRCSET Y SIZES
+  Son dos atributos de HTML que funcionan juntos que nos brindan opciones más avanzadas para cargar imágenes responsive. Permite al navegador elegir cual es la imagen más adecuada según una condición. Es fundamental para el rendimiento y la carga de la página, los usuarios abandonan un sitio si no carga antes de los 4s, por lo tanto es importante mejoroar lo más posibe el tiempo de carga
+  Para esto creamos imágenes en distintas resoluciones, es un paso opcional pero muy recomendable
+
+  Si tenemos una pantalla pequeña por qué cargar una imagen grande para tener que achicarla, por qué no cargar una imagen pequeña si la resolución no cambia? Si bien cambia la calidad no cambia la resolución 
+  Tenemos una imágen para cada tamaño de pantalla, los celulares cargan más lento que las computadoras
+  Cuando usamos srcset al tamaño de la pantalla le ponemos la unidad w por ejemplo 400w en lugar de 400px
+  Se usa
+  <img
+      src="./images/Severus300.png"
+      srcset="./images/Severus300.png 400w, ./images/severus600.png 600w, ./images/severus.jpg 1000w"
+  />
+  Le estamos dando una recomendación al navegador, y a veces escucha y a veces no
+  Indica las imágenes alternativas
+  SIZES 
+  Le dice al navegador la máxima altura que puede trabajar
+  El atributo sizes sólo funciona con el atributo srcset
+  Se usa
+  sizes="(max-width: 700px) 600px, 900px"
+  Esto es una media query que le dice al navegador, te recomiendo que en pantallas de hasta 700px uses una imagen de 600px aquí se puede usar px
+  Indica el tamaño de imagen según la resolución de pantalla
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SrcSet y Sizes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="./images/Severus300.png"
+        srcset="./images/Severus300.png 360w, ./images/severus.jpg 600w, ./images/severus900.png 1000w"
+        sizes="(max-width: 400px) 300px, (max-width: 600px) 500px, 900px"
+      />
+    </div>
+  </body>
+</html>
