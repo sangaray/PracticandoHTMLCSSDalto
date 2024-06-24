@@ -1,0 +1,45 @@
+<!--
+  ATRIBUTOS PICTURE, SOURCE Y MEDIA
+  Esto no va a permitir entender un poco más como trabajar el tema de decirle al navegador mirá te doy estas opciones vos elegí la más óptima, la más adecuada
+
+  PICTURE
+  Sirve para especificar múltiples fuentes para una imagen, acá dentro vas tener una imagen, te voy a definir una especie de contexto que va a servir de fuente para que vos elijas y determines cual buscar, vas a mostrar una nada más. Dentro dela etiqueta Picture siempre va la etiqueta Source, esta etiqueta se puede usar en más situaciones pero esa vez la vamos a usar con picture.
+  Tiene significado semántico más acertado, porque le decimos al navegador acá te doy varias fuente y vos hacé lo que quieras.
+  Va a mostrar una de las posibilidades
+
+  SOURCE
+  Usamos una etiqueta source por cada imagen alternativa que queramos utilizar. Pero también se necesita la etiqueta img
+  Siempre va a cargar la imagen que se indique en img
+  Esta etiqueta se usa dentro de las etiquetas picture, audio y video principalmente y lo que hacemos es definir estos diferentes medios para distintas situacionees
+  Le tenemos que poner también media="(la resolución en px)" con las imagenes alternativas ordenadas de menor a mayor
+
+  MEDIA
+  Nos permite dar la resolución al navegador para que cambie el tamaño de una imagen o seleccione entre varias cual va a utilizar.
+
+  TYPE
+  Permite indicar el tipo de imagen que se va a estar usando. Carga el recurso según su tipo
+
+  Las imagenes webp tienen una características que hacen que las imágenes carguen mejor, es una propuesta de google
+
+  Picture lo usamos cuando necesitamos cargar una imagen muy grande, vamos dando opciones para optimizar las opciones de carga
+
+  Sugerencia leer la documentación
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture, Source y Media</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <picture>
+      <source srcset="./images/Severus.webp" type="image/webp" />
+      <source media="(max-width: 400px)" srcset="./images/Severus300.png" />
+      <source media="(max-width: 600px)" srcset="./images/Severus.jpg" />
+      <img src="./images/Severus900.png" alt="" />
+    </picture>
+  </body>
+</html>
