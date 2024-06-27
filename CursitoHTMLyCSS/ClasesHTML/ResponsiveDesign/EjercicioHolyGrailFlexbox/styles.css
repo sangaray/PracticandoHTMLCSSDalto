@@ -10,6 +10,11 @@
   Estas cinco secciones componen el Saint Grail
   Son tres secciones donde la de arriba y la de abajo están enteras y la del medio está dividida
   En el main section el contenido va a estar siempre dependiendo del contenido del otro 
+
+  Cuando el contenido es muy grande lo recomendado es que se achique
+
+  para que sirve dar al main wrapper un max-width de 1024 px?
+  Es por un tema de legibilidad, hay que darle a usuario una sección donde leer sin estorbos 
 */
 
 body {
@@ -17,8 +22,10 @@ body {
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   min-height: 100vh;
+  justify-content: center;
+  background-color: #333;
 }
 
 div,
@@ -41,8 +48,19 @@ footer {
   width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 /*HEADER*/
-header {
+.header {
   background-color: #48e;
 }
 
@@ -66,15 +84,30 @@ nav a {
   text-decoration: none;
 }
 
+a:hover {
+  opacity: 0.7;
+}
+
 /*MAIN SECTION*/
 .main-wrapper {
   display: flex;
   flex-grow: 1;
+  max-width: 1024px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 aside,
 main {
   padding: 10px 20px;
+  flex-basis: 0;
+  background-color: #000;
+}
+
+main {
+  min-width: 300px;
+  flex-grow: 2;
 }
 
 .main-wrapper aside {
@@ -82,7 +115,7 @@ main {
 }
 
 .secondary-navbar {
-  min-width: 2rem;
+  min-width: 10rem;
   text-align: center;
 }
 
@@ -107,19 +140,20 @@ aside:last-child {
 /*FOOTER*/
 footer {
   margin-top: auto;
-  border: 1px solid red;
   background-color: #333;
   color: #fff;
   padding: 40px;
+  font-weight: bold;
+  text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   aside:last-child {
     display: none;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .main-wrapper {
     flex-direction: column;
   }
