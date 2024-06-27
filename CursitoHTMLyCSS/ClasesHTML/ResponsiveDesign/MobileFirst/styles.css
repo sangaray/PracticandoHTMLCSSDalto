@@ -1,10 +1,16 @@
 /*
   MOBILE FIRST
-  Es un modo de pensar el desarrollo web donde primero desarrollamos una página adaptada a dispositivos móbilesy de dispositivos móviles la vamos adaptando a dispositivos más gandes
+  Es un modo de pensar el desarrollo web donde primero desarrollamos una página adaptada a dispositivos móbilesy de dispositivos móviles la vamos adaptando a dispositivos más gandes. En el media query usamos min-width
 
-  El otro es Desktop first creamos primero la página para pc y luego la llevamos a dispositivos mobiles.
+  El otro es Desktop first creamos primero la página para pc y luego la llevamos a dispositivos mobiles. En el media query usamos max-width
 
-  Esto depende del consumo, si vamos a crear una página para consumo general, no de nicho, si no por ejemplo una tienda virtual o una red social, lo hacemos mobile firts porque la gente principalmente va a entrar desde el celular. 
+  Esto depende del consumo, si vamos a crear una página para consumo general, no de nicho, si no por ejemplo una tienda virtual o una red social, lo hacemos mobile firts porque la gente principalmente va a entrar desde el celular.
+  
+  Aquí tenemos el desafío de mostrar la mayor cantidad de infomación en la menor cantidad de contenido posible y en el menor tiempo posibie, en una pantalla chiquitita, lo que hace que nuestras páginas sean más minimalistas, más simples y también ver como gestionamos el contenido para resoluciones chiquititas.
+
+  Si bien mobile first es el principal enfoque hoy en día tenemos que tomar en cuenta al usuario, si es para una plataforma para médicos por ejemplo, vamos a usar desktop first, ya que ellos no van a trabajar con celulares sino con computadoras en su escritorio
+
+  Tenemos que ver a quien va dirigido y el próposito de la página
 */
 
 body {
