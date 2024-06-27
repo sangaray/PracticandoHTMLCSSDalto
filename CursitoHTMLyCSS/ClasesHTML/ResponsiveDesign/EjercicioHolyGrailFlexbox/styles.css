@@ -1,0 +1,26 @@
+/*
+  EJERCICIO "HOLY GRAIL" CON FLEXBOX 
+  Patrón de diseño, histórico.
+  Vamos a empezar a trabajar con el layout, para ener preparado todo para el contenido
+
+  El Saint Grail Layout se puede componer de tres etapas
+  1. La etapa principal que es el header con un menú de navegación
+  2. Después tenemos la parte principal, el main content y dos columnas
+  3. En la parte de abajo el footer
+  Estas cinco secciones componen el Saint Grail
+  Son tres secciones donde la de arriba y la de abajo están enteras y la del medio está dividida
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+.main-navbar ul {
+  display: flex;
+}
