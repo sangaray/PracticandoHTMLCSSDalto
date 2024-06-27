@@ -53,10 +53,12 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
+  color: #fff;
 }
 
 p {
   text-wrap: pretty;
+  color: #fff;
 }
 
 /*HEADER*/
