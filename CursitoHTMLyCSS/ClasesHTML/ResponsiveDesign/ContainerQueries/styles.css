@@ -1,0 +1,47 @@
+/*
+  CONTAINER QUERIES
+  Representan un avance significativo en el diseño
+  Se puede agarrar un contenedor y según las medidas o propiedades de ese contenedor dar estilo a lo de adentro, es realmente un avance
+  container-type define el tipo de característica que se va a tomar en cuenta
+  - size tiene en cuenta las dimensiones en bloque y en línea, las dos
+  - inline-size indica que según el ancho del contenedor se aplicará el estilo, sólo tiene en cuenta las dimensiones en línea
+  - normal hace que el elemento no pueda considerarse un query contaier
+  SE USA
+  Primero se define el contenedor
+  .container {
+  container-type: inline-size;
+  }
+  Se usa esa definición como media query
+  @container (max-width: 500px){
+  p{
+    font-size: 20px;
+  }
+  }
+  De esta manera se va a aplicar a todos los contenedores
+  Para aplicarlo a uno específico creo un nombre con container-name
+  Así creamos un container context y damos un nombre a ese container
+  Permite modularizar y más control, se pueden reutilizar componente
+  No es compatible en todos los navegadores, en proyectos grandes se puede hacer más complejo el código
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  container-type: inline-size;
+  container-name: main;
+}
+
+p {
+  font-size: 8px;
+}
+
+@container main (max-width: 500px) {
+  p {
+    font-size: 20px;
+    color: #f00;
+    background-color: #000;
+  }
+}
