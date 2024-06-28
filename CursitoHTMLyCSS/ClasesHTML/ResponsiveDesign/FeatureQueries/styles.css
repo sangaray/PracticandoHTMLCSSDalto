@@ -1,9 +1,12 @@
 /*
   FEATURE QUERIES
   Selos conoce también como Media Queries de Nivel 4 porque son de CSS4 que si bien no salió, sí CSS4 va a salir.
-  Básicamente permite a los desarrolladores a escribir código en caso de que los navegadores no soporten una funcionalidad
-
+  Básicamente permite a los desarrolladores a escribir código en caso de que los navegadores soporten una funcionalidad
+  Para qué sirve para hacer cosas en caso de que toda una propiedad no se soporta
+  Ejemplo si no soporta grid que aplique flexbox y si lo soporta que aplique grid
+  En cada @support trabajo los estilos que quiero que se apliquen
 */
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -12,5 +15,15 @@ body {
 @supports (color: oklch(30% 0.2 30)) {
   body {
     color: oklch(80% 0.2 30);
+    display: grid;
+  }
+}
+
+@supports not (display: grid) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
   }
 }
