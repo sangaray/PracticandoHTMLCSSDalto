@@ -1,27 +1,33 @@
 /*
-  MOBILE FIRST
-  Es un modo de pensar el desarrollo web donde primero desarrollamos una página adaptada a dispositivos móbilesy de dispositivos móviles la vamos adaptando a dispositivos más gandes. En el media query usamos min-width
-
-  El otro es Desktop first creamos primero la página para pc y luego la llevamos a dispositivos mobiles. En el media query usamos max-width
-
-  Esto depende del consumo, si vamos a crear una página para consumo general, no de nicho, si no por ejemplo una tienda virtual o una red social, lo hacemos mobile firts porque la gente principalmente va a entrar desde el celular.
-  
-  Aquí tenemos el desafío de mostrar la mayor cantidad de infomación en la menor cantidad de contenido posible y en el menor tiempo posibie, en una pantalla chiquitita, lo que hace que nuestras páginas sean más minimalistas, más simples y también ver como gestionamos el contenido para resoluciones chiquititas.
-
-  Si bien mobile first es el principal enfoque hoy en día tenemos que tomar en cuenta al usuario, si es para una plataforma para médicos por ejemplo, vamos a usar desktop first, ya que ellos no van a trabajar con celulares sino con computadoras en su escritorio
-
-  Tenemos que ver a quien va dirigido y el próposito de la página
+  MEDIA QUERIES
+  Es una herramienta poderosísima que nos permite adapatar nuestra página web a cualquier resolución. Paa esto lo que hacemos es definir estilos distintos para cada resolución
+  Le permiten al desarrollador usar la lógica de si... entonces... determinado estilo se aplica solamente si el dispositivo de visualización cumple ciertas condiciones
+  Sintaxis
+  @media not|only mediatype and (expression) | CSS-Code;
+  @media es la regla que se aplica
+  not evita que se aplique el estilo en los dispositivos que cumplen la condición
+  only es para evitar que navegadores antiguos que no soportan el estilo apliquen la regla
+  mediatype aplica al tipo de medio al que se le aplica la consulta
+  and combinar varias expresiiones en la consulta
+  expresiones determita las propiedades que quiero usar
+  SE USA
+  Abriendo un bloque para el media query y dentro definimos los estilos
+  Ejemplo
+  @media type {
+    selector {
+      propiedades: valores
+    }
+  }
+  Tenemos una condición que se debe cumplir
+  print se aplica sólo a los medios de impresión
+  pt es una unidad de impresión
+  screen se aplica solamente a  pantallas
+  Esto es lo que hace posible el 99% de los layouts de hoy en día
 */
 
 body {
   margin: 0;
   font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  justify-content: center;
-  background-color: #333;
 }
 
 div,
@@ -29,135 +35,37 @@ body {
   box-sizing: border-box;
 }
 
-div,
-body,
-header,
-nav,
-ul,
-footer {
-  box-sizing: border-box;
-}
-
-.main-wrapper,
-header,
-footer {
-  width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-  color: #fff;
-}
-
-p {
-  text-wrap: pretty;
-  color: #fff;
-}
-
-/*HEADER*/
-.header {
-  background-color: #48e;
-}
-
-.main-wrapper {
-  max-width: 1024px;
-  flex-direction: column;
-}
-
-.main-navbar ul {
+.flexbox {
   display: flex;
-  padding: 0;
 }
 
-.main-navbar li {
-  list-style: none;
-  margin: 4px;
-}
-
-.main-navbar a {
-  color: #fff;
-  display: inline-block;
-  padding: 6px 9px;
-}
-
-nav a {
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
-/*MAIN SECTION*/
-.main-wrapper {
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-aside,
-main {
-  padding: 10px 20px;
-  flex-basis: 0;
-  background-color: #000;
-}
-
-main {
-  min-width: 300px;
-  flex-grow: 2;
-}
-
-.main-wrapper aside {
+.flex-item {
+  background-color: #ccc;
+  padding: 30px;
+  border: 1px solid red;
   flex-grow: 1;
 }
 
-.secondary-navbar {
-  min-width: 10rem;
-  text-align: center;
-}
-
-.secondary-navbar ul {
-  padding: 0;
-}
-
-.secondary-navbar li {
-  list-style: none;
-}
-
-.secondary-navbar a {
-  color: #48e;
-  display: inline-block;
-  padding: 6px 10px;
-}
-
-aside:last-child {
-  min-width: 10rem;
-  display: none;
-}
-
-/*FOOTER*/
-footer {
-  margin-top: auto;
-  background-color: #333;
-  color: #fff;
-  padding: 40px;
-  font-weight: bold;
-  text-align: center;
-}
-
-@media screen and (min-width: 480px) {
-  .main-wrapper {
-    flex-direction: row;
+/*Para impresión
+@media print {
+  body {
+    font-size: 200pt;
   }
 }
+*/
 
-@media screen and (min-width: 800px) {
-  aside:last-child {
-    display: block;
+/*Para pantalla
+@media screen and {max-width: 500px{
+  body{
+    font-size: 30px
+    background-color: #000
+    color: #fff  
+  }
+}
+*/
+
+@media screen and (max-width: 480px) {
+  .flexbox {
+    flex-direction: column;
   }
 }

@@ -1,0 +1,16 @@
+/*
+  FEATURE QUERIES
+  Selos conoce también como Media Queries de Nivel 4 porque son de CSS4 que si bien no salió, sí CSS4 va a salir.
+  Básicamente permite a los desarrolladores a escribir código en caso de que los navegadores no soporten una funcionalidad
+
+*/
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@supports (color: oklch(30% 0.2 30)) {
+  body {
+    color: oklch(80% 0.2 30);
+  }
+}
