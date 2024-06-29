@@ -1,0 +1,28 @@
+/*
+  UNIDADES AUTO Y FR
+  - Auto: la celda se estira para ocupar todo el espacio. Una cosa es el tamaño de la columna y otra muy distinta es el tamaño del hijo, el tamaño reservado es el de la celda, el tamaño del item puede no ocupar toda esa celda. El esapcio disponible se calcula por el cntenido de las cajas. Si le pongo auto a más de una columna, el espacio disponible es el que queda luego de quitale el espacio que ocupa el contenido de hijo y ese espacio lo reparten entre las columnas que tengan auto. Se calcula el min-content de las cajas y el espacio de la grid que sobre se distribuye entre las columnas a las que le dimos auto en grid-template-columns. Primer se asegura que el contenido de todos las cajas entre y lo que sobra es lo que reparte entre las que tienen auto
+  En rows funciona igual que en columns
+  - fr: si le pongo 1fr, ocupa todo el ancho disponible, si se lo pongo a todas las columnas, ya no le importa más el contenido. No se aplica restando el min-content, sino que se aplica tomando en cuenta el width total. Si el contenido ocupa todo el ancho de la celda entonces está se estira, porque el valor dado se toma cómo el mínimo. Representa una fracción de espacio de la grid y actúa como flex-grow
+  Mientras auto quita el contenido mínimo, 1fr no lo hace.
+  fr se usa mucho más que auto porque divide a todas por igual y nos da una visión más certera de las proporciones que está tomando.
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  height: 80vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.grid-item {
+  background-color: #48e;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
