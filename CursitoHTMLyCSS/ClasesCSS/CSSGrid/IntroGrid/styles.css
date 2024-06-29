@@ -1,0 +1,17 @@
+/*
+  INTRODUCCIÓN A GRID
+  Es un sistema de diseño bidmensional que lo que hace es permitirnos a nosotros los desarrolladores crear layouts enteros complejos de forma fácil y con cosas flexibles
+  En una grilla vamos a trabajar no en una sola dirección si no en dos, nos va a permitir trabajar con filas y columnas, no vamos a necesitar elegir con cual queremos trabajar
+  Grid se creo para superar limitaciones anteriores de cosas que no se podían hacer y ahora sí se puede hacer, viene a superar esa barrera de trabajar en una sola dirección y trabajar en dos direcciónes
+  CUÁNDO TRABAJO CON FLEXBOX Y CUANDO TRABAJO CON GRID?
+  GRID cuando vamos atrabajar con contenido que va a cambiar o en dos direcciones 
+  FLEXBOX cuando necesito trabajar diseños en filas o en columnas, en una sola dirección
+  CONCEPTOS BÁSICO
+  - Grid Container: básicamente e somo un contenedor padre, el contenedor cuadrícula, se define con
+  display: grid
+  - Grid Items: son los elementos de la cuadrícula, que son los hijos directos del contenedor de la cuadrícula, cada uno de estos elementos pueden ocupar uno o varios lugares de la cuadrícula. Es el elemento puntual html que se coloca en la cuadrícula
+  - Líneas de la Cuadrícula: son los bordes de la cuadrícula y separan las filas de las columnas, estás líneas se pueden referencias para crear los elementos de la cuadrícula
+  - Grid Tracks: cada línea de la cuadrícula es un track, puede ser una fila o una columna
+  - Grid Cell: son los espacios entre cuatro líneas adyascentes. Es la unidad básica donde se pueden ubicar los elementos. Es el espacio real que grid reserva para colocar el elemento puntual. Nosotros podemos definir una grid y no poner ningún elemento y aún así están las grid cells
+  - Grid Area: son espacios de grid delimitados por cuatro line grids, pueden tener uno o más celdas y se usan para ubicar de manera más eficiente los elementos en la página. Podemos decirle a un elemento que ocupe un área completa
+*/
