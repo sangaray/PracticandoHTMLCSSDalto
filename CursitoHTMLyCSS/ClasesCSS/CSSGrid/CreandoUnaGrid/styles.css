@@ -1,0 +1,32 @@
+/*
+  CREANDO UNA GRID
+  Lo primero que hacemos es crear un contexto en el que podemos trabajar con filas y columnas. Creamos un entorno en el que le decimos al navegador que vamos a trabajar con filas y columnas
+  Si definimos una grid y no ponemos nada cada hijo se va a convertir en una fila implícita
+  Cuando usamos grid los no hay colpaso de márgenes y sí se van a sumar los dos márgenes de las dos filas o columnas adyascentes
+  Si aplico display grid al contenedor los elementos siguen ubicandose uno al lado del otro sin importar que a cada item le puse un display inline-bloc, que deberí formar dos columnas al cambiarles también el ancho.
+  Cuando asignamos display grid se crea una grilla con una sola columna y cada hijo formando una fila que ocupa una celda 
+  diferente
+  Tanto flexbox como grid manejan sus ejes principales en el sentido de la escitura
+  PROPIEDADES
+  - grid-template-columns: me pide que indique la medida de la columna, sólo me pide medidas. Ejemplo si le digo 200px, esto es lo que va a medir cada columna, si no le ponemos nada le estamos diciendo que la columna va a ocupar todo lo que ocupe la grilla, para indicar cuantas columnas tengo que poner una medida al lado de la otra. También podemos usar porcentajes, esto va a hacer que esa celda o celdas crezca, haciéndola dinámica. Podemos usar todas las unidades que vimos. Define el width de la columnas
+  - grid-template-rows: permite definir el tamaño y cantidad de filas. Si uso porcentajes es para el alto de la celda o del alto de la celda. Si definimos sólo una fila, la otra se adapta al contenido.   Aunque algunos espacios no estén utilizados, el espacio se guarda si defino una fila. Define el height de la filas
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100px 200px 300px;
+  grid-template-rows: 500px 200px;
+}
+
+.grid-item {
+  background-color: #48e;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
