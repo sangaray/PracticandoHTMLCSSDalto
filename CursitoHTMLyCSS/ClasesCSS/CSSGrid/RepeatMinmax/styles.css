@@ -1,0 +1,35 @@
+/*
+  REPEAT() Y MINMAX()
+  REPEAT() nos sirve para evitar repetir siempre la misma expresión o las mismas expresiones
+  repeat(cantidadveces, expresión)
+  Repite sólo lo que se encuenra entre los paréntesis, puedo poner otro valor delante o detrás del repeat
+  También se pueden repetir patrones
+  repeat(3, 1fr 2fr)
+  Esta es una forma interesante de ir cambiando varios valores de una sola vez
+
+  MINMAX() es para darle un mínimo o un máximo a una columna. Va a decir toda la columna va a tener un mínimo de... y un máximo de...
+  SE USA
+  minmax(valormínimo, valormaximo)
+  Es como usar min-width y max-width pero en lugar de ponerselo a un elemento se lo ponemos a toda la columna
+  Se pueden combinar estos dos valores
+  */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(2, minmax(100px, 300px)) 1fr;
+  grid-template-rows: repeat(2, 200px) 1fr;
+}
+
+.grid-item {
+  background-color: #48e;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
