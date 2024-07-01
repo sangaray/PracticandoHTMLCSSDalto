@@ -1,0 +1,50 @@
+/*
+  GRID GAP
+  Es la separación entre elementos
+  - gap esta es la forma correcta de crear separaciones entre elementos porque solo nos separa los elementos entre sí, no con el borde del contenedor ni nada así. Este es un shorthand para las dos siguientes
+  SE USA
+  gap: row column
+  - column-gap separa las columnas
+  - row-gap separa las filas
+  Para que también se separe del borde del contenedor se le da al padre un padding igual al gap
+  No es común utilizar el padding, es raro, pero si tiene sentido lo pueden utilizar, el padding sólo lo utilizaríamos si queremos que resalte un borde, por un tema estético
+
+  Cuantas menos media queries, cuantas menos capas de complejidad  tengan que usar es mejor
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-auto-flow: row;
+  grid-auto-rows: 150px;
+  border: 2px solid #000;
+  gap: 20px;
+  padding: 20px;
+  width: 80vw;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.grid-item {
+  background-color: #48e;
+  padding: 10px;
+  font-size: 30px;
+  color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
