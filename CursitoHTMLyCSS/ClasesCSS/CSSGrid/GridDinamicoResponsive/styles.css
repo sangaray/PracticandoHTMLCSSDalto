@@ -1,0 +1,56 @@
+/*
+  GRID DINÁMICO (Y RESPONSIVE)
+  GRID ESTÁTICA lo que vimos hasta ahora es un grid estático porque no importa lo que digamos o hagamos no se va a ajustar a distintas medidas y tamaños. Mantienen siempre la misma cantidad de columnas, la misma cantidad de filar
+
+  GRID DINÁMICA sin impotar el tamaño se va modificando
+
+  Con el repeat tenemos dos valores muy importantes 
+  - auto-fit ajusta os elementos. Con grid-auto-flow en row hace una especie de wrap y va subiendo o bajando los elementos dentro de la grid, se adapta, y hasta acá no hay diferencia con auto-fill, en los dos casos si le damos un solo valor está bien, la forma de funcionar es igual. Cuando usamos fr en el minmax es donde se crean y descrean columnas cuando el espacio alcanza para hacerlo.
+  - auto-fill literalmente rellena. Cuando hay muchos elementos no hay diferencia entre los dos auto-fit y auto-fil. La diferencia varía cuando hay pocos elementos. Esta opción crea columnas para ir rellenando el espacio aunque no haya elementos, caso en el que deja el espacio reservado en blanco. Mientras auto-fill rellena, auto-fit adapta los elementos
+
+  Usar auto-fit puede servir para centrar contenido de elementos en la página
+  Usar auto-fill para trabajar con imágenes o resultados de búsquedas
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  margin: auto;
+  margin-top: 30px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #48e;
+  font-size: 30px;
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+.grid-item:hover {
+  opacity: 0.74;
+}
+
+/* @media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+} */
