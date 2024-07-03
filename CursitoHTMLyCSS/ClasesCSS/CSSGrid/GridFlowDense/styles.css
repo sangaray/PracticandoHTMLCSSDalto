@@ -5,6 +5,7 @@
   grid-flow: dense
   Se rellenan los espacios en blanco
   No respeta el orden de los elementos, dice estos huecos vacíos hay que rellenarlos de alguna forma
+  Esta es la mejor solución, en realidad es la única solución nativa para resolver el problema de que se rompa la página
 */
 
 body {
