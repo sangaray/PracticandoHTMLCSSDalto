@@ -20,7 +20,7 @@
   grid-template-areas define las áreas o secciones del layout
   grid-area asigna cada área o sección a los elementos que van a estar allí
 
-  min-content es una forma de hacer que los elementos sean tan pequeños como su contenido lo permita, sin causar desbordamiento, y es especialmente útil en diseños responsivos y cuadrículas2.
+  min-content es una forma de hacer que los elementos sean tan pequeños como su contenido lo permita, sin causar desbordamiento, y es especialmente útil en diseños responsivos y cuadrículas.
 */
 
 body {
