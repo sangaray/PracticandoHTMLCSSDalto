@@ -26,6 +26,9 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 div,
@@ -40,25 +43,33 @@ aside,
 main {
   padding: 20px;
   border: 2px solid #444;
+  box-sizing: border-box;
 }
 
 .grid {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr) minmax(200px, 1fr);
+  grid-template-rows: 1fr;
   grid-auto-flow: dense;
   margin: auto;
   gap: 10px;
   padding: 10px;
   min-height: 100vh;
-  grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+  grid-template-areas: "nav main aside";
+  flex-grow: 1;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
-  grid-area: header;
   background-color: #48e;
   color: #fff;
   border-color: #48e;
+  width: 100%;
 }
 nav {
   grid-area: nav;
@@ -66,6 +77,8 @@ nav {
 
 main {
   grid-area: main;
+  min-width: 300px;
+  max-width: 700px;
 }
 
 aside {
@@ -76,4 +89,5 @@ footer {
   grid-area: footer;
   background-color: #141414;
   color: #fff;
+  width: 100%;
 }
