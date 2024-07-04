@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
+  background-color: #48e3;
 }
 
 div,
@@ -42,8 +43,8 @@ footer,
 aside,
 main {
   padding: 20px;
-  border: 2px solid #444;
   box-sizing: border-box;
+  background-color: #420b8933;
 }
 
 .grid {
@@ -61,7 +62,7 @@ main {
 }
 
 .grid {
-  max-width: 1200px;
+  max-width: 1460px;
   margin: auto;
 }
 
@@ -70,6 +71,8 @@ header {
   color: #fff;
   border-color: #48e;
   width: 100%;
+  padding: 30px;
+  text-align: center;
 }
 nav {
   grid-area: nav;
@@ -86,8 +89,52 @@ aside {
 }
 
 footer {
-  grid-area: footer;
   background-color: #141414;
   color: #fff;
   width: 100%;
+  padding: 50px;
+  text-align: center;
+}
+
+nav,
+aside {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: minmax(200px, 1fr) minmax(300px, 3fr);
+  }
+
+  nav,
+  aside {
+    height: auto;
+    position: static;
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "aside";
+  }
+
+  nav,
+  aside {
+    height: auto;
+    position: static;
+  }
+
+  aside {
+    display: none;
+  }
 }
