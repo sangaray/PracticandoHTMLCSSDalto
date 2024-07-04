@@ -1,0 +1,79 @@
+/*
+  GRID AREA
+  Nos permite crear un layout teórico donde le decimos al navegador en cuentas filas queremos dividir cada fila o darle un nombre que después le podemos reemplazar por un grid. Podemos asignar un elemento a un área específica que le dimos en grid
+  USO
+  grid-area rowstart/rowend/columnstart/columnend
+
+  Ejemplo
+  grid-area: span 2 / span 3
+  esto reemplaza a 
+  grid-column: span 3;
+  grid-row: span 2;
+
+  Ejemplo
+    grid-template-areas: "header header header" "nav main aside" "footer footer footer" ;
+  Tiene que haber una coincidencia, tiene que haber tres de cada uno
+  Delimita las columnas que van a ser usadas y la estructura de la grid
+  grid-area: header
+  por ejemplo indica el elemento que voy a posicionar
+
+  grid-template-areas define las áreas o secciones del layout
+  grid-area asigna cada área o sección a los elementos que van a estar allí
+
+  min-content es una forma de hacer que los elementos sean tan pequeños como su contenido lo permita, sin causar desbordamiento, y es especialmente útil en diseños responsivos y cuadrículas2.
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+nav,
+header,
+footer,
+aside,
+main {
+  padding: 20px;
+  border: 2px solid #444;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-rows: auto 1fr auto;
+  grid-auto-flow: dense;
+  margin: auto;
+  gap: 10px;
+  padding: 10px;
+  min-height: 100vh;
+  grid-template-areas: "header header header" "nav main aside" "footer footer footer";
+}
+
+header {
+  grid-area: header;
+  background-color: #48e;
+  color: #fff;
+  border-color: #48e;
+}
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #141414;
+  color: #fff;
+}
