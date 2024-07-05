@@ -9,7 +9,7 @@
   Esta es una forma válida de centrar elementos pero vamos a ver como centrarlos con grid porque es algo muy poderoso y sencillo de hacer
   2. Con grid
   Propiedades
-  justify-items es la más compleja de todas
+  justify-items es la más compleja de todas. Es como align-itmes de flexbox, pero en lugar de actuar sobre el eje vertical, lo hace sobre el eje horizontal. En grid no se puede cambiar el flujo tan fácil. 
   - start
   - self-start
   - left
@@ -18,10 +18,31 @@
   - right
   - end
   - self-end
-  - baseline
-  - first-baseline
+  - baseline lo pone sobre la última línea de texto
+  - first-baseline lo pone sobre la primera linea de texto
   - last-baseline
   Por defecto el valor que trae es stretch
+  center, start, end, significa en la dirección de la escritura del texto, vas a ir como vaya el texto. Esto es como en flexbox, no hay nada nuevo
+  La principal diferencia es que en grid start tiene en cuenta la dirección del contenedor y self-start la dirección del hijo, dirección del texto.
+  right siempre alinea a la derecha
+  left siempre alinea a la izquierda.
+  El alineamiento es dentro de sus propias celdas
+  stretch se estira completamente
+  los self son para mover el elemento hijo dentro del elemento padre de forma independiente del resto de los hijos o todos juntos
+
+  justify-content tenemos las mismas propiedades que con flex. Movemos las celdas dentro del contenedor
+  - start
+  - end
+  - center
+  - space-around
+  - space-between
+  - space-evenly
+  Por defecto trae start
+  - right
+  - left
+  En estos dos casos no importa la dirección del texto siempre van a estar a la derecha o a la izquierda 
+
+  align-item funciona de forma vertical. Usa los mismos valores que justify-content
 */
 
 body {
@@ -36,21 +57,34 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
-  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: repeat(1, 1f);
+  grid-template-rows: repeat(3, 50px);
   gap: 10px;
   padding: 10px;
-  justify-items: ;
+  justify-items: stretch;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: space-around;
+  height: 350px;
+  border: 2px solid #000;
+  margin: 20px;
+}
+
+.grid-item:first-child {
+  background-color: #e66;
 }
 
 .grid-item {
   background-color: #48e;
+  color: #fff;
   font-size: 60px;
+  font-size: 30px;
   max-width: 100%;
   border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .grid-item:hover {
