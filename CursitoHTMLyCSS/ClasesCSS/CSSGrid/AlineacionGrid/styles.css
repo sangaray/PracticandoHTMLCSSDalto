@@ -1,0 +1,58 @@
+/*
+  ALINEACIÓN CON GRID
+  Con grid no tenemos que preocuparnos por el main axis y esas cosas porque podmeos decirle la dirección como eje horizontal o eje vertical
+  FORMAS DE CENTRAR ELEMENTOS
+  1. Usando flex en los grid-item
+  display: flex
+  justify-content: center
+  align-items: center
+  Esta es una forma válida de centrar elementos pero vamos a ver como centrarlos con grid porque es algo muy poderoso y sencillo de hacer
+  2. Con grid
+  Propiedades
+  justify-items es la más compleja de todas
+  - start
+  - self-start
+  - left
+  Aparentemente las tres hacen lo mismo
+  - center
+  - right
+  - end
+  - self-end
+  - baseline
+  - first-baseline
+  - last-baseline
+  Por defecto el valor que trae es stretch
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 250px);
+  gap: 10px;
+  padding: 10px;
+  justify-items: ;
+}
+
+.grid-item {
+  background-color: #48e;
+  font-size: 60px;
+  max-width: 100%;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item:hover {
+  opacity: 0.74;
+}
