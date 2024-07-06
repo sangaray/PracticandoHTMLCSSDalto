@@ -7,31 +7,36 @@
   justify-content: center
   align-items: center
   Esta es una forma válida de centrar elementos pero vamos a ver como centrarlos con grid porque es algo muy poderoso y sencillo de hacer
+  
   2. Con grid
   Propiedades
-  justify-items es la más compleja de todas. Es como align-itmes de flexbox, pero en lugar de actuar sobre el eje vertical, lo hace sobre el eje horizontal. En grid no se puede cambiar el flujo tan fácil. 
+  justify-items es la más compleja de todas. Es como align-itmes de flexbox, pero en lugar de actuar sobre el eje vertical, lo hace sobre el eje horizontal. En grid no se puede cambiar el flujo tan fácilmente. 
   - start
   - self-start
   - left
-  Aparentemente las tres hacen lo mismo
+  Aparentemente las tres hacen lo mismo, pero no. Si cambiamos grid-flow no se afectan los valores
   - center
   - right
   - end
   - self-end
-  - baseline lo pone sobre la última línea de texto
+  Las últimas tres también parecen hacer lo mismo pero no
+  - baseline dice vamos a ponerlo sobre la línea de texto
   - first-baseline lo pone sobre la primera linea de texto
-  - last-baseline
-  Por defecto el valor que trae es stretch
-  center, start, end, significa en la dirección de la escritura del texto, vas a ir como vaya el texto. Esto es como en flexbox, no hay nada nuevo
+  - last-baseline lo pone sobre la última linea de texto
+  
+  center, start, end, significa en la dirección del texto, 
+  si usamos direction rtl cambia la distribución de los elementos
+  vas a ir como vaya el texto. Esto es como en flexbox, no hay nada nuevo
   La principal diferencia es que en grid start tiene en cuenta la dirección del contenedor y self-start la dirección del hijo, dirección del texto.
   right siempre alinea a la derecha
   left siempre alinea a la izquierda.
-  El alineamiento es dentro de sus propias celdas
-  stretch se estira completamente
-  los self son para mover el elemento hijo dentro del elemento padre de forma independiente del resto de los hijos o todos juntos
+  Siempre alinean el contenido dentro de su propia celda
 
-  justify-content tenemos las mismas propiedades que con flex. Movemos las celdas dentro del contenedor
-  - start
+  stretch se estira completamente y es el valor por defecto
+  los self toman en cuenta la dirección del hijo, son para mover el elemento hijo dentro del elemento padre de forma independiente del resto de los hijos o todos juntos. Es start solo tiene en cuenta la dirección del contenedor
+  
+  justify-content tenemos las mismas propiedades que con flex. Movemos las celdas de forma horizontal dentro del contenedor, justificamos la celda dentro del su contenedor
+  - start valor por defecto, funciona con ltr o rtl en función de la dirección del texto
   - end
   - center
   - space-around
@@ -40,9 +45,17 @@
   Por defecto trae start
   - right
   - left
-  En estos dos casos no importa la dirección del texto siempre van a estar a la derecha o a la izquierda 
+  En estos dos casos no importa la dirección del texto siempre van a estar a la derecha o a la izquierda y no importa el direction que tengan
 
-  align-item funciona de forma vertical. Usa los mismos valores que justify-content
+  align-items hace lo mismo que justify items pero en el eje vertical. Usa los mismos valores que justify-content. Funciona muy parecido a flexbox pero con bidimensonalidad
+
+  justify-self self se refiere a sí mismo, entonces vamos a autojustificarnos a nosotros mismos (el hijo)
+
+  Los elementos hijos están dentro de una celda con justify-items justifica los elementos en el eje horizontal dentro de su propia celda
+
+  align-self alinea los hijos dentro de la celda individualmente, actúa como justify-self pero en vertical
+
+  align-content alinea las celdas dentro de su contenedor verticalmente
 */
 
 body {
@@ -57,7 +70,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1f);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 50px);
   gap: 10px;
   padding: 10px;
@@ -72,11 +85,11 @@ body {
 
 .grid-item:first-child {
   background-color: #e66;
+  align-self: stretch;
 }
 
 .grid-item {
   background-color: #48e;
-  color: #fff;
   font-size: 60px;
   font-size: 30px;
   max-width: 100%;
