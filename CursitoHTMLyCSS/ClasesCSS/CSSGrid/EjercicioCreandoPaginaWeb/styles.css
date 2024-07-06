@@ -1,0 +1,31 @@
+/*
+  CREANDO UNA PÁGINA WEB
+  Tenemos la complejidad por la cantidad de código y por el código en sí, que vamos a estar trabajando
+  Es importante al emprender un proyecto grande como corregir errores sin afectar al resto del código y que tampoco sea tan complicado encontrarlos
+
+  Sistema a usar Mobile First
+  
+  PASOS A SEGUIR EN UN PROYECTO REAL
+  1. Crear el wireframe
+  son como bocetos de los que queremos hacer, hay uno para como se debería ver en dispositivos móviles y otro para como se debería ver en computadora. Vamos a partir de dispositivos móviles y agrandarlo para computadores. Esto está bueno porque requiere menos código, tenemos que concentrarnos en el contenido más relevante
+  Carpeta con
+  index.html
+  styles.css
+  logo
+  imagen
+  2. Elegir la paleta de colores
+  #4488ee
+  #e2eaff
+  #18233f
+  Cargamos la imagen para ver que está bien
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div,
+body {
+  box-sizing: border-box;
+}
