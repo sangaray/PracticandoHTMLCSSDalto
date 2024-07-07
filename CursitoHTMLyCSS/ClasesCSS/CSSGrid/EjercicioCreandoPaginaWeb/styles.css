@@ -21,6 +21,8 @@
   Cargamos la imagen para ver que está bien
   3. Preparar los archivos a utilizar
   El color de fondo no puede ser blanco puro ni negro puto ni colores muy intensos o brillantes porque hace que la página parezca trucha
+  4. Trabajamos el header con el navbar y el menú
+  Vamos a usar container queries
 */
 
 * {
@@ -46,15 +48,71 @@ body {
   padding: 0;
 }
 
+/*------ HEADER SECTION ------*/
 .header {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  container-type: inline-size;
+  container-name: header;
+}
+
+.header__open-nav-button {
+  color: #48e;
+  font-size: 3rem;
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+}
+
+.header .header__checkbox {
+  display: none;
+}
+
+.header__nav {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: -1;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.header__checkbox:checked ~ .header__nav {
+  display: flex;
 }
 
 .header__logo {
   max-width: 100%;
-  width: 64px;
+  width: 80px;
   margin: 10px 20px;
 }
+
+.header__nav-item {
+  list-style: none;
+}
+
+.header__nav-item a {
+  color: #48e;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.header__nav-item :is(:hover, :active) {
+  text-decoration: underline;
+}
+
+/*------ HEADER QUERIES ------*/
+
+/*------ HEADER ENDS ------*/
