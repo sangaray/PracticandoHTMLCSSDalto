@@ -23,6 +23,7 @@
   El color de fondo no puede ser blanco puro ni negro puto ni colores muy intensos o brillantes porque hace que la página parezca trucha
   4. Trabajamos el header con el navbar y el menú
   Vamos a usar container queries
+  Hay que tener cuidado con las especificidades a la hora de  asignar las propiedades y ver donde comviene más por recursos y por especificidad
 */
 
 * {
@@ -105,7 +106,7 @@ body {
 .header__nav-item a {
   color: #48e;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -114,5 +115,26 @@ body {
 }
 
 /*------ HEADER QUERIES ------*/
+@container header (min-width: 600px) {
+  .header__nav {
+    display: block;
+    position: static;
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+  }
+
+  .header__nav-list {
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    gap: 20px;
+    margin-right: 40px;
+  }
+
+  .header__open-nav-button {
+    display: none;
+  }
+}
 
 /*------ HEADER ENDS ------*/
