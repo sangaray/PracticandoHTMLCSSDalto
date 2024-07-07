@@ -15,18 +15,46 @@
   imagen
   2. Elegir la paleta de colores
   #4488ee
-  #e2eaff
+  #e2eaff fondo body
   #18233f
+  #4988e9 logo
   Cargamos la imagen para ver que está bien
   3. Preparar los archivos a utilizar
+  El color de fondo no puede ser blanco puro ni negro puto ni colores muy intensos o brillantes porque hace que la página parezca trucha
 */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: sans-serif;
+  font-family: "Montserrat";
+  background-color: #e2eaff;
+  color: #101632dd;
 }
 
 div,
+ul,
+nav,
+header,
+footer,
+a,
+li,
+label,
 body {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  max-width: 100%;
+  width: 64px;
+  margin: 10px 20px;
 }
