@@ -24,6 +24,8 @@
   4. Trabajamos el header con el navbar y el menú
   Vamos a usar container queries
   Hay que tener cuidado con las especificidades a la hora de  asignar las propiedades y ver donde comviene más por recursos y por especificidad
+
+  4. Damos estilo a la profile section
 */
 
 * {
@@ -139,3 +141,83 @@ body {
 /*------ HEADER ENDS ------*/
 
 /*------ PROFILE SECTION ------*/
+.profile {
+  container-name: profile;
+  container-type: inline-size;
+}
+
+.profile__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.profile__data-container {
+  max-width: 600px;
+  padding: 12px;
+}
+
+.profile__img-container {
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.profile__img {
+  max-width: 100%;
+  width: 720px;
+}
+
+h1 {
+  color: #26a;
+}
+
+.profile__skills-container h2 {
+  color: #26a;
+}
+
+.profile__skill {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+  max-width: 600px;
+  margin-left: 0;
+  align-items: center;
+}
+
+.load-bar {
+  border: 2px solid #48e;
+  border-radius: 8px;
+  color: #fff;
+  padding: 2px;
+  font-size: 12px;
+  width: 80%;
+  margin: 4px;
+  margin-left: 0;
+}
+
+.profile__skill-name {
+  color: #48e;
+}
+
+.load-bar__bar {
+  background-color: #48e;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+.bar--80 {
+  width: 80%;
+}
+
+.bar--70 {
+  width: 70%;
+}
+
+.bar--60 {
+  width: 60%;
+}
+
+.bar--90 {
+  width: 90%;
+}
