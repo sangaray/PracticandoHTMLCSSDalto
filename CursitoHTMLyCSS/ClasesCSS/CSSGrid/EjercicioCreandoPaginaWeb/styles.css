@@ -26,6 +26,13 @@
   Hay que tener cuidado con las especificidades a la hora de  asignar las propiedades y ver donde comviene más por recursos y por especificidad
 
   4. Damos estilo a la profile section
+
+  place-content: center, sirve para centrar el contenido en una grid
+
+  Hay cosas que van a ir aprendiendo que van a tener que ir modificando, ya no se hace más overlay si no que usamos
+  background-image: gradient
+  Recuerden que background-image es para usar imágenes o gradientes
+  Se pone primero el gradiente y luego la imagen para que la segunda no tape al gradiente
 */
 
 * {
@@ -264,3 +271,41 @@ h1 {
   }
 }
 /*------ PROFILE ENDS ------*/
+
+/*------ PORTFOLIO SECTION ------*/
+.portfolio {
+  background-color: #18233f;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.portfolio__project-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1300px;
+  margin: auto;
+  width: 100%;
+  gap: 12px;
+  padding: 12px;
+  min-height: 90vh;
+}
+
+.portfolio__project {
+  background-image: linear-gradient(#0009, #0009), url("./images/images.jpeg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+}
+
+.portfolio__project:hover {
+  opacity: 0.74;
+  outline: 2px solid #fff6;
+}
+
+/*------ PORTFOLIO QUERIES ------*/
+
+/*------ PORTFOLIO ENDS ------*/
