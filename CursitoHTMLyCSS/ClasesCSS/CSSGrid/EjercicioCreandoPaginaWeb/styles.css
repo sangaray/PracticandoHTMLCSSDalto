@@ -40,8 +40,9 @@
 
   scroll-behavior: smooth hace que el desplazamiento sea más lento
 
-  Tarea dar a la caja del - form un estilo acorde al profile
-  - agregar un sticky a la navbar
+  Tarea dar a la caja del 
+  - form un estilo acorde al profile
+  - agregar un sticky a la navbar - hecho
 
   6. Trabajamos el portfolio
 
@@ -86,6 +87,8 @@ body {
   z-index: 10;
   text-align: center;
   font-size: 20px;
+  position: sticky;
+  top: 0;
 }
 
 .header__open-nav-button {
@@ -385,6 +388,9 @@ h1 {
   width: 100%;
   display: grid;
   margin-bottom: 30px;
+  border: 1px solid #18233f;
+  border-radius: 12px;
+  padding: 30px;
 }
 
 .form__input-container :is(input, textarea) {
@@ -424,6 +430,7 @@ h1 {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 0px 40px #0006;
+    border: none;
   }
 
   .form__input-container:first-child {
