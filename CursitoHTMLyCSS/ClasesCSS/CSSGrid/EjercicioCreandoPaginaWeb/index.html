@@ -4,6 +4,8 @@
   2. Creamos el main con un div clase wrapper, el wrapper se usa como un contenedor que nos deja delimitar el espacio y tamaño del contenido
 
   Normalmente se usa un id en lugar de clases para armar bloques completos
+  3. Creamos un Section para el Portfolio
+  4. Creamos otro section para el form de contacto
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -86,6 +88,8 @@
         </div>
       </div>
     </main>
+
+    <!-- PORTFOLIO SECTION -->
     <section class="portfolio">
       <h2 class="portfolio__title">Portfolio Section</h2>
       <div class="portfolio__project-container">
@@ -108,6 +112,40 @@
           <h2 class="portfolio__project-name">Project</h2>
         </div>
       </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="form">
+      <h2 class="form__title">Contact</h2>
+      <form class="form__form">
+        <div class="form__input-container">
+          <label
+            >Nombre
+            <input type="text" placeholder="John" />
+          </label>
+        </div>
+        <div class="form__input-container">
+          <label
+            >Apellido
+            <input type="text" placeholder="Doe" />
+          </label>
+        </div>
+        <div class="form__input-container">
+          <label
+            >E-mail
+            <input type="email" placeholder="email@example.com" />
+          </label>
+        </div>
+        <div class="form__input-container">
+          <label
+            >Mensaje
+            <textarea placeholder="Your message"></textarea>
+          </label>
+        </div>
+        <div class="form__input-container">
+          <input type="submit" />
+        </div>
+      </form>
     </section>
   </body>
 </html>
