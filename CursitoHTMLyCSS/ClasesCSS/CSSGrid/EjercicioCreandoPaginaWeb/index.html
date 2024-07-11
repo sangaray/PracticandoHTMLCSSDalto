@@ -2,10 +2,10 @@
   CREANDO UNA PÁGINA WEB
   1. Creamos el header
   2. Creamos el main con un div clase wrapper, el wrapper se usa como un contenedor que nos deja delimitar el espacio y tamaño del contenido
-
   Normalmente se usa un id en lugar de clases para armar bloques completos
   3. Creamos un Section para el Portfolio
   4. Creamos otro section para el form de contacto
+  5. Creamos el footer
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -25,16 +25,16 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#">About</a></li>
-          <li class="header__nav-item"><a href="#">Portfolio</a></li>
-          <li class="header__nav-item"><a href="#">Contact</a></li>
+          <li class="header__nav-item"><a href="#profile">About</a></li>
+          <li class="header__nav-item"><a href="#portfolio">Portfolio</a></li>
+          <li class="header__nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <!-- HEADER ENDS -->
 
     <!-- PROFILE SECTION -->
-    <main class="profile">
+    <main class="profile" id="profile">
       <div class="profile__wrapper">
         <div class="profile__img-container">
           <img src="./images/unicornio_real1.jpg" alt="" class="profile__img" />
@@ -90,7 +90,7 @@
     </main>
 
     <!-- PORTFOLIO SECTION -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="portfolio__title">Portfolio Section</h2>
       <div class="portfolio__project-container">
         <div class="portfolio__project">
@@ -115,7 +115,7 @@
     </section>
 
     <!-- CONTACT SECTION -->
-    <section class="form">
+    <section class="form" id="contact">
       <h2 class="form__title">Contact</h2>
       <form class="form__form">
         <div class="form__input-container">
@@ -147,5 +147,6 @@
         </div>
       </form>
     </section>
+    <footer><strong>IAE</strong> - Copyright 2024</footer>
   </body>
 </html>

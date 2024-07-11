@@ -1,5 +1,6 @@
 /*
   CREANDO UNA PÁGINA WEB
+  Este cuenta como proyecto final
   Tenemos la complejidad por la cantidad de código y por el código en sí, que vamos a estar trabajando
   Es importante al emprender un proyecto grande como corregir errores sin afectar al resto del código y que tampoco sea tan complicado encontrarlos
 
@@ -13,19 +14,22 @@
   styles.css
   logo
   imagen
+
   2. Elegir la paleta de colores
   #4488ee
   #e2eaff fondo body
   #18233f
   #4988e9 logo
   Cargamos la imagen para ver que está bien
+
   3. Preparar los archivos a utilizar
   El color de fondo no puede ser blanco puro ni negro puto ni colores muy intensos o brillantes porque hace que la página parezca trucha
+
   4. Trabajamos el header con el navbar y el menú
   Vamos a usar container queries
   Hay que tener cuidado con las especificidades a la hora de  asignar las propiedades y ver donde comviene más por recursos y por especificidad
 
-  4. Damos estilo a la profile section
+  5. Damos estilo a la profile section
 
   place-content: center, sirve para centrar el contenido en una grid
 
@@ -33,10 +37,22 @@
   background-image: gradient
   Recuerden que background-image es para usar imágenes o gradientes
   Se pone primero el gradiente y luego la imagen para que la segunda no tape al gradiente
-*/
+
+  scroll-behavior: smooth hace que el desplazamiento sea más lento
+
+  Tarea dar a la caja del - form un estilo acorde al profile
+  - agregar un sticky a la navbar
+
+  6. Trabajamos el portfolio
+
+  7. Trabajamos el contact form
+
+  8. Trabajamos el footer
+  */
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -368,6 +384,7 @@ h1 {
   max-width: 600px;
   width: 100%;
   display: grid;
+  margin-bottom: 30px;
 }
 
 .form__input-container :is(input, textarea) {
@@ -377,6 +394,7 @@ h1 {
   margin: 4px;
   border: none;
   box-shadow: 2px 2px 4px #0003;
+  background-color: #fffd;
 }
 
 .form__input-container textarea {
@@ -392,6 +410,7 @@ h1 {
 }
 
 /*------ CONTACT QUERIES ------*/
+
 @container form (min-width: 56.25rem) {
   .form__form {
     grid-template-columns: 1fr 1fr;
@@ -433,5 +452,18 @@ h1 {
 
   .form__input-container :is(input, textarea) {
     box-shadow: none;
+    border-radius: 4px;
   }
+}
+
+/*------ CONTACT ENDS ------*/
+
+/*------ FOOTER SECTION ------*/
+
+footer {
+  padding: 60px;
+  text-align: center;
+  background-color: #18233f;
+  color: #fffd;
+  font-size: 22px;
 }
