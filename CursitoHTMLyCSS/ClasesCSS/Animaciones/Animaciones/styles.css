@@ -17,6 +17,32 @@
   En lugar de from y to se pueden usar porcentajes, también se pueden agregar porcentajes o puntos intermedios de animación
 
   Las animaciones las podemos ejecutar cuando queramos, incluso pueden ser automáticas, podemos cambiar más veces las propiedades, controlar los cambios. También se pueden repetir todas las veces que queramos, incluso infinitamente
+
+  PROPIEDADES
+  - animation-name: nombre dado a la animación
+  - animation-duration: tiempo que va a durar la animación
+  Estas dos propiedades tienen que estar sí o sí en el elemento al que se le aplica la animación
+  - animation-delay es el tiempo que tarda en comenzar a ejecutarse la animación. Se puede dar números negativos, al hacer esto es como si la animación hubiera arrancado hace el tiempo indicado en negativo. El dilay por defecto es 0, arranca en 0 y termina en el valor de la duración-1. Se aplica siempre sólo la primera vez que carga o se ejecuta la la animación
+  - animation-fill-mode dice cómo va a quedar la animación una vez termine de ejecutarse
+    backwards se queda como estaba antes de la animación
+    none es como backwards se queda como antes de la animación
+    both se queda como está al final de la animación y arranca como le indique la propiedad from. Arranca con el from dela nimación duante el delay incluido
+    backwards espera el dilay como estaba y arranca con las propiedades de from
+  - animation-timing-function indica el flujo de la animación
+    linear toda la animación es pareja
+    por defecto arranca rápido y termina más lento
+  - animation-iteration-count determina cuantas veces se va a repetir la animación
+    infinite repite la animación siempre
+    por defecto viene 1
+    puedo dar la cantidad específica que quiero
+  - animation-direction indica hacia donde se dirige la animación
+    reverse del final al principio o de atrás para adelante
+    normal es la opción por defecto
+    alternate va primero de adelante para atrás y luego de atrás para adelante. 
+    alternate-reverse va de atras hacia adelante y de adelante hacia atrás
+  - animation-play-state permite que se pueda manipular la animación
+    paused detiene la animación mientras haya un estado específico
+    running es la opción por defecto que mantiene la animación ejecutándose
 */
 
 body {
@@ -42,4 +68,26 @@ div {
   background-color: #48e;
   border-radius: 30px;
   width: 10%;
+  animation-name: llenar-barra;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.barra:active {
+  animation-play-state: paused;
+}
+
+@keyframes llenar-barra {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+    background-color: #f33;
+  }
 }
