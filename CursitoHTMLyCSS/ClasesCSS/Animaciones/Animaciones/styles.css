@@ -1,0 +1,45 @@
+/*
+  ANIMACIONES
+  Proceso que quiere generar una ilusión de movimiento, tomar un objeto inanimado y hacerlo animado. Es como una transición entre un estado inicial y un estado final y en el medio pueden pasar más cosas. Tomar un elemento y hacerlo pasar de un estado a otro a través del tiempo.
+  Se usa para mejorar la interrelación con el usuario, la gente de UX lo usa para mejorar la experiencia y también en cargas que tardan para mejorar la espera
+
+  Transiciones ocurre sólo cuando hay un cambio de estado, necesitan un evento disperador que diga que están en un estado y ahora pasaron a otro estado. La transición sólo se repite una vez y es de un estado a otro
+
+  ESTRUCTURA
+  @keyframes nombre{
+    from{
+      propiedad: valor
+    }
+    to{
+    propiedad: valor
+    }
+  }
+  En lugar de from y to se pueden usar porcentajes, también se pueden agregar porcentajes o puntos intermedios de animación
+
+  Las animaciones las podemos ejecutar cuando queramos, incluso pueden ser automáticas, podemos cambiar más veces las propiedades, controlar los cambios. También se pueden repetir todas las veces que queramos, incluso infinitamente
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ccc;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.box {
+  margin: 20px;
+  background-color: #fff;
+  border: 3px solid #0009;
+  padding: 6px;
+  border-radius: 39px;
+}
+
+.barra {
+  padding: 40px;
+  background-color: #48e;
+  border-radius: 30px;
+  width: 10%;
+}
