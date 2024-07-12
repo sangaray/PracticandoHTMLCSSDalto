@@ -1,0 +1,59 @@
+/*
+  TRANSICIONES REPASO
+  Con las dos líneas de código siguientes vamos a poder hacer que en un estado determinada una transición tenga un tiempo de duración distenta a cuando ese estado deja de existir
+  En el elemento: transition ponemos width 2s linear;
+  y en el estado ponemos transition-duration: 1s;
+
+  steps(cantidad de pasos) permite que la animación sea segmentada en la cantidad de pasos indicada
+
+  PARA PERSONAS EPILÉPTICA O CON PROBLEMAS NEUROLÓGICOS
+  Google Chrome tiene una configuración que permite reducir las animaciones
+  @media (prefers-reduced-motion:reduce){
+    aquí podemos hacer que las animaciones o transiciones sean más lentas o directamente que se desactiven
+  }
+  Hay que tener cuidado para que los movimientos no sean tan bruscos
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ccc;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.box {
+  margin: 20px;
+  background-color: #fff;
+  border: 3px solid #0009;
+  padding: 6px;
+  border-radius: 39px;
+  transition: border-color 1s steps(30);
+}
+
+.barra {
+  padding: 40px;
+  background-color: #48e;
+  border-radius: 30px;
+  width: 10%;
+  transition: width 1s steps(30), background-color 0.6s;
+}
+
+.barra:active {
+  width: 100%;
+  transition-duration: 3s;
+  background-color: #f33;
+}
+
+.box:has(.barra:active) {
+  border: 4px solid #f33;
+  transition-duration: 3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .barra .box {
+    transition: none;
+  }
+}
