@@ -1,7 +1,7 @@
 /*
   ANIMACIONES
   Proceso que quiere generar una ilusión de movimiento, tomar un objeto inanimado y hacerlo animado. Es como una transición entre un estado inicial y un estado final y en el medio pueden pasar más cosas. Tomar un elemento y hacerlo pasar de un estado a otro a través del tiempo.
-  Se usa para mejorar la interrelación con el usuario, la gente de UX lo usa para mejorar la experiencia y también en cargas que tardan para mejorar la espera
+  Se usa para mejorar la interrelación con el usuario, la gente de UX lo usa para mejorar la experiencia y también en cargas que tardan para mejorar la espera.
 
   Transiciones ocurre sólo cuando hay un cambio de estado, necesitan un evento disperador que diga que están en un estado y ahora pasaron a otro estado. La transición sólo se repite una vez y es de un estado a otro
 
