@@ -1,6 +1,7 @@
 /*
   BOTONES ANIMADOS
   ::After y ::before son muy usados para hacer animaciones y es muy poderoso
+  ::before tiene que tener la propiedad content sí o sí aunque esté vacía para que funcione
 
 */
 
@@ -28,4 +29,30 @@ div {
   color: #fff;
   border-radius: 6px;
   letter-spacing: 3px;
+  position: relative;
+}
+
+/*------ Wave Button ------*/
+.btn-1 {
+  border: 1px solid #48e;
+  overflow: hidden;
+}
+
+.btn-1::before {
+  content: "";
+  background-color: #48e;
+  display: block;
+  height: 200%;
+  width: 140%;
+  position: absolute;
+  z-index: -1;
+  transition: top 0.6s, left 0.6s, margin 0.6s;
+  border-radius: 50%;
+  top: 100%;
+  left: 30%;
+}
+
+.btn-1:hover::before {
+  top: -35%;
+  left: -20%;
 }
