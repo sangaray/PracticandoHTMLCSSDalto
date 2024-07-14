@@ -1,29 +1,4 @@
 /*
-  ANIMACIONES BASADAS EN SCROLL
-  Hasta ahora lo único que tenemos es una línea de tiempo basada en la duración. El timeline va a estar basada en la duración
-  En las animaciones basadas en scroll tenemos dos tipos de timeline
-  - Scroll: Uno basado en scroll que básicamente sólo funciona por el scroll del elmento. La animación va a progresar según progrese la barra de scroll del objeto padre
-  - View: Hay otra opción que es por el view, cuando el elemento empieza a aparecer en el viewport comienza la animación y cuando el elemento se sale del viewport termina la animación
-
-  animation-iteration-count, sólo sirve cuando estamos trabajando animaciones basadas en la duración
-
-  direction y delay sí se usan pero lo vamos a sacar por ahora
-
-  ANIMACIÓN POR SCROLL
-  Hay dos forma de hacer la animación por scroll
-  1. Por desplazamiento del scroll: La más básica es darle a la caja que tiene la animación la propiedad animation-timeline con la función scroll() como valor
-  En body agregamos la propiedad scroll-timeline-name y le damos un nombre como valor con el formato --nombre, con esto le damos un nombre a las barras de scrill
-  scroll-timeline-axis para indicar cual de las dos barras se toma en cuenta
-  - inline en el eje horizontal
-  - block en el eje vertical
-  scroll-timeline es el shorhand de las dos propiedades anteriores
-  scroll-timeline: --name axis
-  En el body no podemos usar estar propiedad, esta debe ser aplicada a cualquier elemento que no sea el body
-
-  Para que la animación funcione con el scroll del root debemos usar la función scroll() como valor de la propiedade animation-timeline. Esta opción es la más utilizada
-
-  Si queremos que no se base en el root, debemos crear otro contenedor al que le vamos a poner un nombre para la propiedad animation-timeline-name
-
   ANIMACIÓN POR EL VIEW
   No depende del scroll, depende de si el elemento es o no visible
   view-timeline dice al navegador cual es el elemento que debe ser observaro, es decir se pone en el elemento que se va a animar y lleva el valor --nombre
