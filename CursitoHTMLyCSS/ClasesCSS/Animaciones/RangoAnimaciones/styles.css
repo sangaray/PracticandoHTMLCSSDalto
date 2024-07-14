@@ -1,0 +1,50 @@
+/*
+  RANGO DE ANIMACIONES
+  Sirve para que la animación comience con más arriba del viewport
+  PROPIEDADES
+  animation-range-start va a decir mirá la animación puede arrancar un poco después
+  animation-range-end permite finalizar la antimación antes o despues
+  ambas vienen por defecto en nomal que es cómo lo indique la animación y el elemento en sí. Tambien pueden usaarse porcentajes del viewport
+  - cover la animación inicia cuando el borde superior del elemento toca el borde del viewport, y termina cuando el borde inferior toca el borde superior del viewport.
+  - contain comienza después, cuando el elemento está a la vista por completo y termina antes, cuando el borde inferior del elemento toca el borde inferior del viewport, cuando el borde superior del elemento toca el borde superior del viewport
+  
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.crecedor {
+  height: 100vh;
+}
+
+.box {
+  height: 100px;
+  view-timeline: --cajita block;
+  background-color: #48e;
+  padding: 20px;
+  animation: llenar-barra both;
+  animation-timeline: --cajita;
+  animation-timing-function: linear;
+  animation-range-start: cover 0%;
+  animation-range-end: contain 100%;
+}
+
+@keyframes llenar-barra {
+  from {
+    width: 0%;
+    opacity: 10%;
+  }
+
+  to {
+    width: 100%;
+    background-color: #f33;
+    opacity: 100%;
+  }
+}
