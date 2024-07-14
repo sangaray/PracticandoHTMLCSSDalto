@@ -1,70 +1,97 @@
 /*
   ANIMACIONES BASADAS EN SCROLL
-  
+  Hasta ahora lo único que tenemos es una línea de tiempo basada en la duración. El timeline va a estar basada en la duración
+  En las animaciones basadas en scroll tenemos dos tipos de timeline
+  - Scroll: Uno basado en scroll que básicamente sólo funciona por el scroll del elmento. La animación va a progresar según progrese la barra de scroll del objeto padre
+  - View: Hay otra opción que es por el view, cuando el elemento empieza a aparecer en el viewport comienza la animación y cuando el elemento se sale del viewport termina la animación
 
+  animation-iteration-count, sólo sirve cuando estamos trabajando animaciones basadas en la duración
+
+  direction y delay sí se usan pero lo vamos a sacar por ahora
+
+  ANIMACIÓN POR SCROLL
+  Hay dos forma de hacer la animación por scroll
+  1. Por desplazamiento del scroll: La más básica es darle a la caja que tiene la animación la propiedad animation-timeline con la función scroll() como valor
+  En body agregamos la propiedad scroll-timeline-name y le damos un nombre como valor con el formato --nombre, con esto le damos un nombre a las barras de scrill
+  scroll-timeline-axis para indicar cual de las dos barras se toma en cuenta
+  - inline en el eje horizontal
+  - block en el eje vertical
+  scroll-timeline es el shorhand de las dos propiedades anteriores
+  scroll-timeline: --name axis
+  En el body no podemos usar estar propiedad, esta debe ser aplicada a cualquier elemento que no sea el body
+
+  Para que la animación funcione con el scroll del root debemos usar la función scroll() como valor de la propiedade animation-timeline. Esta opción es la más utilizada
+
+  Si queremos que no se base en el root, debemos crear otro contenedor al que le vamos a poner un nombre para la propiedad animation-timeline-name
+
+  ANIMACIÓN POR EL VIEW
+  No depende del scroll, depende de si el elemento es o no visible
 */
 
 body {
   margin: 0;
-  background-color: #222;
-  font-family: Montserrat;
-  display: flex;
+  font-family: sans-serif;
+  background-color: #ccc;
+  height: 200vh;
 }
 
-.text-container {
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: auto;
-  filter: drop-shadow(0px 0px 15px #fff9) drop-shadow(0px 0px 2px #fff9) drop-shadow(0px 0px 12px #fff9)
-    drop-shadow(0px 0px 1px #fff);
+div {
+  box-sizing: border-box;
 }
 
-.text {
-  color: #fff;
-  letter-spacing: 3px;
-  animation: grow 1s both steps(7);
-  overflow: hidden;
-  position: relative;
+/* .crecedor {
+  height: 200vh;
+} */
+
+.container {
+  scroll-timeline: --containerScroll block;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
-.tex::selection {
-  background-color: transparent;
-}
-
-.text::before {
-  content: "";
-  width: 1px;
-  height: 100%;
+.box {
   background-color: #fff;
-  position: absolute;
-  right: 0;
-  border-radius: 4px;
-  animation: titilar 0.36s infinite alternate;
+  border: 3px solid #0009;
+  padding: 6px;
+  border-radius: 39px;
+  position: fixed;
+  width: 100%;
 }
 
-@keyframes grow {
+.barra {
+  padding: 40px;
+  background-color: #48e;
+  border-radius: 30px;
+  width: 10%;
+  animation-name: llenar-barra;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: scroll();
+}
+
+.barra:active {
+  animation-play-state: paused;
+}
+
+@keyframes llenar-barra {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
+    background-color: #f33;
   }
 }
 
-@keyframes titilar {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.crecedor-1 {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .btn .btn::before .btn::after {
-    animation: none;
-  }
+.box-1 {
+  background-color: #48e;
+  padding: 20px;
+  animation: llenar-barra;
+  animation-timing-function: view;
 }
