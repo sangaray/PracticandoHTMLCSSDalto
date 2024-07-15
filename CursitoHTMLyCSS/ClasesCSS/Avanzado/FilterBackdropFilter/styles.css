@@ -1,0 +1,53 @@
+/*
+  FILTER BACKDROP FILTER
+  Vamos a ver funciones, que son códigos internos que cumplen determinadas funcionalidades.
+  Función es un código que se asocia a un nombre para no repetirlo muchas veces, puede tener parámetros que puede usar para devolvernos resultados distintos
+  FUNCIONES
+  - de Filtro son funciones que utilizamos en la propiedad filter
+    drop-shadow(valores) agrega una sombra al elemento, si este es transparente se aplica al borde del contenido de la imagen
+
+    blur(valor)
+
+    Los filtros que se apliquen se aplican a la caja y a todos sus elementos hijos
+
+    brightness (valor sin unidad) da brillo al objeto. Valor normal o por defecto 1
+
+    contrast(valor sin unidad) cambia el contraste del objeto. Valor normal o por defecto 1. Es la diferencia entre las partes. Los claros sean más claros y los oscuros más oscuros, reforzando las diferencia de los colores
+
+    grayscale(1) es practicamente la saturación, pone el objeto en escala de grises. Reduce la escala de color en cada matriz, rojo, verde y azul
+
+    saturate(valor sin unidades) aumenta la intensidad de los colores
+
+    hue-rotate(valor en porcentaje) agarra todos los colores hasta que todos se mueven los grados indicados en el círculo cromático
+
+    opacity, da opacidad o transparencia al elemento al que se le aplica, no funciona con backdrop-filter
+
+    invert, invierte los colores, hace un efecto negativo en el círculo cromático del hue. 0.5 es como dejar contraste 0. 1 es el invertido, es el valor por defecto
+
+    sepia, color sepia para el objeto
+
+    Se pueden poner varios filtros al mismo tiempo separados por espacio, si no pongo valor toma el valor por defecto. Los filtros se aplican en el orden en que son escritos
+
+  - backdrop-filter: hue() actúa como una capa de ajuste, los filtros que aplico sólo se aplican al fondo
+
+    Los valores se pueden dar en rem o px, tambien en cm pero no en porcentaje
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  background-color: #48e;
+}
+
+.box {
+  margin: auto;
+  padding: 20px 50px;
+  border: 4px solid #000;
+  width: fit-content;
+}
+
+img {
+  filter: grayscale() drop-shadow(0px 0px 45px #000) invert();
+}
