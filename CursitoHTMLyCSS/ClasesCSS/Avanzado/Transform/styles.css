@@ -1,0 +1,45 @@
+/*
+  TRANSFORM
+  Funciones de Transforación, son funciones que nos permiten escalar, sesgar, rotar y transladar elementos. Que transforman al elemento, que transforman sus propiedades
+
+PROPIEDADES
+- scale  cambia el tamaño de elemento. Esta propiedad estaba dentro de otra que se llama transform
+- scaley sólo aumenta el tamaño a lo alto
+- scalex sólo aumenta el tamaño a lo ancho
+- scale() sólo crece. puedo usar solo un valor o puede usar valores para x e y al mismo tiempo
+Se puede usar
+transform: scale(x, y)
+scale: x y
+Si damos un valorsolo se aplica a ambos
+- scale3d() permite mover en 3d un objeto
+scale se puede usar solo o como valor de transform
+
+VALORES DE TRANSFORM
+- skew inclina o sesga el elemento al que se aplica. El valor es en grados. Lo inclina en ambos ejes
+- skewy lo inclina sólo en el eje vertical
+- skewx lo inclina solo en el eje horizontal
+
+- rotate sirve para rotar o girar el elemento. El valor es en grados. Puede usarse también sin el transform
+
+- translate sirve para desplazar un objeto. Permite desplazar en x y en y
+- translatey lo desplaza en el eje vertical
+- translatex lo desplaa en el eje horizontal
+Se pueden usar valores positivos para arriba y a la derecha y valores negativos para arriba y a la izquierda
+Para que al usar dos valores en una función funcione debemos separar dichos valores por comas
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  background-color: #48e;
+  flex-direction: column;
+}
+
+.box {
+  margin: auto;
+  padding: 20px 50px;
+  border: 4px solid #000;
+  width: fit-content;
+  transform: translate(300px, 200px);
+}
