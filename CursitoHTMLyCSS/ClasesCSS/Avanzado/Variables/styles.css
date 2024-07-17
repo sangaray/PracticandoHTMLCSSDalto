@@ -1,0 +1,77 @@
+/*
+  VARIABLES (CUSTOM PROPERTIES)
+  Variable es un espacio que se almacena en la memoria de nuestro programa para guardad un dato y ese dato puede ir cambiando con el tiempo
+
+  Supongamos que en mi página va a haber un color principal y un color secundario, para guardarlo voy a usar una variable
+
+  SE USA
+  --nombre de la variable: valor
+  var(--nombre de la variable a usar)
+  Estamos creando un nombre con un valor, si ahora queremos otro color
+
+  Las variables dependen del scope en el que se encuentra. Podemos definir un entorno. Tiene un alcance local, todo lo que está dentro de esa caja lo puede usar, y las cajas internas pueden crear sus propias variables
+
+  Con property creamos una nuevo valor, una nueva propiedad para todo el root. También funciona de manera local
+  @property --nombre-propiedad{
+    syntax: "<tipo propiedad>"
+    inherit: true or false;
+    initial-value: valor de inicio
+  }
+
+  Técnica Houdini crear propiedades personalizadas con javascript
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+  --color-principal: #48e;
+  --tamaño-principal: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  --color-principal: #f44;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  font-size: 30px;
+  margin: 120px auto;
+  padding: 0 40px;
+  width: clamp(900px, 100%, 1400px);
+  border: 6px solid #000;
+  font-size: clamp(2.4rem, 2.2vw, 4rem);
+}
+
+.box:first-child {
+  background-color: var(--color-principal);
+}
+
+.box:nth-child(2) {
+  color: var(--color-principal);
+  border: 6px solid var(--color-principal);
+}
+
+.box p {
+  --color-principal: #4f4;
+  color: var--color-principal;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0;
+}
+
+body > p {
+  color: var(--color-principal);
+  font-size: 60px;
+}
+
+@property --color-principal {
+  syntax: "<color>";
+  inherit: false;
+  initial-value: #48e;
+}
