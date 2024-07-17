@@ -1,59 +1,43 @@
 /*
   FUNCIÓN CALC
-  
-*/
+  Nos permite hacer cálculos, matemática básica, nos permite hacer cuatro cosas, sumar, restar, multiplicar y dividir
+  Se pueden usar otras funciones dentro de la función calc
+  Calc es para hacer cálculos, eso es todo
+  Permite combinar medidas relativas con medidas fijas
+  EJEMPLOS
+  Algo que se usa mucho es:
+  width: calc(60% + 200px);
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-  padding: 20px;
-  --color-principal: #48e;
-  --tamaño-principal: 1rem;
-}
+  Con el menos y con el más siempre tiene que haber espacio entre los números y el signo
+  Se usa cuando estamos usanod un elemento con medidas relativos 
+*/
 
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --color-principal: #48e;
+  --alto-del-box: 200px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
 .box {
-  --color-principal: #f44;
-  display: grid;
-  place-content: center;
-  color: #fff;
   font-size: 30px;
-  margin: 120px auto;
   padding: 0 40px;
-  width: clamp(900px, 100%, 1400px);
-  border: 6px solid #000;
   font-size: clamp(2.4rem, 2.2vw, 4rem);
+  border: 6px solid #000;
 }
 
 .box:first-child {
-  background-color: var(--color-principal);
+  height: var(--alto-del-box);
 }
 
 .box:nth-child(2) {
-  color: var(--color-principal);
-  border: 6px solid var(--color-principal);
-}
-
-.box p {
-  --color-principal: #4f4;
-  color: var(--color-principal);
-}
-
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 0;
-}
-
-body > p {
-  color: var(--color-principal);
-  font-size: 60px;
-}
-
-@property --color-principal {
-  syntax: "<color>";
-  inherit: false;
-  initial-value: #48e;
+  height: calc(100vh - var(--alto-del-box));
+  overflow: auto;
 }
