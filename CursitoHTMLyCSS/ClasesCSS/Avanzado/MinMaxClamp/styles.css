@@ -1,0 +1,53 @@
+/*
+  MAX, MIN Y CLAMP
+  Comparan tres valores y se van quedando con el máximo, el mínimo o el valor ideal
+  En realidad son funciones de comparación
+
+  Los hijos no heredan el font-size del padre porque el navegador ya trae el tamaño de la fuente en rem
+  Los hijos traen medidas por defecto y no heredan el tamaño del padre
+  1rem = 16px (por defecto del root para párrafos)
+  El h1 tiene 2 em y el p 1 em, por lo que se van a ajustar a ese tamaño en función del tamaño de su padre
+
+  em busca el font-size de la caja padre para tomarlo de referencia
+  rem busca el em del root para tomarlo de referencia
+
+  - min() nos va a devolver el más chico de los valores que le pasemos. Las funciones nos devuelven cosas. El código escrito dentro de los paréntesis de la función se va a transfromar en algo. Permite comparar entre medidas fijas y medidas relativas
+
+  - max() nos devuelve el más grande de los valores dados.
+  Podemos darle varios valores, pero lo máximo para casos muy puntuales es usar 3.
+  Hoy en día nadie usar max ni min.
+
+  clamp(min, ideal, max) primero se pasa la medida mínima que puede tomar, luego le damos el valor ideal y por último el valor máximo. Recomendación usarlo, es correcto usarlo y es una tecnología relativamente nueva.
+  De esta manera nos ahorramos trabajar con media queries, cuanto menos media queries mejor
+
+  Usando estas funciones podemos trabajar con cajas flexibles sin usar flexbox, max-width, min-width
+  También es útli para crear tamaños de letra flexibles
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  background-color: #48e;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  font-size: 30px;
+  margin: 120px auto;
+  padding: 0 40px;
+  width: clamp(900px, 100%, 1400px);
+  border: 6px solid #000;
+  font-size: clamp(2.4rem, 2.2vw, 4rem);
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0;
+}
