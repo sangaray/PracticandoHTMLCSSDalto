@@ -1,14 +1,19 @@
 /*
   UNIDADES DEL VIEWPORT
-  Large
-  Small
-  Dinamic
-  Sólo funciona si primero llamamos al pseudo*elemento first-letter para el elemento al que se lo queremos aplicar
-  PROPIEDADES
-  - initial-letter: valor1 valor2 
-  valor1 indica la cantidad de líneas hacia arriba que se va a ocupar
-  valor2 indica desde que línea se va a contar
-  El valor no lleva unidades. Se pueden usar valores decimales, aunque es raro
+  Si uso mediddas del viewport como vw y vh
+  Si trabajamos con vh la página va a abarcar todo el viewport, el espacio entero incluyendo las barras de scroll.
+  En un celular si usamos 100vh no va a estar centrado porque no toma en cuenta los menúes, va a dar errores
+  
+  Large (lvh) cuando desespandimos se nos queda largo
+  Small (svh) supone que las unidades están extendidas y se ajusta, pero si expandimos el menú se queda corto
+  Dinamic (dvh) se va adaptando según se expanda o se desexpanda
+  USO
+  selector{
+  height: 100dvh
+  }
+  Cada vez que trabajems elementos tenemos que usar esta última unidad, en la pc no se nota pero en mobiles sí
+  Nos ahorra mucho código y la media queries de ajuste de los menúes, scrolles
+  No hay casos dodne usar vh en lugar de dvh, salvo caso en que queramos que la página se expanda más alla o par aapicaciones para navegadores muy antiguos. Recomendación usar siempre dvh en lugar de vh. Aplica también al width
 */
 
 * {
