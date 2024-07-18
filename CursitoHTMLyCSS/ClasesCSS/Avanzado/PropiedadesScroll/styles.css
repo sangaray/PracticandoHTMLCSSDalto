@@ -1,0 +1,43 @@
+/*
+  FUNCIÓN CALC
+  Nos permite hacer cálculos, matemática básica, nos permite hacer cuatro cosas, sumar, restar, multiplicar y dividir
+  Se pueden usar otras funciones dentro de la función calc
+  Calc es para hacer cálculos, eso es todo
+  Permite combinar medidas relativas con medidas fijas
+  EJEMPLOS
+  Algo que se usa mucho es:
+  width: calc(60% + 200px);
+
+  Con el menos y con el más siempre tiene que haber espacio entre los números y el signo
+  Se usa cuando estamos usanod un elemento con medidas relativos 
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-principal: #48e;
+  --alto-del-box: 200px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.box {
+  font-size: 30px;
+  padding: 0 40px;
+  font-size: clamp(2.4rem, 2.2vw, 4rem);
+  border: 6px solid #000;
+}
+
+.box:first-child {
+  height: var(--alto-del-box);
+}
+
+.box:nth-child(2) {
+  height: calc(100vh - var(--alto-del-box));
+  overflow: auto;
+}
