@@ -1,0 +1,32 @@
+/*
+  CLIP PATH
+  Sirve para recortar elementos, lo que está dentro se ve y lo que está fuera no se ve
+  - clip-path para hacer el recorte
+    circle(porcentaje radio at valorx valor y desplazamiento del círculo) el recorte es dentro de un círculo
+    Lo que hace es tomar la distancia del centro al border de la imagen y usarla como radio de la circunsferencia. El círculo más grande que se puede hacer es el del 50%
+    Los valores de desplazamiento pueden ser en porcentaje o en pixeles. 50% 50% ponen el círculo en el centro de la página. Siempre toma como referencia el centro del círculo
+    ellipse(distancia del centro al borde horizontal distancia centro al borde vertical
+
+    Recursos
+    https://www.cssportal.com/css-clip-path-generator/
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+.box {
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  border: 10px solid #f44;
+}
