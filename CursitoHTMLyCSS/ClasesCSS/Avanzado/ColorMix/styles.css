@@ -1,0 +1,52 @@
+/*
+  FUNCIÓN COLOR MIX
+  Es una nueva función, que toma dos valores, los mezcla en cierta cantidad predeterminada y de forma predeterminada
+  Es una función que se usa como valor.
+  USO
+  color-mix(in srgb, color percentage, color percentage)
+  - srgb es el que vamos a usar, son los métodos de colores, trabaja con colores hesxadecimales
+  Primero nos pide un color y un porcentaje, luego nos pide otro color y otro porcentaje
+  Permite combinar colores
+Si usamos color-mix nos ahorramos lo que sigue y el trabajo de encontrar la transparencia correcta para que se cree el color que queremos
+.box2 {
+  background-color: #f447;
+}
+
+.box2 p {
+  font-size: 30px;
+  padding: 320px;
+  background-color: #48e6;
+
+  MEZCLAR COLORES CON EL FONDO BLANCO
+  Usar color-mix con el color que queremos de base y combinarlo con porcentajes de blanco para lograr la opacidad que buscamos sin que el elemento se oscurezca si tenemos un fondo blanco.
+  Se resta intensidad al color con el blanco
+}
+  */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  width: 100%;
+  overflow: hidden;
+}
+
+.box {
+  font-size: 30px;
+  width: fit-content;
+  padding: 320px;
+  background-color: color-mix(in srgb, #f44 30%, #48e 30%);
+}
+
+.box2 {
+  background-color: #f447;
+}
+
+.box2 p {
+  font-size: 30px;
+  padding: 320px;
+  background-color: #48e6;
+}
