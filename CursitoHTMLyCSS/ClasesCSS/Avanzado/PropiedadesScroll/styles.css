@@ -1,24 +1,20 @@
 /*
-  FUNCIÓN CALC
-  Nos permite hacer cálculos, matemática básica, nos permite hacer cuatro cosas, sumar, restar, multiplicar y dividir
-  Se pueden usar otras funciones dentro de la función calc
-  Calc es para hacer cálculos, eso es todo
-  Permite combinar medidas relativas con medidas fijas
-  EJEMPLOS
-  Algo que se usa mucho es:
-  width: calc(60% + 200px);
+  PROPIEDADES DE SCROLL
+  Lo normal es dar estilo no a las barras de adentro sino a las del body
 
-  Con el menos y con el más siempre tiene que haber espacio entre los números y el signo
-  Se usa cuando estamos usanod un elemento con medidas relativos 
+  PROPIEDADES
+  - scroll-behavior, afecta a la suavidad del usuario, nos permite dos valores
+    auto
+    smooth suaviza el desplazamiento del scroll, pero está definidos por el user agent del navegador, en cada navegador podría llegar a funcionar distinto dependiendo de las versiones, pero casi todos manejan la misma velocidad y con javascript se puede modificar. Solo se nota si damos click de un lugar a otro no con la rueda del mouse, ni la barra de desplazamiento. Sólo funciona entre enlaces o con enlaces
+    scrollbar-color: valor barra valor track o fondo de la barra. Requiere los dos valores. Permite cambiar el color de la barra y su fondo. Al usar colores es importante que contrasten por una normativa de accesibilidad
+    scrollbar-width, permite cambiar el ancho de la barra de scroll. Tiene tres valores 
+    auto 
+    thin es finita. Es más difícil acceder a la barra
+    none no aparece la barra pero podemos deslizarnos con el dedo en celulares o con la rueda del mouse en pc.
 */
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --color-principal: #48e;
-  --alto-del-box: 200px;
 }
 
 body {
@@ -29,15 +25,19 @@ body {
 .box {
   font-size: 30px;
   padding: 0 40px;
-  font-size: clamp(2.4rem, 2.2vw, 4rem);
   border: 6px solid #000;
+  width: 50vw;
+  height: 100vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: #6af #fff;
+  scrollbar-width: thin;
 }
 
-.box:first-child {
-  height: var(--alto-del-box);
+.crecer {
+  height: 100vh;
 }
 
-.box:nth-child(2) {
-  height: calc(100vh - var(--alto-del-box));
-  overflow: auto;
+a {
+  color: #000;
 }
