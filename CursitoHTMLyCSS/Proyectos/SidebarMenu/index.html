@@ -1,0 +1,31 @@
+<!--
+  PROYECTO 1 - SIDEBAR
+  Integrar Librería de Iconos
+  Si agregamos el siguiente código 
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+  podemos acceder a los íconos y símbolos de google fonts y podemos usarlos sólo escribiendo  la clase material-symbols-outlined 
+  y dentro de un span el nombre del ícono o símbolo a usar que lo vemos en el siguiente link
+  https://fonts.google.com/icons
+  Vamos a usar una técnica que no está mal, la técnica del checkbox, para evitar usar javacript, pero lo ideal es hacerlo con javascript
+  para esto creamos un form donde ponemos un checkbox y un ícono para reemplazarlo, los asociamos con un label para que el checkbox se active o desactive cuando clickeamos en el ícono.
+  Para enlazar un input con un laberl al input le damos un id y al label un for con el mismo texto del id del input
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+  </head>
+  <body>
+    <aside>
+      <form>
+        <input type="checkbox" id="open-menu" />
+        <label for="open-menu" class="material-symbols-outlined">close</label>
+      </form>
+    </aside>
+  </body>
+</html>
