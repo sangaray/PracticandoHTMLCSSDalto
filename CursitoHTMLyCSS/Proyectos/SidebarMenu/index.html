@@ -9,6 +9,7 @@
   Vamos a usar una técnica que no está mal, la técnica del checkbox, para evitar usar javacript, pero lo ideal es hacerlo con javascript
   para esto creamos un form donde ponemos un checkbox y un ícono para reemplazarlo, los asociamos con un label para que el checkbox se active o desactive cuando clickeamos en el ícono.
   Para enlazar un input con un laberl al input le damos un id y al label un for con el mismo texto del id del input
+  A modo de Experiencia de Usuario puede ser que no sea el mejor diseño, pero nosotros nos dedicamos al desarrollo y al diseño estructural no a donde va cada elemento
 -->
 
 <!DOCTYPE html>
@@ -21,15 +22,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
   </head>
   <body>
-    <aside>
-      <form>
+    <aside class="sidebar">
+      <form class="sidebar__form">
         <input type="checkbox" id="open-menu" />
         <label for="open-menu" class="material-symbols-outlined">close</label>
       </form>
-      <picture>
+      <picture class="sidebar__picture">
         <source srcset="images/LogoSmall.png" media="(max-width:57.5rem)" />
         <img src="./images/LogoBig.png" alt="" />
       </picture>
+      <nav class="sidebar__nav">
+        <ul>
+          <li class="sidebar__item">
+            <span class="material-symbols-outlined">Notifications</span>
+            <a href="#">Notifications</a>
+          </li>
+          <li class="sidebar__item">
+            <span class="material-symbols-outlined">Mail</span>
+            <a href="#">Messages</a>
+          </li>
+          <li class="sidebar__item">
+            <span class="material-symbols-outlined">Shopping_cart</span>
+            <a href="#"> Cart</a>
+          </li>
+          <li class="sidebar__item">
+            <span class="material-symbols-outlined">Account_Balance</span>
+            <a href="#">Balance</a>
+          </li>
+          <li class="sidebar__item">
+            <span class="material-symbols-outlined">Settings</span>
+            <a href="#">Settings</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar__profile">
+        <ul>
+          <li class="sidebar__item pro">
+            <img src="./images/Sandra 128.png" alt="" />
+            <span class="profile-option">Profile</span>
+          </li>
+          <li class="sidebar__item item--profile">
+            <span class="material-symbols-outlined">Logout</span>
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
     </aside>
   </body>
 </html>
