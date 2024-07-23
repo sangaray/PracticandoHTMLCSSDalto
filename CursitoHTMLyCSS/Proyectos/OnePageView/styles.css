@@ -1,0 +1,117 @@
+/*
+  PROYECTO 4 - ONE-PAGE VIEW
+  Los modos de fusión pueden ser aplicados a CSS
+  - mix-blend-mode combina los colores de la imagen con los del forndo       
+    screen combina la luz de ambas capas, lo conrario a multiply. Se pone en modo pantalla, de manera que los fondos oscuros van atener menor opacidad que los colores claros
+    darken hace los contrariio le dás más opacidad a los colores oscuros y menos a los colores claros. Compara colores y se queda con el más oscuro
+    lighten hace que resalten los colores claros. Compara colores y se queda con el más claro
+    saturation los pixeles donde la imagen esté más saturada se van a adherir al fondo, donde menos saturada esté menos se va a adherir al fondo
+    Cuando usamos drop shadow, las propiedades pasan a ser parte del posicionamiento del elemento
+    DESAFÍO 
+    Agregar links a nuestras redes sociales
+
+    Recursos: 
+    color que me gusra #902D00
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+  --bg-color: #ff9464;
+  --text-color: #fff;
+  --dark-color: #ff824d;
+  background-color: var(--bg-color);
+  height: 200dvh;
+  background-image: linear-gradient(#0008, #0008), url("./images/Fondo.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+/* prettier-ignore */
+body, div, ul, li, a, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  font-size: clamp(1rem, 8vw, 12rem);
+  color: #444;
+  mix-blend-mode: luminosity;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  padding: 3vw;
+  animation: aparecer-texto both;
+  animation-timeline: scroll();
+  animation-range-start: cover 20%;
+}
+
+.left-text {
+  color: var(--dark-color);
+  padding-left: 4vw;
+  filter: drop-shadow(0px 0px 1px var(--dark-color)) drop-shadow(0px 0px 9px var(--dark-color));
+}
+
+.right-text {
+  color: var(--text-color);
+}
+
+img {
+  filter: grayscale();
+  mix-blend-mode: screen;
+  position: fixed;
+  top: 0;
+  animation: aparecer both;
+  animation-timeline: scroll();
+  height: 100vh;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    filter: grayscale();
+    translate: 0 -20%;
+    scale: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+    filter: grayscale();
+    translate: 0 20;
+    scale: 1;
+  }
+}
+
+@keyframes aparecer-texto {
+  0% {
+    opacity: 0;
+    translate: 0 -20%;
+    scale: 1.2;
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .text-container {
+    justify-content: space-evenly;
+  }
+}
