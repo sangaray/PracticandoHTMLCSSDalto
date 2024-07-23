@@ -1,6 +1,9 @@
 <!--
   PROYECTO 3 - FLIP CARD RESPONSIVE
-  
+
+  RECURSOS
+  Todo para trabajar con imágenes
+  https://www.iloveimg.com/
 -->
 
 <!DOCTYPE html>
@@ -11,5 +14,25 @@
     <title>Flip Card Responsive</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="card">
+      <div class="card__front">
+        <picture class="card__worker">
+          <source media="(max-width: 600px)" srcset="./images/Sandra128.png" />
+          <img src="./images/Sandra.jpg" alt="" />
+        </picture>
+        <div class="card__data">
+          <span>Sandra Garaycochea</span>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem vel quae culpa ab dolore laboriosam animi
+            natus? Repudiandae laborum nemo rerum quo, sint quia necessitatibus a temporibus, enim, modi magnam.
+          </p>
+        </div>
+      </div>
+      <div class="card__back">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat laudantium incidunt iusto atque vel nostrum
+        repudiandae eum, magni aliquam eos amet ipsam odit? Itaque, similique. Alias quas necessitatibus minus? Quam!
+      </div>
+    </div>
+  </body>
 </html>
