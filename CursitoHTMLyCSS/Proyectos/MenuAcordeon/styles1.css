@@ -1,6 +1,13 @@
 /*
   PROYECTO 5 - MENÚ ACORDEÓN
-  
+  Trabajar de esta manera es para cuando queremos tener completo control sobre el cierre de las respuestas
+  DIFERENCIAS ENTRE LAS DOS FORMA DE HACER ESTE MENÚ
+  La diferencia entre esta forma y la de usar details y summary es que en la segunda se cierra rápido y no podemos controlarlo, mientres que en la primera sí podemos controlar la animación de cierre de las respuestas
+  Otra diferencia es que en la primera forma hay que esperar a que la animación se complete para poder verla, si no, al abrir y cerrar muy rápido, es como que se desactiva, en la segunda forma no importa si clickeamos rápido el efecto se mantiene, esto se debe al comportamiento nativo de los ditails y los summary y también tienen todo los temas de accesibilidad incluidos, en el primer caso tendríamos que asignar roles y trabajar con aria para lograr la accesibilidad
+  Para respuesta rápida es la opción más correcta es usar details y summary, si estamos dispuestos a poner todos los atributos es más estético usamos la primera
+  DESAFÍO
+  Ingeniarnos una forma para no tener que usar max-height sino height desde 0% hasta 100% dependiendo del contenido
+  Esto es bueno
 */
 
 * {
@@ -26,13 +33,14 @@ body, div, ul, li, a, h1, h2, h3, h4, p {
   margin: auto;
 }
 
-details {
+.faq__option {
   background-color: var(--faq-color);
   margin: 7px;
   padding: 7px;
   max-height: 34px;
-  transition: max-height 2s;
+  transition: max-height 0.5s;
   overflow: hidden;
+  display: block;
 }
 
 .content {
@@ -44,24 +52,25 @@ details {
   color: var(--text-color);
 }
 
-details[open] {
-  max-height: 400px;
+.faq__option:has(input[type="checkbox"]:checked) {
+  max-height: 150px;
+  transition: max-height 1.5s;
 }
 
-details[open] .content {
-  animation: aparecer 1s 0.3s both;
+.faq__option:has(input[type="checkbox"]:checked) .content {
+  animation: aparecer 1s both;
 }
 
-summary {
+.faq__ask {
   user-select: none;
   position: relative;
 }
 
-summary::marker {
+.faq__ask::marker {
   content: "";
 }
 
-summary::before {
+.faq__ask::before {
   content: "+";
   color: var(--bg-color);
   position: absolute;
@@ -69,11 +78,15 @@ summary::before {
   font-weight: 900;
 }
 
-details[open] summary::before {
+input[type="checkbox"] {
+  display: none;
+}
+
+.faq__option:has(input[type="checkbox"]:checked) .faq__ask::before {
   content: "-";
 }
 
-details b {
+.faq__option b {
   background-color: var(--dark-color);
   padding: 2px 4px;
   color: #fff;
@@ -99,5 +112,6 @@ details b {
 @media screen and (min-width: 600px) {
   .faq {
     max-width: clamp(300px, 70%, 700px);
+    margin: 40px auto;
   }
 }
