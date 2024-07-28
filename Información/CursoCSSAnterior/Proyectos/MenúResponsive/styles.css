@@ -40,16 +40,15 @@
 
 .nav__responsive-button-container {
 	position: absolute;
-	/* width: 100%;
+	width: 100%;
 	font-size: 25px;
 	background-color: #69c;
-	margin-top: -64px; */
 }
 
 .nav__responsive-button {
 	padding: 6px 20px;
 	text-align: right;
-	width: 95%;
+	width: 100%;
 }
 
 @media only screen and (max-width: 500px) {
@@ -69,7 +68,6 @@
 		list-style: none;
 		background-color: #9bf;
 		height: 100%;
-		margin-top: 37px;
 		padding-top: 27px;
 	}
 
