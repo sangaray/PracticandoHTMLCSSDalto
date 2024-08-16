@@ -14,136 +14,136 @@
 */
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  background-color: #272117;
-  color: #fff;
+	margin: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background-color: #272117;
+	color: #fff;
 }
 
 /* HEADER SECTION */
 .header {
-  min-height: 100vh;
-  box-sizing: border-box;
-  background-image: url("unicornio_real1.jpg");
-  display: flex;
-  top: 610px;
-  background-size: cover;
+	min-height: 100vh;
+	box-sizing: border-box;
+	background-image: url("unicornio_real1.jpg");
+	display: flex;
+	top: 610px;
+	background-size: cover;
 }
 
 .header__overlay {
-  min-height: 100vh;
-  width: 100%;
-  background-color: #80562699;
-  position: absolute;
-  z-index: 1;
+	min-height: 100vh;
+	width: 100%;
+	background-color: #80562699;
+	position: absolute;
+	z-index: 1;
 }
 
 .header__item-container {
-  position: relative;
-  z-index: 10;
-  margin: auto;
-  text-align: center;
-  max-width: 700px;
+	position: relative;
+	z-index: 10;
+	margin: auto;
+	text-align: center;
+	max-width: 700px;
 }
 
 .header__item-container p {
-  text-wrap: pretty;
+	text-wrap: pretty;
 }
 
 .header__img {
-  min-width: 250px;
-  max-width: 40%;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  margin: 20px;
+	min-width: 250px;
+	max-width: 40%;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	margin: 20px;
 }
 
 h1 {
-  margin: 0;
-  font-size: 3.6rem;
-  text-wrap: balance;
+	margin: 0;
+	font-size: 3.6rem;
+	text-wrap: balance;
 }
 
 /* NAVBAR SECTION */
 .nav {
-  background-color: #272117;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* me gusta con space-evenly */
-  padding: 6px 20px; /* me gusta con padding-right 40px  */
-  border: 2px solid #efc653;
-  position: sticky;
-  top: 0;
-  margin-bottom: 10px;
-  box-shadow: 0 0 25px #efc553b9;
+	background-color: #272117;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* me gusta con space-evenly */
+	padding: 6px 20px; /* me gusta con padding-right 40px  */
+	border: 2px solid #efc653;
+	position: sticky;
+	top: 0;
+	margin-bottom: 10px;
+	box-shadow: 0 0 25px #efc553b9;
 }
 
 .nav__ul {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0;
 }
 
 .nav__item {
-  list-style: none;
+	list-style: none;
 }
 
 .nav__ul-container {
-  flex-grow: 4;
+	flex-grow: 4;
 }
 
 .nav__logo-container,
 .nav__ul-container {
-  flex-grow: 1;
-  text-align: center;
+	flex-grow: 1;
+	text-align: center;
 }
 
 .nav__link {
-  color: #efc653;
-  text-decoration: none;
-  display: inline-block;
-  padding: 25px 10px 8px 10px;
-  margin: 6px;
-  border-radius: 0;
-  transition: background-color 0.24s, border-radius 0.2s outline 0.2 outline-offset 0.2;
-  margin: 2px;
-  outline: 0;
-  outline-offset: 0;
-  font-size: 1.5em;
+	color: #efc653;
+	text-decoration: none;
+	display: inline-block;
+	padding: 25px 10px 8px 10px;
+	margin: 6px;
+	border-radius: 0;
+	transition: background-color 0.24s, border-radius 0.2s outline 0.2 outline-offset 0.2;
+	margin: 2px;
+	outline: 0;
+	outline-offset: 0;
+	font-size: 1.5em;
 }
 
 .nav__link:hover {
-  background-color: #f803;
-  border-radius: 20px;
-  outline: 2px solid #f803;
-  outline-offset: -7px;
+	background-color: #f803;
+	border-radius: 20px;
+	outline: 2px solid #f803;
+	outline-offset: -7px;
 }
 
 .link--login {
-  background-color: #efc653;
-  color: #272117;
-  border-radius: 20px;
-  padding: 8px 24px;
-  margin-left: 6px;
-  margin-top: 17px;
+	background-color: #efc653;
+	color: #272117;
+	border-radius: 20px;
+	padding: 8px 24px;
+	margin-left: 6px;
+	margin-top: 17px;
 }
 
 .link--login:hover {
-  background-color: #efc553b9;
-  outline: none;
+	background-color: #efc553b9;
+	outline: none;
 }
 
 .nav__logo {
-  width: 70px;
+	width: 70px;
 }
 
 /* MAIN SECTION */
 main {
-  max-width: 800px;
-  margin: auto;
-  font-size: 30px;
-  text-wrap: pretty;
+	max-width: 800px;
+	margin: auto;
+	font-size: 30px;
+	text-wrap: pretty;
 }
